@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 30vh;
+    gap: 20px;
+}
+
+
+
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.datos {
+    display: flex;
+    gap: 40px;
+}
+
+.datos input {
+    width: 200px;
+    padding: 5px;
+    align-self: baseline;
+    justify-self: baseline;
+}
+
+.datos label {
+    width: 120px;
+    align-self: baseline;
+    justify-self: baseline;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.buttons button {
+    padding: 7px;
+    width: 130px;
+    gap: 10px;
+    border: none;
+    border-radius:5px;
+    cursor: pointer;
+}
+
+.h1-title {
+    margin-bottom: 20px;
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.btn-send {
+    background-color: rgb(35, 241, 35);
+}
+
+.btn-cancel {
+    background-color: rgb(255, 86, 86);
+}
+
+button.btn-send.login {
+    width: 300px;
+}
+
+.recuperar-contraseña {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.header-img {
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+    border-radius: 15px;
+    margin: 20px;
+}

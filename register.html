@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="styles/register.css">
+</head>
+<body>
+    <header>
+        <h1>Registrarse</h1>
+    </header>
+    <main>
+        <form action="login.html" method="get">
+            <div class="inputs">
+                <section class="datos">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre">
+                </section>
+                <section class="datos">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" id="apellido">
+                </section>
+                <section class="datos">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email">
+                </section>
+                <section class="datos">
+                    <label for="username">Nombre de usuario</label>
+                    <input type="text" id="username">
+                </section>
+                <section class="datos">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password">
+                </section>
+                <section class="datos">
+                    <label for="repetir">Repetir contraseña</label>
+                    <input type="password" id="repetir">
+                </section>
+            </div>
+            <div class="metodo-pago">
+                <p>Metodo de pago</p>
+                <section class="metodo">
+                    <article class="radio">
+                        <input type="radio" name="metodo">
+                        <p>Tarjeta de credito</p>
+                    </article>
+                    <div class="opcion">
+                        <input type="number" placeholder="Numero de tarjeta">
+                        <input type="number" placeholder="XXX">
+                    </div>
+                </section>
+                <section class="metodo">
+                    <article class="radio">
+                        <input type="radio" name="metodo">
+                        <p>Cupon de pago</p>
+                    </article>
+                    <div class="opcion">
+                        <input type="checkbox" id="pago-facil">
+                        <label for="pago-facil">Pago facil</label>
+
+                        <input type="checkbox" id="rapipago">
+                        <label for="rapipago">RapiPago</label>
+                    </div>
+                </section>
+                <section class="metodo">
+                    <article class="radio">
+                        <input type="radio" name="metodo">
+                        <p>Transferencia bancaria</p>
+                    </article>
+                    <div class="opcion">
+                        <p>CBU: 21893457830242123</p>
+                    </div>
+                </section>
+                <section class="buttons">
+                    <button class="btn-send">Confirmar</button>
+                    <button class="btn-cancel">Cancelar</button>
+                </section>
+            </div>
+        </form>
+        
+    </main>
+</body>
+</html>

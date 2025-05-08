@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+    width: 100vw;
+    margin-top: 20px;
+}
+
+header h1 {
+    text-align: center;
+}
+
+.metodo-pago {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+.opcion {
+    margin-left: 20px;
+}
+
+.metodo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 8px;
+}
+
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.datos {
+    display: flex;
+}
+
+.datos input {
+    width: 200px;
+}
+
+.datos label {
+    width:150px;
+}
+
+main {
+    display: flex;
+}
+
+.radio {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    padding: 5px;
+}
+
+.btn-send {
+    background-color: rgb(35, 241, 35);
+}
+
+.btn-cancel {
+    background-color: rgb(255, 86, 86);
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: end;
+    margin-top: 20px;
+}
+
+.buttons button {
+    padding: 7px;
+    width: 130px;
+    gap: 10px;
+    border: none;
+    border-radius:5px;
+    cursor: pointer;
+}
