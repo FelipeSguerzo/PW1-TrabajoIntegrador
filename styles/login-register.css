@@ -41,6 +41,11 @@ form{
     justify-self: baseline;
 }
 
+button a {
+    text-decoration: none;
+    color: black;
+}
+
 .buttons {
     display: flex;
     gap: 20px;
