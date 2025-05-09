@@ -116,3 +116,7 @@ body{
 .btn-cancel {
     background-color: #4e4e56; 
 }
+
+.btn-cancel a {
+    text-decoration: none;
+}
