@@ -4,32 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recuperar Contraseña</title>
-    <link rel="stylesheet" href="styles/login-register.css">
+    <link rel="stylesheet" href="styles/recuperar__contra.css">
 </head>
 <body>
+    <header class="header">
+        <img class="headerimg" src="https://beam-images.warnermediacdn.com/2025-03/max_iridescent-white_logo_small_rgb-width700px.png?host=wbd-dotcom-drupal-prd-us-east-1.s3.amazonaws.com">
+    </header>
     <main>
-        <form id="form-login" action="login.html" method="get">
+        <form class="formtext" id="form-login" action="login.html" method="get">
             <section class="h1-title">
-                <h1>Recuperar contraseña</h1>
+                <h1>Restablece tu contraseña</h1>
             </section>
+            <section class="h3-desc">
+                <h3>Ingresa la direccion de correo electronico que usas para Max, y te
+                    enviaremos un enlace para reestablecer la contraseña.
+                </h3>
+            </section>
+        </form>
+
+        <form class="formlogin" id="form-login" action="login.html" method="get">
             <section class="inputs">
-                
                 <div class="datos">
-                    <label for="email">Email</label>
+                    <h3 class="h3correo">Correo electronico</h3>
                 <input type="email" id="email" required placeholder="Ingrese email">
-                </div>
-                <div class="datos">
-                    <label for="usuario">Nombre de usuario</label>
-                    <input type="text" id="usuario" required placeholder="Ingrese nombre de usuario">
                 </div>
             </section>
             <section class="buttons">
-                <button class="btn-send" type="submit">Enviar email</button>
-                <button class="btn-cancel" type="submit"><a href="login.html">Cancelar</a></button>
+                <button class="btn-send" type="submit">Enviar</button>
+                <button class="btn-cancel">Cancelar</button>
             </section>
         </form>
-        
-        
+
+
     </main>
 </body>
 </html>
