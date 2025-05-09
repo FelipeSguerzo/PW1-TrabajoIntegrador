@@ -2,8 +2,66 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
+
+header.header-login {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 60px 0px 60px;
+}
+
+header.header-login a{
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    box-shadow: rgba(0, 0, 0, 0) 0px 8px 24px;
+}
+
+p.p-desc {
+    font-size: 18px;
+    width: 600px;
+    text-align: center;
+}
+
+
+header {
+    height: 10vh;
+    margin: 0;
+    background-color: #000;
+    color: white;
+  }
+
+main.main-login {
+    margin: 0;
+    background: linear-gradient(to bottom, #000000 0%, #1a1a1a 100%);
+    background-color: #000;
+    color: white;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logearse {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+  
+  
+  
+  
+  
+  
+  
 
 form{
     display: flex;
@@ -12,6 +70,14 @@ form{
     justify-content: center;
     height: 30vh;
     gap: 20px;
+}
+
+form.form-login {
+    background-color: #25262B;
+    border-radius: 5px;
+    width: 600px;
+    height: 300px;
+    padding: 200px;
 }
 
 
@@ -28,6 +94,30 @@ form{
     gap: 40px;
 }
 
+.datos.datos-login {
+    flex-direction: column;
+    gap: 0px;
+    width: 100%;
+
+    label {
+        width:100%;
+    }
+
+    input {
+        width: 500px;
+        padding: 10px;
+        background-color: #1C1D21;
+        border: 1px solid #474B4E;
+        margin-top: 7px;
+    }
+}
+
+.recuperar-contraseña a {
+    color: #71bdf3;
+    text-decoration: none;
+    font-weight: 600;
+}
+
 .datos input {
     width: 200px;
     padding: 5px;
@@ -39,6 +129,7 @@ form{
     width: 120px;
     align-self: baseline;
     justify-self: baseline;
+    font-weight: 600;
 }
 
 button a {
@@ -66,25 +157,32 @@ button a {
     font-size: 18px;
 }
 
-.btn-send {
-    background-color: rgb(35, 241, 35);
+.finalizar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: start;
+    justify-content: start;
+    width: 500px;
+    margin-top: 10px;
 }
+
 
 .btn-cancel {
     background-color: rgb(255, 86, 86);
 }
 
 button.btn-send.login {
-    width: 300px;
+    width: 150px;
+    height: 48px;
+    border-radius: 5px;
+    font-weight: 600;
 }
 
-.recuperar-contraseña {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+button.btn-send.login:hover {
+    background-color: #FFFFFF;
 }
+
 
 .header-img {
     border: 1px solid black;
@@ -94,4 +192,14 @@ button.btn-send.login {
     height: 250px;
     border-radius: 15px;
     margin: 20px;
+}
+
+footer {
+    background: linear-gradient(to top, #000000 0%, #1a1a1a 100%);
+    background-color: #000;
+    height: 10vh;   
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
