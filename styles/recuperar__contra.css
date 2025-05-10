@@ -18,28 +18,6 @@ main {
     align-items: center;
 }
 
-header{
-    height: 10vh;
-    margin: 0;
-    background-color: #000;
-    color: white;
-    font-size: 22px;
-    font-weight: bold;
-    box-shadow: rgba(0, 0, 0, 0) 0px 8px 24px;
-    padding: 20px 60px 0px 60px;
-}
-
-
-
-footer {
-    background: linear-gradient(to top, #000000 0%, #1a1a1a 100%);
-    background-color: #000;
-    height: 10vh;   
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 .header .headerimg{
     height: 30px;

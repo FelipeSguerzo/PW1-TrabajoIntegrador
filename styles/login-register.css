@@ -5,22 +5,7 @@
     font-family: "Open Sans", sans-serif;
 }
 
-header.header-login {
-    display: flex;
-    padding: 20px;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0px 60px 0px 60px;
-    box-shadow: rgba(0, 0, 0, 0) 0px 8px 24px;
-}
 
-header.header-login a{
-    color: white;
-    text-decoration: none;
-    font-size: 22px;
-    font-weight: bold;
-    
-}
 
 p.p-desc {
     font-size: 18px;
@@ -29,12 +14,6 @@ p.p-desc {
 }
 
 
-header {
-    height: 10vh;
-    margin: 0;
-    background-color: #000;
-    color: white;
-  }
 
 main.main-login {
     margin: 0;
@@ -195,12 +174,3 @@ button.btn-send.login:hover {
     margin: 20px;
 }
 
-footer {
-    background: linear-gradient(to top, #000000 0%, #1a1a1a 100%);
-    background-color: #000;
-    height: 10vh;   
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
