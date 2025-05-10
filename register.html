@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    <link rel="stylesheet" href="styles/register.css">
+    <link rel="stylesheet" href="./styles/register.css">
 </head>
 
     <body>
@@ -16,7 +16,7 @@
             <h2>Armá el plan que mas te gusta</h2>
             <h4>Disfrutá de películas multipremiadas y de series nuevas para toda la familia</h4>
 
-            <section>
+            <section class="sectionPlanes">
                 <article>
                     <h3>Plan Estándar</h3>
                     <h3>$7.290,00/mes</h3>
@@ -40,6 +40,28 @@
                     <p>Audio Dolby Atmos</p>
                     <p>100 descargas para disfrutar offline</p>
                 </article>
+            </section>
+
+            <section>
+                <form method="post">
+                    <label for="nombre"></label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre">
+
+                    <label for="apellido"></label>
+                    <input type="text" name="apellido" id="apellido" placeholder="Ingrese su apellido">
+
+                    <label for="email"></label>
+                    <input type="email" name="email" id="email" placeholder="Ingrese su E-mail">
+
+                    <label for="nombreDeUsuario"></label>
+                    <input type="text" name="nombreDeUsuario" id="nombreDeUsuario" placeholder="Nombre de usuario">
+
+                    <label for="contrasenia"></label>
+                    <input type="password" name="contrasenia" id="contrasenia" placeholder="Escriba su contraseña">
+
+                    <label for="contrasenia"></label>
+                    <input type="password" name="contrasenia" id="contrasenia" placeholder="Repetir contraseña">
+                </form>
             </section>
         </main>
     </body>
