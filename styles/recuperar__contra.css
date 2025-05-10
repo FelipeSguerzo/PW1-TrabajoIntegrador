@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 
@@ -119,9 +119,11 @@ footer {
     font-size: 23px;
 }
 
-.h3-desc{
-    width: 400px;
-    font-size: 10px;
+
+
+.h3-desc p {
+    font-size: 18px;
+    width: 600px;
     text-align: center;
 }
 
