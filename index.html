@@ -5,34 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="styles/login-register.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://w7.pngwing.com/pngs/242/287/png-transparent-hbo-logo-black.png">
 </head>
-<body>
-    <header>
-        <section class="header-img">
-            IMAGE
-        </section>
+<body class="body-login">
+    <header class="header-login">
+        <img src="https://images.cdn.prd.api.discomax.com/05b7/3d4a7e2b0215.png?h=30&f=webp" alt="HBO LOGO">
+        <a href="register.html">Registrarse Ahora</a>
     </header>
-    <main>
-        <form action="main.html" method="get">
+    <main class="main-login">
+        <section class="logearse">
+            <h1 class="title-login">Iniciar Sesión</h1>
+            <p class="p-desc">Ingresa la dirección de correo electronico y la contraseña de tu cuenta de Max</p>
+        </section>
+        <form class="form-login" action="main.html" method="get">
             <section class="inputs">
-                <div class="datos">
+                <div class="datos datos-login">
                     <label for="usuario">Nombre de usuario</label>
-                    <input type="text" id="usuario" required placeholder="Ingrese nombre de usuario">
+                    <input type="text" id="usuario" required placeholder="Ingrese su nombre de usuario">
                 </div>
 
-                <div class="datos">
+                <div class="datos datos-login">
                     <label for="password">Contraseña</label>
-                <input type="password" id="password" required placeholder="Ingrese email">
+                <input type="password" id="password" required placeholder="Ingrese su contraseña">
                 </div>
             </section>
-            <section class="buttons">
-                <button class="btn-send login" type="submit">Iniciar sesión</button>
-            </section>
-            <section class="recuperar-contraseña">
-                <a href="recuperar-contraseña.html">Recuperar contraseña</a>
-                <a href="register.html">Registrarse</a>
+            <section class="finalizar">
+                <section class="recuperar-contraseña">
+                    <a href="recuperar-contraseña.html">¿Olvidaste la contraseña?</a>
+                </section>
+                <section class="buttons">
+                    <button class="btn-send login" type="submit">Iniciar sesión</button>
+                </section>
             </section>
         </form>
     </main>
+    <footer>
+        ESPACIO RESERVADO PARA EL FOOTER
+    </footer>
 </body>
 </html>
