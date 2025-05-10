@@ -13,22 +13,22 @@
         </header>
 
         <main>
-            <h2>Armá el plan que mas te gusta</h2>
-            <h4>Disfrutá de películas multipremiadas y de series nuevas para toda la familia</h4>
+            <h2>Arm&aacute; el plan que mas te gusta</h2>
+            <h4>Disfrut&aacute; de pel&iacute;culas multipremiadas y de series nuevas para toda la familia</h4>
 
             <section class="sectionPlanes">
                 <article>
-                    <h3>Plan Estándar</h3>
+                    <h3>Plan Est&aacute;ndar</h3>
                     <h3>$7.290,00/mes</h3>
                     <p>2 dispositivos a la vez</p>
-                    <p>Resolucion Full HD</p>
+                    <p>Resoluci&oacute;n Full HD</p>
                 </article>
 
                 <article>
                     <h3>Plan Gold</h3>
                     <h3>$8.790,00/mes</h3>
                     <p>2 dispositivos a la vez</p>
-                    <p>Resolución Full HD</p>
+                    <p>Resoluci&oacute;n Full HD</p>
                     <p>30 descargas para disfrutar offline</p>
                 </article>
 
@@ -36,36 +36,71 @@
                     <h3>Plan Platino</h3>
                     <h3>$10.990,00/mes</h3>
                     <p>4 dispositivos a la vez</p>
-                    <p>Resolución Full HD y 4K Ultra HD</p>
+                    <p>Resoluci&oacute;n Full HD y 4K Ultra HD</p>
                     <p>Audio Dolby Atmos</p>
                     <p>100 descargas para disfrutar offline</p>
                 </article>
             </section>
 
-            <section>
-                <form method="post">
+            <form method="get">
+                <section>
                     <label for="nombre"></label>
-                    <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre">
+                    <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" required>
+                    <br/>
 
                     <label for="apellido"></label>
-                    <input type="text" name="apellido" id="apellido" placeholder="Ingrese su apellido">
+                    <input type="text" name="apellido" id="apellido" placeholder="Ingrese su apellido" required>
+                    <br/>
 
                     <label for="email"></label>
-                    <input type="email" name="email" id="email" placeholder="Ingrese su E-mail">
+                    <input type="email" name="email" id="email" placeholder="Ingrese su E-mail" required>
+                    <br/>
 
                     <label for="nombreDeUsuario"></label>
-                    <input type="text" name="nombreDeUsuario" id="nombreDeUsuario" placeholder="Nombre de usuario">
+                    <input type="text" name="nombreDeUsuario" id="nombreDeUsuario" placeholder="Nombre de usuario" required>
+                    <br/>
 
                     <label for="contrasenia"></label>
-                    <input type="password" name="contrasenia" id="contrasenia" placeholder="Escriba su contraseña">
+                    <input type="password" name="contrasenia" id="contrasenia" placeholder="Escriba su contraseña" required>
+                    <br/>
 
                     <label for="contrasenia"></label>
-                    <input type="password" name="contrasenia" id="contrasenia" placeholder="Repetir contraseña">
-                </form>
-            </section>
+                    <input type="password" name="contrasenia" id="contrasenia" placeholder="Repetir contraseña" required>
+                    <br/>
+                </section>
+
+                <section>
+                    <label for="tarjetaDeDebitoOCredito"></label>
+                    <input type="radio" name="metodoDePago" id="tarjetaDeDebitoOCredito"/>
+                    <input type="tel" pattern="[0-9]{16}" name="tarjetaDeDebitoOCredito" id="tarjetaDeDebitoOCredito" placeholder="N&uacute;mero de tarjeta" required>
+                    <label for="codigoDeSeguridad"></label>
+                    <input type="tel" pattern="[0-9]{3}" name="codigoDeSeguridad" id="codigoDeSeguridad" placeholder="C&oacute;digo de seguridad" required>                   
+                    <br/>
+                    
+                    <input type="radio" name="metodoDePago" id="transferenciaBancaria"/>
+                    <label fot="transferenciaBancaria">CBU: 21839094111100018971375</label>
+                    <br/>
+                </section>
+
+                <section>
+                    <input type="submit" value="Confirmar">
+                    <input type="button" value="Cancelar">
+                </section>    
+            </form>           
         </main>
     </body>
 </html>
+
+<!--        Preguntas       -->
+<!-- Linea 66 si esta bien usar el valor tel para la tarjeta asi uso el requerimiento de solo 16 digitos numericos -->
+<!-- ¿Es necesario los &acute;? -->
+<!-- Como se hace para cuando elijo el método de pago de transferencia, no me pida el requerimiento de la tarjeta de crédito o débito -->
+
+
+
+
+
+
 
    <!-- <main>
         <form action="main.html" method="get">
