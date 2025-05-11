@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,105 +8,119 @@
     <link rel="stylesheet" href="./styles/register.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=New+Amsterdam&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
 </head>
 
-    <body>
-        <header>
-            <!-- Aca solamente va el logo. -->
-        </header>
+<body>
+    <header>
+        <!-- Aca solamente va el logo. -->
+    </header>
 
-        <main>
-            <h2>Arm&aacute; el plan que mas te gusta</h2>
+    <main class="main">
+        <section class="titulos">
+            <h2>Arm&aacute; el plan que mas te guste</h2>
             <h4>Disfrut&aacute; de pel&iacute;culas multipremiadas y de series nuevas para toda la familia</h4>
+        </section>
 
-            <section class="sectionPlanes">
-                <article>
-                    <h3>Plan Est&aacute;ndar</h3>
-                    <h3>$7.290,00/mes</h3>
-                    <p>2 dispositivos a la vez</p>
-                    <p>Resoluci&oacute;n Full HD</p>
+        <section class="planesYFormulario">
+            <section class="planes">
+                <article class="planes__plan">
+                    <h3 class="planes__plan__tipoDePlan">Plan Est&aacute;ndar</h3>
+                    <h3 class="planes__plan__precio">$7.290,00/mes</h3>
+                    <ul>
+                        <li>2 dispositivos a la vez</li>
+                        <li>Resoluci&oacute;n Full HD</li>
+                    </ul>
                 </article>
 
-                <article>
-                    <h3>Plan Gold</h3>
-                    <h3>$8.790,00/mes</h3>
-                    <p>2 dispositivos a la vez</p>
-                    <p>Resoluci&oacute;n Full HD</p>
-                    <p>30 descargas para disfrutar offline</p>
+                <article class="planes__plan">
+                    <h3 class="planes__plan__tipoDePlan">Plan Gold</h3>
+                    <h3 class="planes__plan__precio">$8.790,00/mes</h3>
+                    <ul>
+                        <li>2 dispositivos a la vez</li>
+                        <li>Resoluci&oacute;n Full HD</li>
+                        <li>30 descargas para disfrutar offline</li>
+                    </ul>
                 </article>
 
-                <article>
-                    <h3>Plan Platino</h3>
-                    <h3>$10.990,00/mes</h3>
-                    <p>4 dispositivos a la vez</p>
-                    <p>Resoluci&oacute;n Full HD y 4K Ultra HD</p>
-                    <p>Audio Dolby Atmos</p>
-                    <p>100 descargas para disfrutar offline</p>
+                <article class="planes__plan">
+                    <h3 class="planes__plan__tipoDePlan">Plan Platino</h3>
+                    <h3 class="planes__plan__precio">$10.990,00/mes</h3>
+                    <ul>
+                        <li>4 dispositivos a la vez</li>
+                        <li>Resoluci&oacute;n Full HD y 4K Ultra HD</li>
+                        <li>Audio Dolby Atmos</li>
+                        <li>100 descargas para disfrutar offline</li>
+                    </ul>
                 </article>
             </section>
 
-            <form method="get">
-                <section>
+            <form method="get" class="formulario">
+                <section class="datosDeUsuario">
                     <label for="nombre"></label>
                     <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" required>
-                    <br/>
 
                     <label for="apellido"></label>
                     <input type="text" name="apellido" id="apellido" placeholder="Ingrese su apellido" required>
-                    <br/>
 
                     <label for="email"></label>
                     <input type="email" name="email" id="email" placeholder="Ingrese su E-mail" required>
-                    <br/>
 
                     <label for="nombreDeUsuario"></label>
-                    <input type="text" name="nombreDeUsuario" id="nombreDeUsuario" placeholder="Nombre de usuario" required>
-                    <br/>
+                    <input type="text" name="nombreDeUsuario" id="nombreDeUsuario" placeholder="Nombre de usuario"
+                        required>
 
                     <label for="contrasenia"></label>
-                    <input type="password" name="contrasenia" id="contrasenia" placeholder="Escriba su contraseña" required>
-                    <br/>
+                    <input type="password" name="contrasenia" id="contrasenia" placeholder="Escriba su contraseña"
+                        required>
 
                     <label for="contrasenia"></label>
-                    <input type="password" name="contrasenia" id="contrasenia" placeholder="Repetir contraseña" required>
-                    <br/>
+                    <input type="password" name="contrasenia" id="contrasenia" placeholder="Repetir contraseña"
+                        required>
                 </section>
 
-                <section>
-                    <label for="tarjetaDeDebitoOCredito"></label>
-                    <input type="radio" name="metodoDePago" id="tarjetaDeDebitoOCredito"/>
-                    <input type="tel" pattern="[0-9]{16}" name="tarjetaDeDebitoOCredito" id="tarjetaDeDebitoOCredito" placeholder="N&uacute;mero de tarjeta" required>
-                    <label for="codigoDeSeguridad"></label>
-                    <input type="tel" pattern="[0-9]{3}" name="codigoDeSeguridad" id="codigoDeSeguridad" placeholder="C&oacute;digo de seguridad" required>                   
-                    <br/>
-                    
-                    <input type="radio" name="metodoDePago" id="transferenciaBancaria"/>
-                    <label fot="transferenciaBancaria">CBU: 21839094111100018971375</label>
-                    <br/>
-                </section>
+                <section class="metodoDePago">
+                    <article class="metodoDePago__tarjetaDeDebitoOCredito">
+                        <label for="tarjetaDeDebitoOCredito"></label>
+                        <input type="radio" name="metodoDePago" id="tarjetaDeDebitoOCredito" />
+                        <input type="tel" pattern="[0-9]{16}" name="tarjetaDeDebitoOCredito"
+                            id="tarjetaDeDebitoOCredito" placeholder="N&uacute;mero de tarjeta" required>
+                        <label for="codigoDeSeguridad"></label>
+                        <input type="tel" pattern="[0-9]{3}" name="codigoDeSeguridad" id="codigoDeSeguridad"
+                            placeholder="C&oacute;digo de seguridad" required>
+                    </article>
 
-                <section>
-                    <input type="submit" value="Confirmar">
-                    <input type="button" value="Cancelar">
-                </section>    
-            </form>           
-        </main>
-    </body>
+                    <article class="metodoDePago__transferenciaBancaria">
+                        <input type="radio" name="metodoDePago" id="transferenciaBancaria" />
+                        <label fot="transferenciaBancaria">CBU: 21839094111100018971375</label>
+                    </article>
+
+                    <article class="confirmarOCancelar">
+                        <input type="submit" value="Confirmar">
+                        <input type="button" value="Cancelar">
+                    </article>
+                </section>
+            </form>
+        </section>
+    </main>
+</body>
+
 </html>
 
 <!--        Preguntas       -->
-<!-- Linea 66 si esta bien usar el valor tel para la tarjeta asi uso el requerimiento de solo 16 digitos numericos -->
+<!-- Linea 66 si esta bien usar el valor tel para la tarjeta asi uso el requerimiento de solo 16 digitos numericos (pattern)-->
 <!-- ¿Es necesario los &acute;? -->
-<!-- Como se hace para cuando elijo el método de pago de transferencia, no me pida el requerimiento de la tarjeta de crédito o débito -->
+<!-- Como hacer para cuando elijo el método de pago de transferencia, no me pida el requerimiento de la tarjeta de crédito o débito -->
+<!-- ¿Son necesarios los label, ya que estan vacios? -->
 
 
 
 
 
 
-
-   <!-- <main>
+<!-- <main>
         <form action="main.html" method="get">
             <div class="inputs">
                 <section class="datos">

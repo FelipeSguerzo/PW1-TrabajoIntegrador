@@ -5,6 +5,86 @@
     font-family: "Open Sans", sans-serif;
 }
 
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 7em;
+}
+
+.titulos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.planesYFormulario {
+    display: flex;
+    flex-direction: column;
+}
+
+.planesYFormulario .planes {
+    display: flex;
+    gap: 0.4em;
+}
+
+.planesYFormulario .planes .planes__plan {
+    border: 0.1em solid black;
+    border-radius: 0.5em;
+    padding: 2em;
+    width: 25em;
+    height: 15em;
+}
+
+.planesYFormulario .planes .planes__plan .planes__plan__tipoDePlan {
+    padding-bottom: 1em;
+    text-align: center;
+}
+
+.planesYFormulario .planes .planes__plan .planes__plan__precio {
+    padding-bottom: 1em;
+    text-align: center;
+}
+
+.formulario {
+    display: flex;
+}
+
+.formulario .datosDeUsuario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.6em;
+
+}
+
+.formulario .datosDeUsuario input {
+    width: 24em;
+    height: 3em;
+    border-radius: 0.5em;
+    font-size: 1em;
+    padding-left: 1em;
+}
+
+.formulario .metodoDePago {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.formulario .metodoDePago .metodoDePago__tarjetaDeDebitoOCredito input{
+    
+}
+
+.formulario .confirmarOCancelar {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 3em;
+}
+
+
 /* form {
     display: flex;
     justify-content: center;
