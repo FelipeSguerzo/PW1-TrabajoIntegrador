@@ -55,6 +55,7 @@ body {
     width: 25em;
     height: 15em;
     background-color: #5a5760;
+    cursor: pointer;
 }
 
 .planesYFormulario .planes .planes__plan .planes__plan__tipoDePlan {
@@ -66,6 +67,11 @@ body {
 .planesYFormulario .planes .planes__plan .planes__plan__precio {
     padding-bottom: 1em;
     text-align: center;
+}
+
+span {
+    font-size: 0.7em;
+    opacity: 0.5;
 }
 
 /* Planes */
@@ -92,10 +98,12 @@ body {
     font-size: 1em;
     padding-left: 1em;
     background-color: #5a5760;
+    border: none;
 }
 
 .formulario .datosDeUsuario input::placeholder {
     color: white;
+    opacity: 0.6;
 }
 
 /* Formulario datos de la persona */
@@ -117,10 +125,12 @@ body {
     font-size: 1em;
     padding-left: 1em;
     background-color: #5a5760;
+    border: none;
 }
 
 .metodoDePago__tarjetaDeDebitoOCredito__numeroDeTarjeta::placeholder {
     color: white;
+    opacity: 0.6;
 }
 
 .metodoDePago__tarjetaDeDebitoOCredito__codigoDeSeguridad {
@@ -130,10 +140,12 @@ body {
     font-size: 1em;
     padding-left: 1em;
     background-color: #5a5760;
+    border: none;
 }
 
 .metodoDePago__tarjetaDeDebitoOCredito__codigoDeSeguridad::placeholder {
     color: white;
+    opacity: 0.6;
 }
 
 .metodoDePago__transferenciaBancaria {
@@ -169,6 +181,15 @@ body {
     font-weight: bold;
     border-radius: 0.5em;
     color: black;
+    border: none;
+}
+
+.boton:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+.boton:active {
+    background-color: rgb(242, 239, 245);
 }
 
 /* Botones de confirmacion o cancelar */
