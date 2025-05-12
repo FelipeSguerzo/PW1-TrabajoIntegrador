@@ -84,22 +84,21 @@
                 <section class="metodoDePago">
                     <article class="metodoDePago__tarjetaDeDebitoOCredito">
                         <label for="tarjetaDeDebitoOCredito"></label>
-                        <input type="radio" name="metodoDePago" id="tarjetaDeDebitoOCredito" />
-                        <input type="tel" pattern="[0-9]{16}" name="tarjetaDeDebitoOCredito"
-                            id="tarjetaDeDebitoOCredito" placeholder="N&uacute;mero de tarjeta" required>
+                        <input class="radio" type="radio" name="metodoDePago" id="tarjetaDeDebitoOCredito" />
+                        <input class="metodoDePago__tarjetaDeDebitoOCredito__numeroDeTarjeta" type="tel" pattern="[0-9]{16}" name="tarjetaDeDebitoOCredito" id="tarjetaDeDebitoOCredito" placeholder="N&uacute;mero de tarjeta" required>
                         <label for="codigoDeSeguridad"></label>
-                        <input type="tel" pattern="[0-9]{3}" name="codigoDeSeguridad" id="codigoDeSeguridad"
-                            placeholder="C&oacute;digo de seguridad" required>
+                        <input class="metodoDePago__tarjetaDeDebitoOCredito__codigoDeSeguridad" type="tel" pattern="[0-9]{3}" name="codigoDeSeguridad" id="codigoDeSeguridad" placeholder="Clave" required>
                     </article>
 
                     <article class="metodoDePago__transferenciaBancaria">
-                        <input type="radio" name="metodoDePago" id="transferenciaBancaria" />
-                        <label fot="transferenciaBancaria">CBU: 21839094111100018971375</label>
+                        <input class="radio" type="radio" name="metodoDePago" id="transferenciaBancaria" />
+                        <label class="transferenciaBancaria" fot="transferenciaBancaria">Transferencia bancaria</label>
+                        <p>CBU: 21839094111100018971375</p>
                     </article>
 
                     <article class="confirmarOCancelar">
-                        <input type="submit" value="Confirmar">
-                        <input type="button" value="Cancelar">
+                        <input class="boton" type="submit" value="Confirmar">
+                        <input class="boton" type="button" value="Cancelar">
                     </article>
                 </section>
             </form>
@@ -110,82 +109,13 @@
 </html>
 
 <!--        Preguntas       -->
-<!-- Linea 66 si esta bien usar el valor tel para la tarjeta asi uso el requerimiento de solo 16 digitos numericos (pattern)-->
+<!-- Linea 86 si esta bien usar el valor tel para la tarjeta asi uso el requerimiento de solo 16 digitos numericos (pattern)-->
 <!-- ¿Es necesario los &acute;? -->
 <!-- Como hacer para cuando elijo el método de pago de transferencia, no me pida el requerimiento de la tarjeta de crédito o débito -->
 <!-- ¿Son necesarios los label, ya que estan vacios? -->
+<!-- .formulario .datosDeUsuario input::placeholder ¿Se puede usar el ::placeholder -->
 
 
-
-
-
-
-<!-- <main>
-        <form action="main.html" method="get">
-            <div class="inputs">
-                <section class="datos">
-                    <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre">
-                </section>
-                <section class="datos">
-                    <label for="apellido">Apellido</label>
-                    <input type="text" id="apellido">
-                </section>
-                <section class="datos">
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email">
-                </section>
-                <section class="datos">
-                    <label for="username">Nombre de usuario</label>
-                    <input type="text" id="username">
-                </section>
-                <section class="datos">
-                    <label for="password">Contraseña</label>
-                    <input type="password" id="password">
-                </section>
-                <section class="datos">
-                    <label for="repetir">Repetir contraseña</label>
-                    <input type="password" id="repetir">
-                </section>
-            </div>
-            <div class="metodo-pago">
-                <p>Metodo de pago</p>
-                <section class="metodo">
-                    <article class="radio">
-                        <input type="radio" name="metodo">
-                        <p>Tarjeta de credito</p>
-                    </article>
-                    <div class="opcion">
-                        <input type="number" placeholder="Numero de tarjeta">
-                        <input type="number" placeholder="XXX">
-                    </div>
-                </section>
-                <section class="metodo">
-                    <article class="radio">
-                        <input type="radio" name="metodo">
-                        <p>Cupon de pago</p>
-                    </article>
-                    <div class="opcion">
-                        <input type="checkbox" id="pago-facil">
-                        <label for="pago-facil">Pago facil</label>
-
-                        <input type="checkbox" id="rapipago">
-                        <label for="rapipago">RapiPago</label>
-                    </div>
-                </section>
-                <section class="metodo">
-                    <article class="radio">
-                        <input type="radio" name="metodo">
-                        <p>Transferencia bancaria</p>
-                    </article>
-                    <div class="opcion">
-                        <p>CBU: 21893457830242123</p>
-                    </div>
-                </section>
-                <section class="buttons">
-                    <button class="btn-send">Confirmar</button>
-                    <button class="btn-cancel" action="index.html">Cancelar</button>
-                </section>
-            </div>
-        </form>
-    </main> -->
+<!-- Body Linea 10 -->
+<!-- Backgrounds de formularios y planes lineas 51-83-104-117 -->
+<!-- Letras lineas 6, 87, 108, 121, 157-->

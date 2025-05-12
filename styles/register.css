@@ -3,6 +3,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Open Sans", sans-serif;
+    color: white;
+}
+
+body {
+    background: #1d1824;
 }
 
 .main {
@@ -13,15 +18,29 @@
     top: 7em;
 }
 
+/* Titulos */
+
 .titulos {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+.titulos h4 {
+    font-weight: normal;
+    position: relative;
+    top: 0.2em;
+}
+
+/* Titulos */
+
+/* Planes */
+
 .planesYFormulario {
     display: flex;
     flex-direction: column;
+    position: relative;
+    top: 3em;
 }
 
 .planesYFormulario .planes {
@@ -30,22 +49,28 @@
 }
 
 .planesYFormulario .planes .planes__plan {
-    border: 0.1em solid black;
+    border: 0.1em;
     border-radius: 0.5em;
     padding: 2em;
     width: 25em;
     height: 15em;
+    background-color: #5a5760;
 }
 
 .planesYFormulario .planes .planes__plan .planes__plan__tipoDePlan {
     padding-bottom: 1em;
     text-align: center;
+    font-style: oblique;
 }
 
 .planesYFormulario .planes .planes__plan .planes__plan__precio {
     padding-bottom: 1em;
     text-align: center;
 }
+
+/* Planes */
+
+/* Formulario datos de la persona */
 
 .formulario {
     display: flex;
@@ -56,117 +81,99 @@
     flex-direction: column;
     justify-content: center;
     gap: 0.6em;
-
+    position: relative;
+    top: 2em;
 }
 
 .formulario .datosDeUsuario input {
-    width: 24em;
+    width: 25em;
     height: 3em;
     border-radius: 0.5em;
     font-size: 1em;
     padding-left: 1em;
+    background-color: #5a5760;
 }
+
+.formulario .datosDeUsuario input::placeholder {
+    color: white;
+}
+
+/* Formulario datos de la persona */
+
+/* Formulario metodo de pago */
 
 .formulario .metodoDePago {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
+    left: 10em;
 }
 
-.formulario .metodoDePago .metodoDePago__tarjetaDeDebitoOCredito input{
-    
+.metodoDePago__tarjetaDeDebitoOCredito__numeroDeTarjeta {
+    width: 25em;
+    height: 3em;
+    border-radius: 0.5em;
+    font-size: 1em;
+    padding-left: 1em;
+    background-color: #5a5760;
 }
+
+.metodoDePago__tarjetaDeDebitoOCredito__numeroDeTarjeta::placeholder {
+    color: white;
+}
+
+.metodoDePago__tarjetaDeDebitoOCredito__codigoDeSeguridad {
+    width: 5em;
+    height: 3em;
+    border-radius: 0.5em;
+    font-size: 1em;
+    padding-left: 1em;
+    background-color: #5a5760;
+}
+
+.metodoDePago__tarjetaDeDebitoOCredito__codigoDeSeguridad::placeholder {
+    color: white;
+}
+
+.metodoDePago__transferenciaBancaria {
+    position: relative;
+    top: 2em;
+}
+
+
+.metodoDePago__transferenciaBancaria .transferenciaBancaria {
+    font-size: 1.2em;
+}
+
+.metodoDePago__transferenciaBancaria p {
+    position: relative;
+    left: 6em;
+    font-size: 1.1em;
+}
+
+/* Formulario metodo de pago */
+
+/* Botones de confirmacion o cancelar */
 
 .formulario .confirmarOCancelar {
     display: flex;
     justify-content: space-around;
     position: relative;
-    top: 3em;
+    top: 6em;
 }
 
-
-/* form {
-    display: flex;
-    justify-content: center;
-    gap: 150px;
-    width: 100vw;
-    margin-top: 20px;
+.boton {
+    width: 15em;
+    height: 3em;
+    font-weight: bold;
+    border-radius: 0.5em;
+    color: black;
 }
 
-header h1 {
-    text-align: center;
-}
-
-.metodo-pago {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
-}
-
-.opcion {
-    margin-left: 20px;
-}
-
-.metodo {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    margin-top: 8px;
-}
-
-
-.inputs {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.datos {
-    display: flex;
-}
-
-.datos input {
-    width: 200px;
-}
-
-.datos label {
-    width:150px;
-}
-
-main {
-    display: flex;
-}
+/* Botones de confirmacion o cancelar */
 
 .radio {
-    display: flex;
-    gap: 10px;
+    width: 4em;
+    height: 1.3em;
 }
-
-input {
-    padding: 5px;
-}
-
-.btn-send {
-    background-color: rgb(35, 241, 35);
-}
-
-.btn-cancel {
-    background-color: rgb(255, 86, 86);
-}
-
-.buttons {
-    display: flex;
-    gap: 20px;
-    justify-content: end;
-    margin-top: 20px;
-}
-
-.buttons button {
-    padding: 7px;
-    width: 130px;
-    gap: 10px;
-    border: none;
-    border-radius:5px;
-    cursor: pointer;
-} */
