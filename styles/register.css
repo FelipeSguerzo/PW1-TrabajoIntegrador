@@ -3,11 +3,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Open Sans", sans-serif;
-    color: white;
+    color: white;                                       /*COLORES LETRAS WHITE*/
 }
 
 body {
-    background: #1d1824;
+    background: #1d1824;                                /*COLOR DEL BODY #1d1824*/
 }
 
 .main {
@@ -54,7 +54,7 @@ body {
     padding: 2em;
     width: 25em;
     height: 15em;
-    background-color: #5a5760;
+    background-color: #5a5760;                              /*COLORES PLACEHOLDER Y PLANES*/
     cursor: pointer;
 }
 
@@ -97,12 +97,12 @@ span {
     border-radius: 0.5em;
     font-size: 1em;
     padding-left: 1em;
-    background-color: #5a5760;
+    background-color: #5a5760;                              /*COLORES PLACEHOLDER Y PLANES*/
     border: none;
 }
 
 .formulario .datosDeUsuario input::placeholder {
-    color: white;
+    color: white;                                           /*COLORES LETRAS*/
     opacity: 0.6;
 }
 
@@ -124,12 +124,12 @@ span {
     border-radius: 0.5em;
     font-size: 1em;
     padding-left: 1em;
-    background-color: #5a5760;
+    background-color: #5a5760;                              /*COLORES PLACEHOLDER Y PLANES*/
     border: none;
 }
 
 .metodoDePago__tarjetaDeDebitoOCredito__numeroDeTarjeta::placeholder {
-    color: white;
+    color: white;                                           /*COLORES LETRAS*/
     opacity: 0.6;
 }
 
@@ -139,12 +139,12 @@ span {
     border-radius: 0.5em;
     font-size: 1em;
     padding-left: 1em;
-    background-color: #5a5760;
+    background-color: #5a5760;                              /*COLORES PLACEHOLDER Y PLANES*/
     border: none;
 }
 
 .metodoDePago__tarjetaDeDebitoOCredito__codigoDeSeguridad::placeholder {
-    color: white;
+    color: white;                                           /*COLORES LETRAS*/
     opacity: 0.6;
 }
 
@@ -180,7 +180,7 @@ span {
     height: 3em;
     font-weight: bold;
     border-radius: 0.5em;
-    color: black;
+    color: black;                                           /*COLORES LETRAS*/
     border: none;
     cursor: pointer;
 }
@@ -195,7 +195,7 @@ span {
 
 .boton a {
     text-decoration: none;
-    color: black;
+    color: black;                                           /*COLORES LETRAS*/
 }
 
 /* Botones de confirmacion o cancelar */
