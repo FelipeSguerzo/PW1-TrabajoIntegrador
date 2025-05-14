@@ -86,7 +86,7 @@ span {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 0.6em;
+    gap: 1.2em;
     position: relative;
     top: 2em;
 }
@@ -104,6 +104,20 @@ span {
 .formulario .datosDeUsuario input::placeholder {
     color: white;                                           /*COLORES LETRAS*/
     opacity: 0.6;
+}
+
+.pass {
+    display: flex;
+}
+
+.formulario .datosDeUsuario .fa-regular {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    position: relative;
+    opacity: 0.8;
+    left: -2.4em;
+    cursor: pointer;
 }
 
 /* Formulario datos de la persona */

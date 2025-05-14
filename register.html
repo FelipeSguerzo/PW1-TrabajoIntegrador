@@ -11,6 +11,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=New+Amsterdam&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a5fd7bc83c.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -59,26 +60,26 @@
 
             <form method="get" class="formulario" action="./index.html">
                 <section class="datosDeUsuario">
-                    <label for="nombre"></label>
                     <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" required>
 
-                    <label for="apellido"></label>
                     <input type="text" name="apellido" id="apellido" placeholder="Ingrese su apellido" required>
 
-                    <label for="email"></label>
                     <input type="email" name="email" id="email" placeholder="Ingrese su E-mail" required>
 
-                    <label for="nombreDeUsuario"></label>
                     <input type="text" name="nombreDeUsuario" id="nombreDeUsuario" placeholder="Nombre de usuario"
                         required>
+                    
+                    <div class="pass">
+                        <input type="password" name="contrasenia" id="contrasenia" placeholder="Escriba su contraseña"
+                            required>
+                        <span class="fa-regular fa-eye-slash"></span>
+                    </div>
 
-                    <label for="contrasenia"></label>
-                    <input type="password" name="contrasenia" id="contrasenia" placeholder="Escriba su contraseña"
-                        required>
-
-                    <label for="contrasenia"></label>
-                    <input type="password" name="contrasenia" id="contrasenia" placeholder="Repetir contraseña"
-                        required>
+                    <div class="pass">
+                        <input type="password" name="contrasenia" id="contrasenia" placeholder="Repetir contraseña"
+                            required>
+                        <span class="fa-regular fa-eye-slash"></span>
+                    </div>
                 </section>
 
                 <section class="metodoDePago">
@@ -114,6 +115,7 @@
 <!-- Como hacer para cuando elijo el método de pago de transferencia, no me pida el requerimiento de la tarjeta de crédito o débito -->
 <!-- ¿Son necesarios los label, ya que estan vacios? -->
 <!-- .formulario .datosDeUsuario input::placeholder ¿Se puede usar el ::placeholder -->
+<!-- Diferencias entre SVG y Web Fonts -->
 
 
 <!-- Body Linea 10 -->
