@@ -3,11 +3,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Open Sans", sans-serif;
-    color: white;                                       /*COLORES LETRAS WHITE*/
+    color: white;
+    /*COLORES LETRAS WHITE*/
 }
 
 body {
-    background: #000000;                                /*COLOR DEL BODY #1d1824*/
+    background: #000000;
+    /*COLOR DEL BODY #1d1824*/
 }
 
 .main {
@@ -54,8 +56,8 @@ body {
     padding: 2em;
     width: 25em;
     height: 15em;
-    background-color: #5a5760;                              /*COLORES PLACEHOLDER Y PLANES*/
-    cursor: pointer;
+    background-color: #5a5760;
+    /*COLORES PLACEHOLDER Y PLANES*/
 }
 
 .planesYFormulario .planes .planes__plan .planes__plan__tipoDePlan {
@@ -67,11 +69,6 @@ body {
 .planesYFormulario .planes .planes__plan .planes__plan__precio {
     padding-bottom: 1em;
     text-align: center;
-}
-
-span {
-    font-size: 0.7em;
-    opacity: 0.5;
 }
 
 /* Planes */
@@ -97,12 +94,14 @@ span {
     border-radius: 0.5em;
     font-size: 1em;
     padding-left: 1em;
-    background-color: #5a5760;                              /*COLORES PLACEHOLDER Y PLANES*/
+    background-color: #5a5760;
+    /*COLORES PLACEHOLDER Y PLANES*/
     border: none;
 }
 
 .formulario .datosDeUsuario input::placeholder {
-    color: white;                                           /*COLORES LETRAS*/
+    color: white;
+    /*COLORES LETRAS*/
     opacity: 0.6;
 }
 
@@ -118,6 +117,11 @@ span {
     opacity: 0.8;
     left: -2.4em;
     cursor: pointer;
+}
+
+span {
+    font-size: 0.7em;
+    opacity: 0.5;
 }
 
 /* Formulario datos de la persona */
@@ -138,12 +142,14 @@ span {
     border-radius: 0.5em;
     font-size: 1em;
     padding-left: 1em;
-    background-color: #5a5760;                              /*COLORES PLACEHOLDER Y PLANES*/
+    background-color: #5a5760;
+    /*COLORES PLACEHOLDER Y PLANES*/
     border: none;
 }
 
 .metodoDePago__tarjetaDeDebitoOCredito__numeroDeTarjeta::placeholder {
-    color: white;                                           /*COLORES LETRAS*/
+    color: white;
+    /*COLORES LETRAS*/
     opacity: 0.6;
 }
 
@@ -153,12 +159,14 @@ span {
     border-radius: 0.5em;
     font-size: 1em;
     padding-left: 1em;
-    background-color: #5a5760;                              /*COLORES PLACEHOLDER Y PLANES*/
+    background-color: #5a5760;
+    /*COLORES PLACEHOLDER Y PLANES*/
     border: none;
 }
 
 .metodoDePago__tarjetaDeDebitoOCredito__codigoDeSeguridad::placeholder {
-    color: white;                                           /*COLORES LETRAS*/
+    color: white;
+    /*COLORES LETRAS*/
     opacity: 0.6;
 }
 
@@ -194,7 +202,8 @@ span {
     height: 3em;
     font-weight: bold;
     border-radius: 0.5em;
-    color: black;                                           /*COLORES LETRAS*/
+    color: black;
+    /*COLORES LETRAS*/
     border: none;
     cursor: pointer;
 }
@@ -209,7 +218,8 @@ span {
 
 .boton a {
     text-decoration: none;
-    color: black;                                           /*COLORES LETRAS*/
+    color: black;
+    /*COLORES LETRAS*/
 }
 
 /* Botones de confirmacion o cancelar */
@@ -217,4 +227,120 @@ span {
 .radio {
     width: 4em;
     height: 1.3em;
+}
+
+/* Medias Queries */
+
+@media screen and (max-width: 30em) {
+    body {
+        display: flex;
+        justify-content: center;
+        font-size: 70%;
+    }
+
+    .main {
+        display: flex;
+        justify-content: center;
+        width: 30em;
+    }
+
+    .titulos {
+        display: flex;
+        text-align: center;
+    }
+
+    .titulos h2 {
+        font-size: large;
+        font-weight: 600;
+    }
+
+    .titulos h4 {
+        font-size: small;
+    }
+
+    .planesYFormulario {
+        display: flex;
+    }
+
+    .planesYFormulario .planes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .planesYFormulario .planes .planes__plan {
+        padding: 1em;
+        height: 14em;
+    }
+
+    .planesYFormulario .planes .planes__plan .planes__plan__tipoDePlan {
+        padding-bottom: 0.3em;
+        text-align: center;
+        font-size: x-large;
+    }
+
+    .planesYFormulario .planes .planes__plan .planes__plan__precio {
+        padding-bottom: 0.3em;
+        text-align: center;
+        font-size: large;
+    }
+
+    .planesYFormulario .planes .planes__plan ul {
+        padding-left: 2em;
+    }
+
+    /* Formulario datos de la persona */
+
+    .formulario {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .formulario .datosDeUsuario input {
+        height: 4em;
+    }
+
+    .formulario .datosDeUsuario input::placeholder {
+        font-size: 1.3em;
+    }
+
+    .formulario .datosDeUsuario .fa-regular {
+        display: none;
+    }
+
+    /* Formulario datos de la persona */
+
+    /* Formulario metodo de pago */
+
+    .formulario .metodoDePago {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        left: 0;
+    }
+
+    .metodoDePago__tarjetaDeDebitoOCredito__numeroDeTarjeta::placeholder {
+        font-size: 1.3em;
+    }
+
+    .metodoDePago__tarjetaDeDebitoOCredito__codigoDeSeguridad::placeholder {
+        font-size: 1.3em;
+    }
+
+    .metodoDePago__tarjetaDeDebitoOCredito__numeroDeTarjeta {
+        height: 4em;
+    }
+
+    .metodoDePago__tarjetaDeDebitoOCredito__codigoDeSeguridad {
+        height: 4em;
+    }
+
+    /* Formulario metodo de pago */
+
+    .radio {
+        width: 2em;
+        height: 1.0em;
+        display: none;
+    }
 }

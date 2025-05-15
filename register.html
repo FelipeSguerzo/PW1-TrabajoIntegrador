@@ -69,25 +69,23 @@
                     <input type="text" name="nombreDeUsuario" id="nombreDeUsuario" placeholder="Nombre de usuario"
                         required>
                     
-                    <div class="pass">
+                    <article class="pass">
                         <input type="password" name="contrasenia" id="contrasenia" placeholder="Escriba su contraseña"
                             required>
                         <span class="fa-regular fa-eye-slash"></span>
-                    </div>
+                    </article>
 
-                    <div class="pass">
+                    <article class="pass">
                         <input type="password" name="contrasenia" id="contrasenia" placeholder="Repetir contraseña"
                             required>
                         <span class="fa-regular fa-eye-slash"></span>
-                    </div>
+                    </article>
                 </section>
 
                 <section class="metodoDePago">
                     <article class="metodoDePago__tarjetaDeDebitoOCredito">
-                        <label for="tarjetaDeDebitoOCredito"></label>
                         <input class="radio" type="radio" name="metodoDePago" id="tarjetaDeDebitoOCredito" />
                         <input class="metodoDePago__tarjetaDeDebitoOCredito__numeroDeTarjeta" type="tel" pattern="[0-9]{16}" name="tarjetaDeDebitoOCredito" id="tarjetaDeDebitoOCredito" placeholder="N&uacute;mero de tarjeta" required>
-                        <label for="codigoDeSeguridad"></label>
                         <input class="metodoDePago__tarjetaDeDebitoOCredito__codigoDeSeguridad" type="tel" pattern="[0-9]{3}" name="codigoDeSeguridad" id="codigoDeSeguridad" placeholder="Clave" required>
                     </article>
 
