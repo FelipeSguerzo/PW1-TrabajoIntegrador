@@ -320,6 +320,19 @@ span {
         left: 0;
     }
 
+    .metodoDePago__tarjetaDeDebitoOCredito {
+        display: flex;
+        position: relative;
+        top: 3.3em;
+    }
+
+    .metodoDePago__tarjetaDeDebitoOCredito__numeroDeTarjeta {
+        display: flex;
+        flex-direction: column;
+        width: 19em;
+        margin-right: 1em;
+    }
+
     .metodoDePago__tarjetaDeDebitoOCredito__numeroDeTarjeta::placeholder {
         font-size: 1.3em;
     }
@@ -341,6 +354,8 @@ span {
     .radio {
         width: 2em;
         height: 1.0em;
-        display: none;
+        display: flex;
+        position: relative;
+        top: 1em;
     }
 }
