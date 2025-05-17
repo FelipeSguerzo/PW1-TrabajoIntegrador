@@ -1,29 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">   <!--REVISAR-->
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Series</title>
+    <link rel="stylesheet" href="styles/headerYFooter.css" />
+    <!-- <link rel="stylesheet" href="styles/info-pelicula.css" /> -->
+    <link rel="stylesheet" href="./styles/info-series.css">
+    <link rel="icon" type="image/png" href="https://w7.pngwing.com/pngs/242/287/png-transparent-hbo-logo-black.png" />
 </head>
 
 <body>
     <header>
-        <nav>
-            <ul>
-                <li>Home</li>
-                <li>Series</li>
-                <li>Peliculas</li>
-                <li>Ajustes</li>
-            </ul>
-        </nav>
+        <a href="index.html"><img src="https://images.cdn.prd.api.discomax.com/05b7/3d4a7e2b0215.png?h=30&f=webp"
+                alt="HBO LOGO" /></a>
     </header>
 
+    <section class="pelicula-hero">
+        <img class="peli-bg" src="./images/better-call-saul.jpg" alt="Better Call Saul" />
+
+        <section class="pelicula-detalles">
+            <section class="detalles-container">
+                <h1 class="pelicula-titulo">BETTER CALL SAUL</h1>
+                <section class="genero">
+                    <ul>
+                        <li>16+</li>
+                        <p>|</p>
+                        <li>2015</li>
+                        <p>|</p>
+                        <li>DRAMA</li>
+                        <p>|</p>
+                        <li>6 TEMPORADAS</li>
+                    </ul>
+                </section>
+                <section class="pelicula-descripcion">
+                    <p class="descripcion">
+                        <span class="span-titulo">Better Call Saul: </span>
+                        Una serie nominada al Emmy que deriva de "Breaking Bad" y sigue la metamorfosis del abogado
+                        Jimmy McGill en Saul Goodman, el asesor inescrupuloso de Walter White.
+                    </p>
+                </section>
+
+                <a href="https://www.youtube.com/watch?v=aT_IzP2eJaU" target="_blank"><button class="btn-comprar">Ver
+                        ahora</button></a>
+            </section>
+        </section>
+    </section>
+
     <main>
-        <section>
-            <h3>16+ | 2015-2022 | 6 Temporadas | Drama</h3>
-            <p>Seis años antes de conocer a Walter White, el cuestionable abogado Jimmy McGill asume el alias de Saul Goodman, mientras intenta labrarse un nombre propio en Albuquerque.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Ylv21uNzW4k?si=MPPbtb2I7o3xOWAs"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <section class="pelicula">
+            <section class="recomendaciones">
+                <h1 class="recomendacion-titulo">Quizá también te guste</h1>
+                <section class="similares">
+                    <section class="pelicula-similar">
+                        <img src="assets/EjemploPeli1.avif" alt="Pelicula Similar" width="300" height="200px" />
+                        <h3 class="titulo-pelicula_recomendada">Romper el circulo</h3>
+                    </section>
+                    <section class="pelicula-similar">
+                        <img src="assets/EjemploPeli1.avif" alt="Pelicula Similar" width="300" height="200px" />
+                        <h3 class="titulo-pelicula_recomendada">Romper el circulo</h3>
+                    </section>
+                    <section class="pelicula-similar">
+                        <img src="assets/EjemploPeli1.avif" alt="Pelicula Similar" width="300" height="200px" />
+                        <h3 class="titulo-pelicula_recomendada">Romper el circulo</h3>
+                    </section>
+                    <section class="pelicula-similar">
+                        <img src="assets/EjemploPeli1.avif" alt="Pelicula Similar" width="300" height="200px" />
+                        <h3 class="titulo-pelicula_recomendada">Romper el circulo</h3>
+                    </section>
+                </section>
+
+                <section class="container-pelicula_desc">
+                    <section class="titulo_pelicula-descripcion">
+                        <h1>Better Call Saul</h1>
+                    </section>
+                    <section class="pelicula_descripcion-detallada">
+                        <article>
+                            <p>
+                                <span>Elenco: </span> Bob Odenkirk, Rhea Seehorn, Jonathan Banks, Michael McKean,
+                                Giancarlo Esposito, Michael Mando, Patrick Fabian, Tony Dalton, Kerry Condon y Brandon
+                                K. Hampton
+                            </p>
+                            <p><span>Directores: </span>Vince Gilligan y Peter Gould</p>
+                            <p>
+                                <span>Productores: </span>Vince Gilligan, Peter Gould, Mark Johnson, Melissa Bernstein,
+                                Thomas Schnauz, Gennifer Hutchison
+                            </p>
+                        </article>
+                        <article>
+                            <p><span>Géneros: </span>Drama, Inusual, Crudo, Sobre crímenes</p>
+                            <p><span>Año de Lanzamiento: </span>2015</p>
+                            <p><span>Clasificación: 16+</span></p>
+                        </article>
+                    </section>
+                </section>
+            </section>
         </section>
     </main>
+    <footer>ESPACIO RESERVADO PARA EL FOOTER</footer>
 </body>
+
 </html>
