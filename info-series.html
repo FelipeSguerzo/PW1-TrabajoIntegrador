@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Series</title>
+    <title>Better Call Saul</title>
     <link rel="stylesheet" href="styles/headerYFooter.css" />
-    <!-- <link rel="stylesheet" href="styles/info-pelicula.css" /> -->
     <link rel="stylesheet" href="./styles/info-series.css">
     <link rel="icon" type="image/png" href="https://w7.pngwing.com/pngs/242/287/png-transparent-hbo-logo-black.png" />
 </head>
@@ -42,37 +41,65 @@
                     </p>
                 </section>
 
-                <a href="https://www.youtube.com/watch?v=aT_IzP2eJaU" target="_blank"><button class="btn-comprar">Ver
+                <a class="btn-verAhora" href="https://www.youtube.com/watch?v=kXiw_wEcUVQ&ab_channel=Wave427"
+                    target="_blank"><button class="btn-comprar">Ver
                         ahora</button></a>
+
+                <form class="temporada-capitulo" action="get">
+                    <select class="temporadas" name="temporada" id="temporada">
+                        <option value="temporada1">Temporada 1</option>
+                        <option value="temporada2">Temporada 2</option>
+                        <option value="temporada3">Temporada 3</option>
+                        <option value="temporada4">Temporada 4</option>
+                        <option value="temporada5">Temporada 5</option>
+                        <option value="temporada6">Temporada 6</option>
+                    </select>
+
+                    <select class="capitulos" name="capitulo" id="capitulo">
+                        <option value="capitulosTemporada1">Capitulo 1</option>
+                        <option value="capitulosTemporada1">Capitulo 2</option>
+                        <option value="capitulosTemporada1">Capitulo 3</option>
+                        <option value="capitulosTemporada1">Capitulo 4</option>
+                        <option value="capitulosTemporada1">Capitulo 5</option>
+                        <option value="capitulosTemporada1">Capitulo 6</option>
+                        <option value="capitulosTemporada1">Capitulo 7</option>
+                        <option value="capitulosTemporada1">Capitulo 8</option>
+                        <option value="capitulosTemporada1">Capitulo 9</option>
+                        <option value="capitulosTemporada1">Capitulo 10</option>
+                    </select>
+                </form>
             </section>
+        </section>
+
+        <section class="ifremaContenedor">
+            <iframe class="iframe-pelicula" src="https://www.youtube.com/embed/Ylv21uNzW4k?si=MPPbtb2I7o3xOWAs" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
         </section>
     </section>
 
     <main>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/Ylv21uNzW4k?si=MPPbtb2I7o3xOWAs"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
         <section class="pelicula">
             <section class="recomendaciones">
                 <h1 class="recomendacion-titulo">Quizá también te guste</h1>
                 <section class="similares">
                     <section class="pelicula-similar">
-                        <img src="assets/EjemploPeli1.avif" alt="Pelicula Similar" width="300" height="200px" />
-                        <h3 class="titulo-pelicula_recomendada">Romper el circulo</h3>
+                        <img src="./images/breaking-bad.jpg" alt="Pelicula Similar"/>
+                        <h3 class="titulo-pelicula_recomendada">Breaking Bad</h3>
                     </section>
                     <section class="pelicula-similar">
-                        <img src="assets/EjemploPeli1.avif" alt="Pelicula Similar" width="300" height="200px" />
-                        <h3 class="titulo-pelicula_recomendada">Romper el circulo</h3>
+                        <img src="./images/chernobyl.jpg" alt="Pelicula Similar"/>
+                        <h3 class="titulo-pelicula_recomendada">Chernobyl</h3>
                     </section>
                     <section class="pelicula-similar">
-                        <img src="assets/EjemploPeli1.avif" alt="Pelicula Similar" width="300" height="200px" />
-                        <h3 class="titulo-pelicula_recomendada">Romper el circulo</h3>
+                        <img src="./images/peaky-blinders.jpg" alt="Pelicula Similar"/>
+                        <h3 class="titulo-pelicula_recomendada">Peaky Blinders</h3>
                     </section>
                     <section class="pelicula-similar">
-                        <img src="assets/EjemploPeli1.avif" alt="Pelicula Similar" width="300" height="200px" />
-                        <h3 class="titulo-pelicula_recomendada">Romper el circulo</h3>
+                        <img src="./images/dexter.jpg" alt="Pelicula Similar"/>
+                        <h3 class="titulo-pelicula_recomendada">Dexter</h3>
                     </section>
                 </section>
 

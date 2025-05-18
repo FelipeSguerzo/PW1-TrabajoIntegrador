@@ -8,6 +8,8 @@ body {
   padding: 0;
 }
 
+/* Info pelicula-serie */
+
 .pelicula-hero {
   position: relative;
   width: 100vw;
@@ -26,7 +28,7 @@ body {
 
 .pelicula-detalles {
   position: absolute;
-  top: 0;
+  top: 3em;
   left: 20vw;
   padding-bottom: 3.125rem;
   height: 100%;
@@ -78,9 +80,20 @@ body {
   text-transform: uppercase;
 }
 
+.btn-verAhora {
+  width: 1em;
+}
+
 .btn-comprar:hover {
   background-color: #ffffff;
 }
+
+.temporada-capitulo {
+  width: 15em;
+  transform: translate(140%, -270%);
+}
+
+/* Info pelicula-serie */
 
 footer {
   position: relative;
@@ -97,6 +110,46 @@ main {
   align-items: center;
 }
 
+.ifremaContenedor {
+  display: flex;
+  justify-content: center;
+}
+
+.iframe-pelicula {
+  position: relative;
+  left: 35em;
+  bottom: 22em;
+  border-radius: 2em;
+  width: 35rem;
+  height: 19.6875rem;
+}
+
+/* Seleccionar temporada y capitulos */
+
+.temporada-capitulo {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 1.8em;
+}
+
+.temporadas {
+  background: #242323;
+  color: #d1c8c8;
+  border-radius: 0.3125rem;
+  padding: .5em;
+  margin-right: 1em;
+}
+
+.capitulos {
+  background: #242323;
+  color: #d1c8c8;
+  border-radius: 0.3125rem;
+  padding: .5em;
+}
+
+/* Seleccionar temporada y capitulos */
+
 .recomendaciones {
   position: relative;
   color: white;
@@ -110,6 +163,12 @@ main {
   margin-top: 1rem;
   flex-wrap: wrap;
   gap: 20px;
+}
+
+.pelicula-similar img {
+  border-radius: 0.3125rem;
+  width: 18.75rem;
+  height: 12.5rem;
 }
 
 .pelicula-similar img:hover {
