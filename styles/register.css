@@ -323,14 +323,17 @@ span {
     .metodoDePago__tarjetaDeDebitoOCredito {
         display: flex;
         position: relative;
-        top: 3.3em;
+        flex-direction: column;
+        top: 2.3em;
     }
 
     .metodoDePago__tarjetaDeDebitoOCredito__numeroDeTarjeta {
         display: flex;
         flex-direction: column;
-        width: 19em;
-        margin-right: 1em;
+        width: 21em;
+        height: 4em;
+        position: relative;
+        right: -2em;
     }
 
     .metodoDePago__tarjetaDeDebitoOCredito__numeroDeTarjeta::placeholder {
@@ -341,12 +344,25 @@ span {
         font-size: 1.3em;
     }
 
-    .metodoDePago__tarjetaDeDebitoOCredito__numeroDeTarjeta {
+    .metodoDePago__tarjetaDeDebitoOCredito__codigoDeSeguridad {
+        position: relative;
+        top: 1em;
         height: 4em;
+        left: 2em;
     }
 
-    .metodoDePago__tarjetaDeDebitoOCredito__codigoDeSeguridad {
-        height: 4em;
+    .metodoDePago__transferenciaBancaria {
+        position: relative;
+        left: -2em;
+        top: 5em;
+    }
+
+    .confirmarOCancelar {
+        gap: 4em;
+    }
+
+    .boton {
+        width: 8em;
     }
 
     /* Formulario metodo de pago */
@@ -356,6 +372,7 @@ span {
         height: 1.0em;
         display: flex;
         position: relative;
-        top: 1em;
+        top: 2em;
+        right: 2em;
     }
 }
