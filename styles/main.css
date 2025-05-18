@@ -117,6 +117,39 @@ main {
     height: 26rem;
 }
 
+@media (max-width: 768px){
+    main{
+        margin-top: 0;
+    }
+    .hero-img{
+       width: 10rem;
+       height: 10rem;
+    }
+    
+    .nav .dropdown-container .dropdown-link{
+        width: 16rem;
+        display: flex;
+    }
+
+    .nav .search-container{
+    margin-bottom: 0.3rem;
+    width: 18rem;
+    }
+
+    .content{
+        display: grid;
+        grid-template-columns: 34% 34% 34%;
+    }
+    
+    .content .img{
+    padding: 1rem;
+    border: solid;
+    border-color: gray;
+    width: 12rem;
+    height: 18rem;
+    } 
+}
+
 @media (max-width: 425px) {
 
     main{
@@ -166,3 +199,4 @@ main {
     height: 10rem;
     }   
 }
+
