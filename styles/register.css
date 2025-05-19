@@ -7,7 +7,7 @@
 }
 
 body {
-    background: linear-gradient(to bottom, #000000 0%, #1a1a1a 100%);
+    background: #000000;
     height: 100vh;
 }
 
@@ -16,6 +16,7 @@ body {
     flex-direction: column;
     align-items: center;
     height: 80vh;
+    justify-content: center;
 }
 
 /* Titulos */
@@ -230,8 +231,6 @@ span {
 
 @media screen and (max-width: 30em) {
     body {
-        display: flex;
-        justify-content: center;
         font-size: 70%;
     }
 
@@ -239,6 +238,7 @@ span {
         display: flex;
         justify-content: center;
         width: 30em;
+        height: 194vh;
     }
 
     .titulos {
@@ -364,6 +364,27 @@ span {
 
     /* Formulario metodo de pago */
 
+    /* Footer */
+
+    .footer {
+        display: flex;
+        position: relative;
+        top: 4em;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .alumnos {
+        position: relative;
+        top: 2em;
+    }
+
+    .alumnos li{
+        font-size: 60%;
+    }
+
+    /* Footer */
+
     .radio {
         width: 2em;
         height: 1.0em;
@@ -373,3 +394,7 @@ span {
         right: 2em;
     }
 }
+
+/* @media screen and (max-width: 48em) {
+
+} */
