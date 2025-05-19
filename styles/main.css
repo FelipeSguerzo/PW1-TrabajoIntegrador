@@ -118,7 +118,40 @@ main {
     height: 26rem;
 }
 
-@media (max-width: 768px){
+@media (max-width: 1440px){
+    main{
+        margin-top: 0;
+    }
+    .hero-img{
+       width: 10rem;
+       height: 10rem;
+    }
+    
+    .filter-categoria .dropdown-container .dropdown-link{
+        width: 16rem;
+        display: flex;
+    }
+
+    .filter-categoria .search-container{
+    margin-bottom: 0.3rem;
+    width: 18rem;
+    }
+
+    .content{
+        display: grid;
+        grid-template-columns: 40% 40% 30%;
+    }
+    
+    .content .img{
+    padding: 1rem;
+    border: solid;
+    border-color: gray;
+    width: 15rem;
+    height: 21rem;
+    } 
+}
+
+@media (max-width: 1024px){
     main{
         margin-top: 0;
     }
