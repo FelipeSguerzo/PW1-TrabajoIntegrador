@@ -34,6 +34,10 @@ nav ul {
     gap: 20px;
 }
 
+.activo {
+    text-decoration: underline;
+}
+
 header a {
     text-decoration: none;
     color: white;
