@@ -6,6 +6,12 @@
 }
 
 header {
+    position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  opacity: 0.8;
     display: flex;
     padding: 20px;
     align-items: center;
@@ -19,6 +25,13 @@ header {
     font-weight: bold;
     height: 10vh;
     margin: 0;
+    
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
 }
 
 header a {
