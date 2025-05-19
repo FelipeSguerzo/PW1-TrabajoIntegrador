@@ -95,3 +95,11 @@ footer {
     gap: 20px;
 
 }
+
+.footer-iniciar_sesion {
+    height: 20vh;
+}
+
+.main-login {
+    padding-top: 150px;
+}
