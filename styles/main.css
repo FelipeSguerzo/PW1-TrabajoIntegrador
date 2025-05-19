@@ -11,32 +11,32 @@ body {
 main {
     width: 80%;
     margin: 0 auto;
-    margin-top: 15rem;
+    margin-top: 2rem;
     margin-bottom: 10rem;
     display: flex;
     flex-direction: column;
 }
 
-.nav{
+.filter-categoria{
     list-style: none;
     display: flex;
     justify-content: space-between;
 
 }
 
-.nav .search-container{
+.filter-categoria .search-container{
     display: flex;
     align-items: flex-end;
     margin-bottom: 0.438rem;
     margin-top: 0.125rem;
 }
 
-.nav .search-container .search{
+.filter-categoria .search-container .search{
     width: 18.75rem;
     padding: 0.5rem;
 }
 
-.nav .search-container .search-icon{
+.filter-categoria .search-container .search-icon{
     width: 2.188rem;
 }
 
@@ -44,6 +44,7 @@ main {
     margin-top: 9rem;
     position: relative;
     width: fit-content;
+    z-index: 1;
 }
 
 .dropdown-container .dropdown-link{
@@ -97,7 +98,7 @@ main {
     font-size: 2.5rem;
 }
 
-.nav .dropdown-container .arrow{
+.filter-categoria .dropdown-container .arrow{
     width: 1rem;
     height: 1rem;
 }
@@ -126,12 +127,12 @@ main {
        height: 10rem;
     }
     
-    .nav .dropdown-container .dropdown-link{
+    .filter-categoria .dropdown-container .dropdown-link{
         width: 16rem;
         display: flex;
     }
 
-    .nav .search-container{
+    .filter-categoria .search-container{
     margin-bottom: 0.3rem;
     width: 18rem;
     }
@@ -160,13 +161,13 @@ main {
        height: 10rem;
     }
     
-    .nav .search-container{
+    .filter-categoria .search-container{
     display: flex;
     align-items: flex-end;
     margin-bottom: 3rem;
     }
 
-    .nav{
+    .filter-categoria{
         display: flex;
         flex-direction: column;
     }
@@ -174,7 +175,7 @@ main {
     .dropdown-container{
         margin-bottom: 5rem;
     }
-    .nav .search-container .search-icon{
+    .filter-categoria .search-container .search-icon{
         display: none;
     }
 
@@ -182,7 +183,7 @@ main {
     left: 0%; 
     }
     
-    .nav .search-container .search{
+    .filter-categoria .search-container .search{
     width: 100%;
     }
 
