@@ -4,20 +4,18 @@
     box-sizing: border-box;
     font-family: "Open Sans", sans-serif;
     color: white;
-    /*COLORES LETRAS WHITE*/
 }
 
 body {
-    background: #000000;
-    /*COLOR DEL BODY #1d1824*/
+    background: linear-gradient(to bottom, #000000 0%, #1a1a1a 100%);
+    height: 100vh;
 }
 
 .main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
-    top: 7em;
+    height: 80vh;
 }
 
 /* Titulos */
@@ -57,7 +55,6 @@ body {
     width: 25em;
     height: 15em;
     background-color: #5a5760;
-    /*COLORES PLACEHOLDER Y PLANES*/
 }
 
 .planesYFormulario .planes .planes__plan .planes__plan__tipoDePlan {

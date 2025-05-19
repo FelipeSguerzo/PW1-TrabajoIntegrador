@@ -35,15 +35,15 @@ main.main-login {
     gap: 10px;
 }
 
-  
-  
-  
-  
-  
-  
-  
 
-form{
+
+
+
+
+
+
+
+form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -80,7 +80,7 @@ form.form-login {
     width: 100%;
 
     label {
-        width:100%;
+        width: 100%;
     }
 
     input {
@@ -127,7 +127,7 @@ button a {
     width: 130px;
     gap: 10px;
     border: none;
-    border-radius:5px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
@@ -173,4 +173,3 @@ button.btn-send.login:hover {
     border-radius: 15px;
     margin: 20px;
 }
-
