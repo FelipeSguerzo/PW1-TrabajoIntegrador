@@ -16,8 +16,15 @@
 </head>
 
 <body>
-    <header>
-        <!-- Aca solamente va el logo. -->
+    <header class="header">
+        <nav>
+            <ul>
+                <li><a href="main.html">HOME</a></li>
+                <li><a href="peliculas.html">PELÍCULAS</a></li>
+                <li><a href="series.html">SERIES</a></li>
+                <li>PERFIL</li>
+            </ul>
+        </nav>
     </header>
 
     <main class="main">
@@ -69,7 +76,7 @@
 
                     <input type="text" name="nombreDeUsuario" id="nombreDeUsuario" placeholder="Nombre de usuario"
                         required>
-                    
+
                     <article class="pass">
                         <input type="password" name="contrasenia" id="contrasenia" placeholder="Escriba su contraseña"
                             required>
@@ -86,8 +93,12 @@
                 <section class="metodoDePago">
                     <article class="metodoDePago__tarjetaDeDebitoOCredito">
                         <input class="radio" type="radio" name="metodoDePago" id="tarjetaDeDebitoOCredito" />
-                        <input class="metodoDePago__tarjetaDeDebitoOCredito__numeroDeTarjeta" type="tel" pattern="[0-9]{16}" name="tarjetaDeDebitoOCredito" id="tarjetaDeDebitoOCredito" placeholder="N&uacute;mero de tarjeta" required>
-                        <input class="metodoDePago__tarjetaDeDebitoOCredito__codigoDeSeguridad" type="tel" pattern="[0-9]{3}" name="codigoDeSeguridad" id="codigoDeSeguridad" placeholder="Clave" required>
+                        <input class="metodoDePago__tarjetaDeDebitoOCredito__numeroDeTarjeta" type="tel"
+                            pattern="[0-9]{16}" name="tarjetaDeDebitoOCredito" id="tarjetaDeDebitoOCredito"
+                            placeholder="N&uacute;mero de tarjeta" required>
+                        <input class="metodoDePago__tarjetaDeDebitoOCredito__codigoDeSeguridad" type="tel"
+                            pattern="[0-9]{3}" name="codigoDeSeguridad" id="codigoDeSeguridad" placeholder="Clave"
+                            required>
                     </article>
 
                     <article class="metodoDePago__transferenciaBancaria">
