@@ -8,11 +8,11 @@
 
 
 main {
-   margin: 0;
+    margin: 0;
     background: linear-gradient(to bottom, #000000 0%, #1a1a1a 100%);
     background-color: #000;
     color: white;
-    height: 80vh;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,8 +20,8 @@ main {
 
 
 .header .headerimg{
-    height: 30px;
-    width: 110.625px;
+    height: 1.875rem;
+    width: 6.914rem;
 }
 
 .formtext{
@@ -30,7 +30,7 @@ main {
     align-items: center;
     justify-content: center;
     height: 30vh;
-    gap: 5px;
+    gap: 0.313rem;
 }
 
 .formlogin{
@@ -40,42 +40,42 @@ main {
     align-items: center;
     justify-content: center;
     height: 25vh;
-    gap: 20px;
+    gap: 1.25rem;
     margin: auto;
-    margin-top: 50px;
-    width: 500px;
-    border-radius:7px;
+    margin-top: 3.125rem;
+    width: 31.25rem;
+    border-radius: 1rem;
 }
 
 .datos {
-    gap: 40px;
+    gap: 2.5rem;
 }
 
 .datos input {
-    margin-left: 10px;
+    margin-left: 0.625rem;
     background-color: #1d1e24;
-    width: 280px;
+    width: 17.5rem;
     border-width: 1px;
     border-radius: 5px;
     border-color: white;
-    padding: 10px;
+    padding: 0.625rem;
 }
 
 .datos label {
-    width: 120px;
+    width: 7.5rem;
     align-self: baseline;
     justify-self: baseline;
 }
 
 .buttons {
     display: flex;
-    gap: 20px;
+    gap: 1.25rem;
     background-color: #323338;
 }
 
 .buttons button {
     padding: 7px;
-    width: 130px;
+    width: 8.125rem;
     gap: 10px;
     border: none;
     border-radius:3px;
@@ -88,26 +88,26 @@ main {
     align-items: center;
     justify-content: center;
     height: 30vh;
-    gap: 20px;
+    gap: 1.25rem;
 }
 
 .h1-title {
-    padding-top: 250px;
+    padding-top: 15.625rem;
     font-weight: normal;
-    font-size: 23px;
+    font-size: 1.438rem;
 }
 
 
 
 .h3-desc p {
-    font-size: 18px;
-    width: 600px;
+    font-size: 1.125rem;
+    width: 37.5rem;
     text-align: center;
 }
 
 .h3correo{
     margin-left: 10px;
-    width: 300px;
+    width: 18.75rem;
     font-size: 15px;
     text-align: start;
 }
@@ -123,4 +123,52 @@ main {
 
 .btn-cancel a {
     text-decoration: none;
+}
+
+@media (max-width: 1440px) {
+    .formlogin{
+        margin-top: 6rem;
+    }
+}
+
+@media (max-width: 425px){
+
+    .formlogin{
+    height: 25vh;
+    gap: 1.25rem;
+    margin: auto;
+    margin-top: 7rem;
+    width: 15rem;
+    border-radius: 1rem;
+    }
+
+    .buttons button {
+    padding: 5px;
+    width: 5rem;
+    border-radius:3px;
+    }
+
+    .h1-title {
+    font-weight: normal;
+    font-size: 0.8rem;
+    }
+
+    .h3-desc p {
+    padding-top: 1rem;
+    font-size: 0.7rem;
+    width: 19rem;
+    }
+
+    .datos {
+    gap: 2.5rem;
+    }
+
+    .datos input {
+        width: 12rem;
+    }
+
+    .h3correo{
+        width: 10rem;
+        font-size: 0.9rem;
+    }
 }

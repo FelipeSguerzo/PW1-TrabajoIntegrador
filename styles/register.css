@@ -11,15 +11,6 @@ body {
     height: 100vh;
 }
 
-.header {
-    display: block;
-}
-
-.header ul {
-    display: flex;
-    justify-content: space-around;
-}
-
 .main {
     display: flex;
     flex-direction: column;
@@ -102,13 +93,11 @@ body {
     font-size: 1em;
     padding-left: 1em;
     background-color: #5a5760;
-    /*COLORES PLACEHOLDER Y PLANES*/
     border: none;
 }
 
 .formulario .datosDeUsuario input::placeholder {
     color: white;
-    /*COLORES LETRAS*/
     opacity: 0.6;
 }
 
@@ -150,13 +139,11 @@ span {
     font-size: 1em;
     padding-left: 1em;
     background-color: #5a5760;
-    /*COLORES PLACEHOLDER Y PLANES*/
     border: none;
 }
 
 .metodoDePago__tarjetaDeDebitoOCredito__numeroDeTarjeta::placeholder {
     color: white;
-    /*COLORES LETRAS*/
     opacity: 0.6;
 }
 
@@ -167,13 +154,11 @@ span {
     font-size: 1em;
     padding-left: 1em;
     background-color: #5a5760;
-    /*COLORES PLACEHOLDER Y PLANES*/
     border: none;
 }
 
 .metodoDePago__tarjetaDeDebitoOCredito__codigoDeSeguridad::placeholder {
     color: white;
-    /*COLORES LETRAS*/
     opacity: 0.6;
 }
 
@@ -210,7 +195,6 @@ span {
     font-weight: bold;
     border-radius: 0.5em;
     color: black;
-    /*COLORES LETRAS*/
     border: none;
     cursor: pointer;
 }
@@ -226,7 +210,6 @@ span {
 .boton a {
     text-decoration: none;
     color: black;
-    /*COLORES LETRAS*/
 }
 
 /* Botones de confirmacion o cancelar */
@@ -243,10 +226,25 @@ span {
         font-size: 70%;
     }
 
+    .header {
+        display: flex;
+        position: fixed;
+        height: auto;
+    }
+
+    .headerimg{
+        max-width: 100%;
+        height: auto;
+    }
+
+    .header li {
+        font-size: .6em;
+    }
+
     .main {
         display: flex;
         justify-content: center;
-        width: 30em;
+        width: 100%;
         height: 194vh;
     }
 
@@ -378,9 +376,10 @@ span {
     .footer {
         display: flex;
         position: relative;
-        top: 4em;
+        top: 6em;
         flex-direction: column-reverse;
         align-items: center;
+        height: auto;
     }
 
     .alumnos {
