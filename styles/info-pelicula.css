@@ -148,6 +148,46 @@ main {
     height: 10rem;
     margin-bottom: 0.5rem;
   }
+
+@media (max-width: 1024px) {
+
+  .pelicula-detalles h1 {
+
+    width: 20rem;
+    margin-left: 3rem;
+  }
+
+  .pelicula-descripcion{
+    margin-left: 3rem;
+  }
+
+    .pelicula-detalles{
+    left: 0vw;
+    width: 100%;
+  }
+
+  .genero-li{
+    margin-left: 3rem;
+  }
+
+  .btn-comprar{
+    margin-left: 3rem;
+  }
+
+  .pelicula_descripcion-detallada{
+    display: flex;
+    flex-direction: column;
+  }
+
+  span{
+    margin-bottom: 2rem;
+  }
+
+  p{
+    margin-bottom: 2rem;
+  }
+}  
+
 @media (max-width: 425px) {
 
   .pelicula-hero {
