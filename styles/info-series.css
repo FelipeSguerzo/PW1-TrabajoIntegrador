@@ -16,7 +16,6 @@ body {
   height: 90vh;
   left: 50%;
   transform: translateX(-50%);
-  overflow: hidden;
 }
 
 .peli-bg {
@@ -28,7 +27,7 @@ body {
 
 .pelicula-detalles {
   position: absolute;
-  top: 3em;
+  top: 0;
   left: 20vw;
   padding-bottom: 3.125rem;
   height: 100%;
@@ -78,14 +77,6 @@ body {
   border-radius: 0.3125rem;
   font-weight: 600;
   text-transform: uppercase;
-}
-
-.btn-verAhora {
-  width: 1em;
-}
-
-.btn-comprar:hover {
-  background-color: #ffffff;
 }
 
 .temporada-capitulo {
@@ -202,5 +193,199 @@ main {
     span {
       font-weight: bold;
     }
+  }  
+}
+
+  .btn-verAhora-Movil{
+    display: none;
   }
+
+  .temporada-capitulo-movil{
+    display: none;
+  }
+
+  .ifremaContenedor-movil{
+    display: none;
+  }
+
+  @media (max-width: 1024px) {
+
+    .pelicula-hero .peli-bg{
+      height: 123%;
+  }
+
+    .pelicula-detalles{
+      margin-left: -2rem;
+      margin-top: 9rem;
+    }
+
+    .ifremaContenedor{
+      display: none;
+    }
+
+    .temporada-capitulo-movil{
+      display: flex;
+    }
+
+    .btn-verAhora-Movil{
+      display: none;
+    }
+
+    .temporadas-movil{
+      display: none;
+    }
+
+    .capitulos-movil{
+      display: none;
+    }
+
+    .btn-comprar-movil{
+      display: none;
+    }
+
+    .ifremaContenedor-movil{
+      display: flex;
+      height: 27vh;
+    }
+
+    .pelicula{
+      margin-top: 8rem;
+    }
+
+    .similares{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-row-gap: 2.5rem;
+    }
+
+    .pelicula_descripcion-detallada{
+      display: flex;
+      flex-direction: column;
+  }
+
+  .titulo-pelicula_recomendada{
+    margin-top: 0.5rem;
+  }
+
+  p{
+    margin-bottom: 2rem;
+  }
+  }
+
+  @media (max-width: 425px) {
+
+  .pelicula-hero {
+    height: 90vh;
+  }
+
+  .pelicula-hero .peli-bg{
+    width: 300%;
+    height: 135%;
+  }
+
+  .pelicula-detalles{
+    margin-left: -1.5rem;
+    margin-top: 13rem;
+  }
+
+  .pelicula-detalles .detalles-container .pelicula-titulo{
+    width: 15rem;
+    font-size: 1.5rem;
+  }
+
+  .genero ul{
+    width: 20rem;
+    font-size: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 0.5rem;
+  }
+
+  .pelicula-descripcion .descripcion{
+    font-size: .8rem;
+    width: 15rem;
+  }
+  
+  .btn-comprar{
+    display: none;
+  }
+
+  .temporada-capitulo{
+    display: none;
+  }
+
+  .ifremaContenedor{
+    display: none;
+  }
+
+  .temporada-capitulo-movil{
+    display: grid;
+    grid-template-columns: 2fr 1fr; 
+  }
+
+  .btn-comprar-movil{
+  padding: 0.4375rem;
+  gap: 0.625rem;
+  border: none;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  width: 12.3125rem;
+  height: 2.875rem;
+  border-radius: 0.3125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  }
+
+  .temporadas-movil{
+    width: 6.05rem;
+
+    background: #242323;
+    color: #d1c8c8;
+    border-radius: 0.3125rem;
+    padding: .5em;
+    margin-right: 2.5rem;
+  }
+
+  .capitulos-movil{
+    background: #242323;
+    color: #d1c8c8;
+    border-radius: 0.3125rem;
+    padding: .5em;
+    width: 6.05rem;
+    margin-left: -2.5rem;
+  }
+
+  .ifremaContenedor-movil{
+    display: grid;
+  }
+
+  .iframe-pelicula-movil{
+    margin-top: 3rem;
+    width: 120%;
+    margin-left: 0rem;
+  }
+  
+  .recomendacion-titulo {
+    margin-top: 15rem;
+    font-size: 1.8rem;
+  }
+
+  .pelicula_descripcion-detallada{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .titulo-pelicula_recomendada{
+    margin-top: 1.5rem;
+  }
+
+  span{
+    margin-bottom: 2rem;
+  }
+
+  p{
+    margin-bottom: 2rem;
+  }
+  
 }
