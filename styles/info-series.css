@@ -389,3 +389,30 @@ main {
   }
   
 }
+
+@media screen and (max-width: 640px) {
+    body {
+        font-size: 70%;
+    }
+
+    .header {
+        display: flex;
+        position: fixed;
+        justify-content: center;
+        padding: 0;
+        gap: 0.5em;
+    }
+
+    .headerimg {
+        width: 2.5em;
+    }
+
+    .header nav ul {
+        display: flex;
+        gap: .6em;
+    }
+
+    .header li {
+        font-size: .6em;
+    }
+}
