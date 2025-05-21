@@ -55,7 +55,7 @@ body {
 
 .descripcion {
   font-size: 1.25rem;
-  width: 38.4375rem;
+  max-width: 38.4375rem;
   line-height: 1.875rem;
 }
 
