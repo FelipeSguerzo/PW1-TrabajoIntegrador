@@ -35,15 +35,8 @@ main.main-login {
     gap: .625rem;
 }
 
-  
-  
-  
-  
-  
-  
-  
 
-form{
+form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -80,7 +73,7 @@ form.form-login {
     width: 100%;
 
     label {
-        width:100%;
+        width: 100%;
     }
 
     input {
@@ -127,8 +120,6 @@ button a {
     width: 8.125rem;
     gap: .625rem;
     border: none;
-    border-radius:.3125rem;
-    cursor: pointer;
 }
 
 .h1-title {
@@ -197,10 +188,3 @@ main {
 
 }
 
-@media screen and (width<500px) {
-    form.form-login {
-        width: 15rem;
-        padding: 0px;
-    }
-
-}

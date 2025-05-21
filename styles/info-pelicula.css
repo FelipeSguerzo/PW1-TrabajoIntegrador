@@ -1,4 +1,3 @@
-html,
 body {
   overflow-x: hidden;
   background: linear-gradient(to bottom, #000000 0%, #1a1a1a 100%);
@@ -14,7 +13,6 @@ body {
   height: 90vh;
   left: 50%;
   transform: translateX(-50%);
-  overflow: hidden;
 }
 
 .peli-bg {
@@ -133,7 +131,7 @@ main {
   justify-content: space-between;
   margin-top: 0.625rem;
   margin-bottom: 6.25rem;
-
+}
   article {
     display: flex;
     flex-direction: column;
@@ -143,5 +141,111 @@ main {
     span {
       font-weight: bold;
     }
+  }
+
+  .img-pelicula-similar{
+    width: 16rem;
+    height: 10rem;
+    margin-bottom: 0.5rem;
+  }
+
+@media (max-width: 1024px) {
+
+  .pelicula-detalles h1 {
+
+    width: 20rem;
+    margin-left: 3rem;
+  }
+
+  .pelicula-descripcion{
+    margin-left: 3rem;
+  }
+
+    .pelicula-detalles{
+    left: 0vw;
+    width: 100%;
+  }
+
+  .genero-li{
+    margin-left: 3rem;
+  }
+
+  .btn-comprar{
+    margin-left: 3rem;
+  }
+
+  .pelicula_descripcion-detallada{
+    display: flex;
+    flex-direction: column;
+  }
+
+  span{
+    margin-bottom: 2rem;
+  }
+
+  p{
+    margin-bottom: 2rem;
+  }
+}  
+
+@media (max-width: 425px) {
+
+  .pelicula-hero {
+    position: none;
+    margin: 0;
+    width: 0rem;
+    height: 90vh;
+    left: 0%;
+    transform: translateX(0%);
+  }
+
+  .pelicula-hero .peli-bg{
+    width: 100vw;
+  }
+
+  .pelicula-detalles{
+    left: 0vw;
+    height: 100%;
+    width: 10%;
+  }
+
+  .genero-li{
+    font-size: 0.8rem;
+    margin-left: 3rem;
+  }
+
+  .pelicula-descripcion{
+    margin-left: 3rem;
+  }
+
+  .descripcion {
+    width: 15rem;
+  }
+
+  .pelicula-detalles h1 {
+    font-size: 2.5rem;
+    width: 15rem;
+    margin-left: 3rem;
+  }
+
+  .btn-comprar{
+    margin-left: 3rem;
+  }
+
+  .recomendacion-titulo {
+    font-size: 1.8rem;
+  }
+
+  .pelicula_descripcion-detallada{
+    display: flex;
+    flex-direction: column;
+  }
+
+  span{
+    margin-bottom: 2rem;
+  }
+
+  p{
+    margin-bottom: 2rem;
   }
 }

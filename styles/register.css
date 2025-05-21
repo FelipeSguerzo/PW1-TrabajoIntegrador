@@ -4,20 +4,19 @@
     box-sizing: border-box;
     font-family: "Open Sans", sans-serif;
     color: white;
-    /*COLORES LETRAS WHITE*/
 }
 
 body {
     background: #000000;
-    /*COLOR DEL BODY #1d1824*/
+    height: 100vh;
 }
 
 .main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
-    top: 7em;
+    height: 80vh;
+    justify-content: center;
 }
 
 /* Titulos */
@@ -57,7 +56,6 @@ body {
     width: 25em;
     height: 15em;
     background-color: #5a5760;
-    /*COLORES PLACEHOLDER Y PLANES*/
 }
 
 .planesYFormulario .planes .planes__plan .planes__plan__tipoDePlan {
@@ -95,13 +93,11 @@ body {
     font-size: 1em;
     padding-left: 1em;
     background-color: #5a5760;
-    /*COLORES PLACEHOLDER Y PLANES*/
     border: none;
 }
 
 .formulario .datosDeUsuario input::placeholder {
     color: white;
-    /*COLORES LETRAS*/
     opacity: 0.6;
 }
 
@@ -143,13 +139,11 @@ span {
     font-size: 1em;
     padding-left: 1em;
     background-color: #5a5760;
-    /*COLORES PLACEHOLDER Y PLANES*/
     border: none;
 }
 
 .metodoDePago__tarjetaDeDebitoOCredito__numeroDeTarjeta::placeholder {
     color: white;
-    /*COLORES LETRAS*/
     opacity: 0.6;
 }
 
@@ -160,13 +154,11 @@ span {
     font-size: 1em;
     padding-left: 1em;
     background-color: #5a5760;
-    /*COLORES PLACEHOLDER Y PLANES*/
     border: none;
 }
 
 .metodoDePago__tarjetaDeDebitoOCredito__codigoDeSeguridad::placeholder {
     color: white;
-    /*COLORES LETRAS*/
     opacity: 0.6;
 }
 
@@ -203,7 +195,6 @@ span {
     font-weight: bold;
     border-radius: 0.5em;
     color: black;
-    /*COLORES LETRAS*/
     border: none;
     cursor: pointer;
 }
@@ -219,7 +210,6 @@ span {
 .boton a {
     text-decoration: none;
     color: black;
-    /*COLORES LETRAS*/
 }
 
 /* Botones de confirmacion o cancelar */
@@ -233,15 +223,35 @@ span {
 
 @media screen and (max-width: 30em) {
     body {
-        display: flex;
-        justify-content: center;
         font-size: 70%;
+    }
+
+    .header {
+        display: flex;
+        position: fixed;
+        justify-content: center;
+        padding: 0;
+        gap: 0.5em;
+    }
+
+    .headerimg {
+        width: 2.5em;
+    }
+
+    .header nav ul {
+        display: flex;
+        gap: .6em;
+    }
+
+    .header li {
+        font-size: .6em;
     }
 
     .main {
         display: flex;
         justify-content: center;
-        width: 30em;
+        width: 100%;
+        height: 198vh;
     }
 
     .titulos {
@@ -323,14 +333,17 @@ span {
     .metodoDePago__tarjetaDeDebitoOCredito {
         display: flex;
         position: relative;
-        top: 3.3em;
+        flex-direction: column;
+        top: 2.3em;
     }
 
     .metodoDePago__tarjetaDeDebitoOCredito__numeroDeTarjeta {
         display: flex;
         flex-direction: column;
-        width: 19em;
-        margin-right: 1em;
+        width: 21em;
+        height: 4em;
+        position: relative;
+        right: -2em;
     }
 
     .metodoDePago__tarjetaDeDebitoOCredito__numeroDeTarjeta::placeholder {
@@ -341,21 +354,61 @@ span {
         font-size: 1.3em;
     }
 
-    .metodoDePago__tarjetaDeDebitoOCredito__numeroDeTarjeta {
+    .metodoDePago__tarjetaDeDebitoOCredito__codigoDeSeguridad {
+        position: relative;
+        top: 1em;
         height: 4em;
+        left: 2em;
     }
 
-    .metodoDePago__tarjetaDeDebitoOCredito__codigoDeSeguridad {
-        height: 4em;
+    .metodoDePago__transferenciaBancaria {
+        position: relative;
+        left: -2em;
+        top: 5em;
+    }
+
+    .confirmarOCancelar {
+        gap: 4em;
+    }
+
+    .boton {
+        width: 8em;
     }
 
     /* Formulario metodo de pago */
+
+    /* Footer */
+
+    .footer {
+        display: flex;
+        position: relative;
+        top: 6em;
+        flex-direction: column-reverse;
+        align-items: center;
+        height: auto;
+    }
+
+    .alumnos {
+        position: relative;
+        top: 2em;
+    }
+
+    .alumnos li {
+        font-size: 60%;
+    }
+
+    /* Footer */
 
     .radio {
         width: 2em;
         height: 1.0em;
         display: flex;
         position: relative;
-        top: 1em;
+        top: 2em;
+        right: 2em;
     }
 }
+
+/* @media screen and (max-width: 48em) {
+
+} */
