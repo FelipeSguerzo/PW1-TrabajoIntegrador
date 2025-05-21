@@ -250,3 +250,23 @@ main {
         font-size: .6em;
     }
 }
+
+@media screen and (width<720px){
+    .content {
+        grid-template-columns: 50% 50%;
+        gap: 10px;
+    }
+}
+
+@media screen and (width<420px) {
+    .content {
+        grid-template-columns: 100%;
+        gap: 0px;
+        margin: 0 auto;
+    }
+
+    h2.h2-destacados {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+}
