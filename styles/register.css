@@ -229,12 +229,18 @@ span {
     .header {
         display: flex;
         position: fixed;
-        height: auto;
+        justify-content: center;
+        padding: 0;
+        gap: 0.5em;
     }
 
-    .headerimg{
-        max-width: 100%;
-        height: auto;
+    .headerimg {
+        width: 2.5em;
+    }
+
+    .header nav ul {
+        display: flex;
+        gap: .6em;
     }
 
     .header li {
@@ -245,7 +251,7 @@ span {
         display: flex;
         justify-content: center;
         width: 100%;
-        height: 194vh;
+        height: 198vh;
     }
 
     .titulos {
@@ -387,7 +393,7 @@ span {
         top: 2em;
     }
 
-    .alumnos li{
+    .alumnos li {
         font-size: 60%;
     }
 
