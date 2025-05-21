@@ -162,19 +162,19 @@ main {
 
     .content{
         display: grid;
-        grid-template-columns: 27% 27% 27% 0%;
+        grid-template-columns: 28% 28% 28% 0%;
     }
     
     .content .img{
     padding: 1rem;
     border: solid;
     border-color: gray;
-    width: 12rem;
-    height: 18rem;
+    width: 18rem;
+    height: 24rem;
     } 
 }
 
-@media (max-width: 1024px){
+@media (max-width: 1397px){
     main{
         margin-top: 0;
     }
@@ -195,7 +195,7 @@ main {
 
     .content{
         display: grid;
-        grid-template-columns: 34% 34% 34%;
+        grid-template-columns: 36% 36% 0%;
     }
     
     .content .img{
@@ -345,7 +345,7 @@ main {
 
     .content{
         display: grid;
-        grid-template-columns: 60% 10%;
+        grid-template-columns: 60% 0%;
     }
     
     .content .img{
