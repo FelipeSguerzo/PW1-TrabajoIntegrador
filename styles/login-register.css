@@ -78,12 +78,12 @@ form.form-login {
     }
 
     input {
-        width: 100%;
-        max-width: 31.25rem;
         padding: .625rem;
         background-color: #1C1D21;
         border: .0625rem solid #474B4E;
         margin-top: .4375rem;
+        width: 31.25rem;
+        color: white;
     }
 }
 
@@ -183,11 +183,18 @@ form.form-login {
 
 form.form-login input {
     width: 100%;
-    max-width:10rem ;
+    max-width:20rem;
 }
 
 main {
     justify-content: center;
 }
 
+}
+
+@media screen and (width<400px){
+    form.form-login input {
+        width: 100%;
+        max-width: 10rem;
+    }
 }
