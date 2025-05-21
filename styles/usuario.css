@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+
+
+}
+body {
+    color: white;
+    background: linear-gradient(to bottom, #000000 0%, #1a1a1a 100%);
+    background-color: #000;
+}
+
+
+main {
+    height: 100%;
+    margin: 2rem ;
+    padding: 2rem;
+    margin-top: 5%;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 10% 40% 40% 10%;
+    gap: 1rem; 
+}
+
+.perfil {
+    grid-column-start: 1;
+}
+
+.datosPerfil {
+    grid-column-start: 2;
+}
+.datosPerfil input{
+    width: 15rem;
+    height: 2rem;
+    display: inline-block;
+}
+
+.mail {
+    display: inline-block;
+    padding: 0.7rem 1.2rem;
+}
+
+.contraseña{
+    display: inline-block;
+    padding: 0.7rem 1.2rem;
+}
+
+.nuevaContraseña{
+    display: inline-block;
+    padding: 0.7rem 1.2rem;
+    vertical-align: middle;
+}
+.repetirContraseña{
+    display: inline-block;
+    padding: 0.7rem 1.2rem;
+    vertical-align: middle;
+}
+
+
+.metodos {
+    grid-column-start: 3;
+    display:grid;
+    grid-template-rows: auto;
+}
+
+.acionesFormulario {
+    grid-column: 1 / -1; 
+    grid-column-start: 2;
+    grid-column-end: 4;
+    padding-top: 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.perfil img {
+    width: 6.25rem; 
+    height: 6.25rem; 
+    object-fit: cover; 
+    border-radius: 50%; 
+}
+
+.boton {
+    width: 15em;
+    height: 3em;
+    font-weight: bold;
+    border-radius: 0.5em;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px)  {
+    .header {
+        display: flex;
+        position: fixed;
+        justify-content: center;
+        padding: 0;
+        gap: 0.5em;
+    }
+
+    .headerimg{
+        width: 2.5em;
+    }
+
+    .header nav ul{
+        display: flex;
+        gap: .6em;
+    }
+
+    .header li {
+        font-size: .6em;
+    }
+
+    form {
+        grid-template-columns: 100%;
+    }
+
+    .perfil {
+        grid-column-start: auto;
+        text-align: center;
+    }
+
+    .datosPerfil {
+        grid-column-start: auto;
+    }
+
+    .datosPerfil input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .metodos {
+        grid-column-start: auto;
+    }
+
+    .acionesFormulario {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 425px)  {
+    .header {
+        display: flex;
+        position: fixed;
+        justify-content: center;
+        padding: 0;
+        gap: 0.5em;
+    }
+
+    .headerimg{
+        width: 2.5em;
+    }
+
+    .header nav ul{
+        display: flex;
+        gap: .6em;
+    }
+
+    .header li {
+        font-size: .6em;
+    }
+
+    main{
+        margin: 1rem;
+        padding: 1rem;
+    }
+    form {
+        grid-template-columns: 100%;
+    }
+
+    .perfil {
+        grid-column-start: auto;
+        text-align: center;
+    }
+
+    .datosPerfil {
+        grid-column-start: auto;
+    }
+
+    .datosPerfil input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .metodos {
+        grid-column-start: auto;
+    }
+
+    .acionesFormulario {
+        grid-column: 1 / -1;
+    }
+    .metodoDePago_tarjetaDeDebitoOCredito_codigoDeSeguridad{
+        width: 30%;
+    }
+    .boton{
+        width: 100%;
+    }
+}
