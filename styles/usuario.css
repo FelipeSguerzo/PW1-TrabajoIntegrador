@@ -14,10 +14,10 @@ body {
 
 
 main {
-    height: 100%;
+    height: 80vh;
     margin: 2rem ;
     padding: 2rem;
-    margin-top: 5%;
+    padding-top: 10rem;
 }
 
 form {
@@ -92,6 +92,11 @@ form {
     color: black;
     border: none;
     cursor: pointer;
+}
+
+.boton a {
+    color: black;
+    text-decoration: none;
 }
 
 @media (max-width: 768px)  {
