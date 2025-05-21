@@ -98,7 +98,7 @@ footer {
 .contenedor-redes {
     display: flex;
     gap: 1.25rem;
-
+    flex-wrap: wrap;
 }
 
 .main-login {
@@ -113,6 +113,7 @@ footer {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        height: auto;
         gap: 16px;
     }
 }
