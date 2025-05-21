@@ -117,3 +117,9 @@ footer {
         gap: 16px;
     }
 }
+
+@media screen and (width<710px) {
+     footer {
+        justify-content: center;
+    }
+}
