@@ -91,13 +91,27 @@
                             pattern="[0-9]{16}" name="tarjetaDeDebitoOCredito" id="tarjetaDeDebitoOCredito"
                             placeholder="N&uacute;mero de tarjeta">
                         <input class="metodoDePago__tarjetaDeDebitoOCredito__codigoDeSeguridad" type="tel"
-                            pattern="[0-9]{3}" name="codigoDeSeguridad" id="codigoDeSeguridad" placeholder="Clave"
-                            >
+                            pattern="[0-9]{3}" name="codigoDeSeguridad" id="codigoDeSeguridad" placeholder="Clave">
+                    </article>
+
+                    <article class="cuponDePago">
+                        <article>
+                            <input class="radio" type="radio" name="metodoDePago" id="cuponDePago" />
+                            <label class="transferenciaBancaria" for="cuponDePago">Cup&oacute;n de pago</label>
+                        </article>
+                        
+                        <article class="seleccionDeCuponDePago">
+                            <input class="metodoDePago__cuponDePago" type="checkbox" id="pagoFacil" />
+                            <label class="cuponDePago__pagoFacil" for="pagoFacil">Pago facil</label>
+
+                            <input class="metodoDePago__cuponDePago" type="checkbox" id="rapiPago" />
+                            <label class="cuponDePago__rapiPago" for="rapiPago">RapiPago</label>
+                        </article>
                     </article>
 
                     <article class="metodoDePago__transferenciaBancaria">
                         <input class="radio" type="radio" name="metodoDePago" id="transferenciaBancaria" />
-                        <label class="transferenciaBancaria" fot="transferenciaBancaria">Transferencia bancaria</label>
+                        <label class="transferenciaBancaria" for="transferenciaBancaria">Transferencia bancaria</label>
                         <p>CBU: 21839094111100018971375</p>
                     </article>
 
