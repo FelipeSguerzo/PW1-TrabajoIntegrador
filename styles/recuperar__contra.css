@@ -126,16 +126,25 @@ main {
     text-decoration: none;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 696px) {
     .formlogin{
-        margin-top: 6rem;
+        width: 25rem;
+    }
+
+    .h3-desc p {
+    width: 23rem;
+    }
+
+    h1{
+        width: 26rem;
+        font-size: 2rem;
     }
 }
 
 @media (max-width: 425px){
 
     .formlogin{
-    height: 25vh;
+    height: 10rem;
     gap: 1.25rem;
     margin: auto;
     margin-top: 7rem;
@@ -154,14 +163,15 @@ main {
     font-size: 0.8rem;
     }
 
+    h1{
+        width: 16.5rem;
+        font-size: 1.3rem;
+    }
+
     .h3-desc p {
     padding-top: 1rem;
     font-size: 0.7rem;
     width: 19rem;
-    }
-
-    .datos {
-    gap: 2.5rem;
     }
 
     .datos input {
