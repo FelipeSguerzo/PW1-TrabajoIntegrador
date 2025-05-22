@@ -6,11 +6,15 @@
   font-family: "Open Sans", sans-serif;
 }
 
+body{
+    margin-top: 5%;
+    background: linear-gradient(to bottom, #000000 0%, #1a1a1a 100%);
+        background-color: #000;
+}
 
 main {
     margin: 0;
-    background: linear-gradient(to bottom, #000000 0%, #1a1a1a 100%);
-    background-color: #000;
+    min-height: 90vh;
     color: white;
     height: 51.25rem;
     display: flex;

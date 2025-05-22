@@ -4,6 +4,7 @@ body {
     background-color: #000;
     color: white;
     margin: 0;
+    margin-top: 3%;
     padding: 0;
     font-family: sans-serif;
 }
@@ -15,6 +16,7 @@ main {
     margin-bottom: 10rem;
     display: flex;
     flex-direction: column;
+    min-height: 90vh;
 }
 
 .filter-categoria{
