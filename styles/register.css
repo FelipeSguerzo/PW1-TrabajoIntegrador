@@ -127,9 +127,10 @@ span {
 .formulario .metodoDePago {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     position: relative;
     left: 10em;
+    top: 2em;
 }
 
 .metodoDePago__tarjetaDeDebitoOCredito__numeroDeTarjeta {
@@ -162,11 +163,21 @@ span {
     opacity: 0.6;
 }
 
-.metodoDePago__transferenciaBancaria {
-    position: relative;
-    top: 2em;
+.cuponDePago .transferenciaBancaria {
+    font-size: 1.2em;
 }
 
+.metodoDePago .cuponDePago .cuponDePago__pagoFacil, .cuponDePago__rapiPago {
+    font-size: 1.1em;
+}
+
+.seleccionDeCuponDePago {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 1em;
+    gap: 2em;
+}
 
 .metodoDePago__transferenciaBancaria .transferenciaBancaria {
     font-size: 1.2em;
@@ -186,7 +197,6 @@ span {
     display: flex;
     justify-content: space-around;
     position: relative;
-    top: 6em;
 }
 
 .boton {
