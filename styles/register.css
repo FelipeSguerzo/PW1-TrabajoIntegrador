@@ -7,10 +7,12 @@
 }
 
 body {
-    background: #000000;
+        margin-top: 5%;
     min-height: 100vh;          /*Agregado VER*/
     display: flex;              /*Agregado VER*/
     flex-direction: column;     /*Agregado VER*/
+    background: linear-gradient(to bottom, #000000 0%, #1a1a1a 100%);
+
 }
 
 .main {
