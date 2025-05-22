@@ -12,7 +12,7 @@ main {
     background: linear-gradient(to bottom, #000000 0%, #1a1a1a 100%);
     background-color: #000;
     color: white;
-    height: 90vh;
+    height: 51.25rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -29,8 +29,9 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 30vh;
+    height: 10rem;
     gap: 0.313rem;
+    margin-bottom: 6rem;
 }
 
 .formlogin{
@@ -39,7 +40,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 25vh;
+    height: 13rem;
     gap: 1.25rem;
     margin: auto;
     margin-top: 3.125rem;
