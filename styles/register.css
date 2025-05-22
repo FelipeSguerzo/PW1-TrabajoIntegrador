@@ -8,14 +8,14 @@
 
 body {
     background: #000000;
-    height: 100vh;
+    height: 100vh;              /*vh*/
 }
 
 .main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 80vh;
+    height: 80vh;               /*vh*/
     justify-content: center;
 }
 
@@ -238,15 +238,6 @@ span {
         width: 2.5em;
     }
 
-    .header nav ul {
-        display: flex;
-        gap: .6em;
-    }
-
-    .header li {
-        font-size: .6em;
-    }
-
     .main {
         display: flex;
         justify-content: center;
@@ -426,15 +417,6 @@ span {
         width: 4em;
     }
 
-    .header nav ul {
-        display: flex;
-        gap: 1.2em;
-    }
-
-    .header li {
-        font-size: 1em;
-    }
-
     .main {
         display: flex;
         justify-content: center;
@@ -595,14 +577,6 @@ span {
     }
 }
 
-    .footer{
-        margin-top: 5rem;
-    }
-
-    body{
-        margin-top: 5rem;
-    }
-
 @media screen and (max-width: 64em) and (min-width: 49em) {
     body {
         font-size: 70%;
@@ -618,15 +592,6 @@ span {
     .headerimg {
         display: flex;
         width: 4em;
-    }
-
-    .header nav ul {
-        display: flex;
-        gap: 1.2em;
-    }
-
-    .header li {
-        font-size: 1em;
     }
 
     .main {
