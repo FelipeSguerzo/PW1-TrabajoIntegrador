@@ -5,7 +5,10 @@
     font-family: "Open Sans", sans-serif;
 }
 
-
+body{
+    margin-top: 3%;
+        background: linear-gradient(to bottom, #000000 0%, #1a1a1a 100%);
+}
 
 p.p-desc {
     font-size: 1.125rem;
