@@ -190,6 +190,23 @@ main {
 
 @media (max-width: 425px) {
 
+  .header {
+      display: flex;
+      position: fixed;
+      justify-content: center;
+      padding: 0;
+      gap: 0.5em;
+  }
+
+  .header nav ul {
+    display: flex;
+    gap: .6em;
+  }
+
+  .header li {
+    font-size: .6em;
+  }
+
   .pelicula-hero {
     position: none;
     margin: 0;
@@ -250,6 +267,7 @@ main {
   }
 }
 
+/*
 @media screen and (max-width: 640px) {
     body {
         font-size: 70%;
@@ -276,3 +294,4 @@ main {
         font-size: .6em;
     }
 }
+    */
