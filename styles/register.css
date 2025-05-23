@@ -7,12 +7,11 @@
 }
 
 body {
-        margin-top: 5%;
-    min-height: 100vh;          /*Agregado VER*/
-    display: flex;              /*Agregado VER*/
-    flex-direction: column;     /*Agregado VER*/
+    margin-top: 5%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     background: linear-gradient(to bottom, #000000 0%, #1a1a1a 100%);
-
 }
 
 .main {
@@ -75,6 +74,11 @@ body {
     text-align: center;
 }
 
+.mes {
+    font-size: 0.7em;
+    opacity: 0.5;
+}
+
 /* Planes */
 
 /* Formulario datos de la persona */
@@ -119,11 +123,6 @@ body {
     opacity: 0.8;
     left: -2.4em;
     cursor: pointer;
-}
-
-span {
-    font-size: 0.7em;
-    opacity: 0.5;
 }
 
 /* Formulario datos de la persona */
@@ -180,7 +179,6 @@ span {
     display: flex;
     justify-content: center;
     position: relative;
-    left: 1em;
     gap: 2em;
 }
 
@@ -190,8 +188,8 @@ span {
 
 .metodoDePago__transferenciaBancaria p {
     position: relative;
-    left: 6em;
-    font-size: 1.1em;
+    left: 8em;
+    width: 17em;
 }
 
 /* Formulario metodo de pago */
@@ -241,6 +239,8 @@ span {
         font-size: 70%;
     }
 
+    /* Header */
+
     .header {
         display: flex;
         position: fixed;
@@ -253,12 +253,9 @@ span {
         width: 2.5em;
     }
 
-    .main {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        height: 198vh;
-    }
+    /* Header */
+
+    /* Titulos */
 
     .titulos {
         display: flex;
@@ -273,6 +270,10 @@ span {
     .titulos h4 {
         font-size: small;
     }
+
+    /* Titulos */
+
+    /* Planes */
 
     .planesYFormulario {
         display: flex;
@@ -305,6 +306,8 @@ span {
         padding-left: 2em;
     }
 
+    /* Planes */
+
     /* Formulario datos de la persona */
 
     .formulario {
@@ -332,24 +335,23 @@ span {
     .formulario .metodoDePago {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        left: 0;
+        row-gap: 2.5em;
+        margin-top: 1.2em;
     }
 
     .metodoDePago__tarjetaDeDebitoOCredito {
         display: flex;
         position: relative;
-        flex-direction: column;
-        top: 2.3em;
+        column-gap: 1.3em;
+        align-items: center;
     }
 
     .metodoDePago__tarjetaDeDebitoOCredito__numeroDeTarjeta {
         display: flex;
         flex-direction: column;
-        width: 21em;
+        width: 15em;
         height: 4em;
         position: relative;
-        right: -2em;
     }
 
     .metodoDePago__tarjetaDeDebitoOCredito__numeroDeTarjeta::placeholder {
@@ -362,15 +364,15 @@ span {
 
     .metodoDePago__tarjetaDeDebitoOCredito__codigoDeSeguridad {
         position: relative;
-        top: 1em;
         height: 4em;
-        left: 2em;
     }
 
     .metodoDePago__transferenciaBancaria {
         position: relative;
-        left: -2em;
-        top: 5em;
+    }
+
+    .cuponDePago {
+        row-gap: 1em;
     }
 
     .confirmarOCancelar {
@@ -408,36 +410,32 @@ span {
     .radio {
         width: 2em;
         height: 1.0em;
-        display: flex;
         position: relative;
-        top: 2em;
-        right: 2em;
     }
 }
 
 @media screen and (max-width: 48em) and (min-width: 30em) {
-    body {
+   body {
         font-size: 70%;
     }
+
+    /* Header */
 
     .header {
         display: flex;
         position: fixed;
-        justify-content: space-between;
-        gap: 1.5em;
+        justify-content: center;
+        padding: 0;
+        gap: 0.5em;
     }
 
     .headerimg {
-        display: flex;
-        width: 4em;
+        width: 2.5em;
     }
 
-    .main {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        height: 198vh;
-    }
+    /* Header */
+
+    /* Titulos */
 
     .titulos {
         display: flex;
@@ -452,6 +450,10 @@ span {
     .titulos h4 {
         font-size: small;
     }
+
+    /* Titulos */
+
+    /* Planes */
 
     .planesYFormulario {
         display: flex;
@@ -484,6 +486,8 @@ span {
         padding-left: 2em;
     }
 
+    /* Planes */
+
     /* Formulario datos de la persona */
 
     .formulario {
@@ -511,24 +515,23 @@ span {
     .formulario .metodoDePago {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        left: 0;
+        row-gap: 2.5em;
+        margin-top: 1.2em;
     }
 
     .metodoDePago__tarjetaDeDebitoOCredito {
         display: flex;
         position: relative;
-        flex-direction: column;
-        top: 2.3em;
+        column-gap: 1.3em;
+        align-items: center;
     }
 
     .metodoDePago__tarjetaDeDebitoOCredito__numeroDeTarjeta {
         display: flex;
         flex-direction: column;
-        width: 21em;
+        width: 15em;
         height: 4em;
         position: relative;
-        right: -2em;
     }
 
     .metodoDePago__tarjetaDeDebitoOCredito__numeroDeTarjeta::placeholder {
@@ -541,15 +544,15 @@ span {
 
     .metodoDePago__tarjetaDeDebitoOCredito__codigoDeSeguridad {
         position: relative;
-        top: 1em;
         height: 4em;
-        left: 2em;
     }
 
     .metodoDePago__transferenciaBancaria {
         position: relative;
-        left: -2em;
-        top: 5em;
+    }
+
+    .cuponDePago {
+        row-gap: 1em;
     }
 
     .confirmarOCancelar {
@@ -567,17 +570,19 @@ span {
     .footer {
         display: flex;
         position: relative;
-        top: 5em;
+        top: 6em;
+        flex-direction: column-reverse;
         align-items: center;
         height: auto;
     }
 
     .alumnos {
         position: relative;
+        top: 2em;
     }
 
     .alumnos li {
-        font-size: 80%;
+        font-size: 60%;
     }
 
     /* Footer */
@@ -585,36 +590,32 @@ span {
     .radio {
         width: 2em;
         height: 1.0em;
-        display: flex;
         position: relative;
-        top: 2em;
-        right: 2em;
     }
 }
 
 @media screen and (max-width: 64em) and (min-width: 49em) {
-    body {
+       body {
         font-size: 70%;
     }
+
+    /* Header */
 
     .header {
         display: flex;
         position: fixed;
-        justify-content: space-between;
-        gap: 1.5em;
+        justify-content: center;
+        padding: 0;
+        gap: 0.5em;
     }
 
     .headerimg {
-        display: flex;
-        width: 4em;
+        width: 2.5em;
     }
 
-    .main {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        height: 118vh;
-    }
+    /* Header */
+
+    /* Titulos */
 
     .titulos {
         display: flex;
@@ -622,12 +623,26 @@ span {
     }
 
     .titulos h2 {
-        font-size: x-large;
-        font-weight: 700;
+        font-size: large;
+        font-weight: 600;
     }
 
     .titulos h4 {
-        font-size: large;
+        font-size: small;
+    }
+
+    /* Titulos */
+
+    /* Planes */
+
+    .planesYFormulario {
+        display: flex;
+    }
+
+    .planesYFormulario .planes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .planesYFormulario .planes .planes__plan {
@@ -651,7 +666,15 @@ span {
         padding-left: 2em;
     }
 
+    /* Planes */
+
     /* Formulario datos de la persona */
+
+    .formulario {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
     .formulario .datosDeUsuario input {
         height: 4em;
@@ -661,17 +684,34 @@ span {
         font-size: 1.3em;
     }
 
+    .formulario .datosDeUsuario .fa-regular {
+        display: none;
+    }
+
     /* Formulario datos de la persona */
 
     /* Formulario metodo de pago */
 
+    .formulario .metodoDePago {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2.5em;
+        margin-top: 1.2em;
+    }
+
+    .metodoDePago__tarjetaDeDebitoOCredito {
+        display: flex;
+        position: relative;
+        column-gap: 1.3em;
+        align-items: center;
+    }
+
     .metodoDePago__tarjetaDeDebitoOCredito__numeroDeTarjeta {
         display: flex;
         flex-direction: column;
-        width: 21em;
+        width: 15em;
         height: 4em;
         position: relative;
-        right: -2em;
     }
 
     .metodoDePago__tarjetaDeDebitoOCredito__numeroDeTarjeta::placeholder {
@@ -684,23 +724,23 @@ span {
 
     .metodoDePago__tarjetaDeDebitoOCredito__codigoDeSeguridad {
         position: relative;
-        top: 1em;
         height: 4em;
-        left: 2em;
     }
 
-    .metodoDePago__transferenciaBancaria .transferenciaBancaria {
-        font-size: 1.6em;
-    }
-
-    .metodoDePago__transferenciaBancaria p {
+    .metodoDePago__transferenciaBancaria {
         position: relative;
-        left: 6em;
-        font-size: 1.4em;
+    }
+
+    .cuponDePago {
+        row-gap: 1em;
     }
 
     .confirmarOCancelar {
         gap: 4em;
+    }
+
+    .boton {
+        width: 8em;
     }
 
     /* Formulario metodo de pago */
@@ -710,17 +750,19 @@ span {
     .footer {
         display: flex;
         position: relative;
-        top: 5em;
+        top: 6em;
+        flex-direction: column-reverse;
         align-items: center;
         height: auto;
     }
 
     .alumnos {
         position: relative;
+        top: 2em;
     }
 
     .alumnos li {
-        font-size: 80%;
+        font-size: 60%;
     }
 
     /* Footer */
@@ -728,9 +770,6 @@ span {
     .radio {
         width: 2em;
         height: 1.0em;
-        display: flex;
         position: relative;
-        top: 2em;
-        right: 2em;
     }
 }
