@@ -17,7 +17,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* height: 80vh; */
     justify-content: center;
     flex: 1;
     row-gap: 1em;
