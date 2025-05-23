@@ -414,7 +414,7 @@ body {
     }
 }
 
-@media screen and (max-width: 48em) and (min-width: 30em) {
+@media screen and (max-width: 48em){
    body {
         font-size: 70%;
     }
@@ -594,7 +594,7 @@ body {
     }
 }
 
-@media screen and (max-width: 64em) and (min-width: 49em) {
+@media screen and (max-width: 64em){
        body {
         font-size: 70%;
     }
