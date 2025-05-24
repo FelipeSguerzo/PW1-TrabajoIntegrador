@@ -422,9 +422,10 @@ body {
     .header {
         /* display: flex;
         position: fixed; */     /*Ver si queda en sticky o fixed*/
-        justify-content: center;
+        /* justify-content: center; */
         /*padding: 0;*/             /*Ver si queda en sticky o fixed*/
-        gap: 0.5em;
+        /* gap: 0.5em; */
+        align-items: start;
     }
 
     .headerimg {
@@ -602,9 +603,10 @@ body {
     .header {
         /* display: flex;
         position: fixed; */ /*Ver si queda en sticky o fixed*/
-        justify-content: center;
+        /* justify-content: center; */
         /*padding: 0;*/     /*Ver si queda en sticky o fixed*/
-        gap: 0.5em;
+        /* gap: 0.5em; */
+        align-items: start;
     }
 
     .headerimg {
