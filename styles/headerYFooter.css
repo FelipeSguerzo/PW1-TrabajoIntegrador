@@ -6,7 +6,7 @@
 }
 
 header {
-    position: fixed;
+    position: sticky;    /*CAMBIE POSITION DE FIXED A STICKY*/
   top: 0;
   left: 0;
   width: 100%;
@@ -26,7 +26,6 @@ header {
     height: 10vh;
     margin: 0;
     flex-wrap: wrap;
-    width: 100%;
     max-width: 100vw;
     
 }

@@ -7,7 +7,7 @@
 }
 
 body {
-    margin-top: 5%;
+    /* margin-top: 6%;   Ver si queda en sticky o fixed */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -35,7 +35,7 @@ body {
 .titulos h4 {
     font-weight: normal;
     position: relative;
-    top: 0.2em;
+    row-gap: 0.2em;
 }
 
 /* Titulos */
@@ -242,15 +242,13 @@ body {
     /* Header */
 
     .header {
-        display: flex;
-        position: fixed;
-        justify-content: center;
-        padding: 0;
-        gap: 0.5em;
+        /* display: flex;
+        position: fixed; */     /*Ver si queda en sticky o fixed*/
+        align-items: start;
     }
 
     .headerimg {
-        width: 2.5em;
+        width: 4.5em;
     }
 
     /* Header */
@@ -414,7 +412,7 @@ body {
     }
 }
 
-@media screen and (max-width: 48em){
+@media screen and (max-width: 48em) and (min-width: 31em){
    body {
         font-size: 70%;
     }
@@ -422,15 +420,15 @@ body {
     /* Header */
 
     .header {
-        display: flex;
-        position: fixed;
+        /* display: flex;
+        position: fixed; */     /*Ver si queda en sticky o fixed*/
         justify-content: center;
-        padding: 0;
+        /*padding: 0;*/             /*Ver si queda en sticky o fixed*/
         gap: 0.5em;
     }
 
     .headerimg {
-        width: 2.5em;
+        width: 4.5em;
     }
 
     /* Header */
@@ -442,14 +440,14 @@ body {
         text-align: center;
     }
 
-    .titulos h2 {
+    /* .titulos h2 {
         font-size: large;
         font-weight: 600;
-    }
+    } */
 
-    .titulos h4 {
+    /* .titulos h4 {
         font-size: small;
-    }
+    } */
 
     /* Titulos */
 
@@ -602,15 +600,15 @@ body {
     /* Header */
 
     .header {
-        display: flex;
-        position: fixed;
+        /* display: flex;
+        position: fixed; */ /*Ver si queda en sticky o fixed*/
         justify-content: center;
-        padding: 0;
+        /*padding: 0;*/     /*Ver si queda en sticky o fixed*/
         gap: 0.5em;
     }
 
     .headerimg {
-        width: 2.5em;
+        width: 4.5em;
     }
 
     /* Header */
