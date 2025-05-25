@@ -17,6 +17,12 @@ body {
 .header {
     align-items: start;
     height: 10vh;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.headerimg {
+    width: 4.5em;
 }
 
 .header .enlace {
@@ -69,6 +75,11 @@ body {
     width: 25em;
     height: 15em;
     background-color: #5a5760;
+    cursor: pointer;
+}
+
+.planesYFormulario .planes .planes__plan:hover {
+    outline: white .1875rem solid;
 }
 
 .planesYFormulario .planes .planes__plan .planes__plan__tipoDePlan {
@@ -242,7 +253,7 @@ body {
 
 /* Medias Queries */
 
-@media screen and (max-width: 30em) {
+@media screen and (max-width: 47.99em) {
     body {
         font-size: 70%;
     }
@@ -388,21 +399,14 @@ body {
     /* Footer */
 
     .footer {
-        display: flex;
         position: relative;
-        top: 6em;
+        top: 3em;
         flex-direction: column-reverse;
         align-items: center;
-        height: auto;
-    }
-
-    .alumnos {
-        position: relative;
-        top: 2em;
     }
 
     .alumnos li {
-        font-size: 60%;
+        font-size: 65%;
     }
 
     /* Footer */
@@ -414,195 +418,10 @@ body {
     }
 }
 
-@media screen and (max-width: 48em) and (min-width: 31em) {
+@media screen and (min-width: 48em) and (max-width: 53.99em) {
     body {
         font-size: 70%;
     }
-
-    /* Header */
-
-    .headerimg {
-        width: 4.5em;
-    }
-
-    /* Header */
-
-    /* Titulos */
-
-    .titulos {
-        display: flex;
-        text-align: center;
-    }
-
-    /* .titulos h2 {
-        font-size: large;
-        font-weight: 600;
-    } */
-
-    /* .titulos h4 {
-        font-size: small;
-    } */
-
-    /* Titulos */
-
-    /* Planes */
-
-    .planesYFormulario {
-        display: flex;
-    }
-
-    .planesYFormulario .planes {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .planesYFormulario .planes .planes__plan {
-        padding: 1em;
-        height: 14em;
-    }
-
-    .planesYFormulario .planes .planes__plan .planes__plan__tipoDePlan {
-        padding-bottom: 0.3em;
-        text-align: center;
-        font-size: x-large;
-    }
-
-    .planesYFormulario .planes .planes__plan .planes__plan__precio {
-        padding-bottom: 0.3em;
-        text-align: center;
-        font-size: large;
-    }
-
-    .planesYFormulario .planes .planes__plan ul {
-        padding-left: 2em;
-    }
-
-    /* Planes */
-
-    /* Formulario datos de la persona */
-
-    .formulario {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .formulario .datosDeUsuario input {
-        height: 4em;
-    }
-
-    .formulario .datosDeUsuario input::placeholder {
-        font-size: 1.3em;
-    }
-
-    .formulario .datosDeUsuario .fa-regular {
-        display: none;
-    }
-
-    /* Formulario datos de la persona */
-
-    /* Formulario metodo de pago */
-
-    .formulario .metodoDePago {
-        display: flex;
-        flex-direction: column;
-        row-gap: 2.5em;
-        margin-top: 1.2em;
-    }
-
-    .metodoDePago__tarjetaDeDebitoOCredito {
-        display: flex;
-        position: relative;
-        column-gap: 1.3em;
-        align-items: center;
-    }
-
-    .metodoDePago__tarjetaDeDebitoOCredito__numeroDeTarjeta {
-        display: flex;
-        flex-direction: column;
-        width: 15em;
-        height: 4em;
-        position: relative;
-    }
-
-    .metodoDePago__tarjetaDeDebitoOCredito__numeroDeTarjeta::placeholder {
-        font-size: 1.3em;
-    }
-
-    .metodoDePago__tarjetaDeDebitoOCredito__codigoDeSeguridad::placeholder {
-        font-size: 1.3em;
-    }
-
-    .metodoDePago__tarjetaDeDebitoOCredito__codigoDeSeguridad {
-        position: relative;
-        height: 4em;
-    }
-
-    .metodoDePago__transferenciaBancaria {
-        position: relative;
-    }
-
-    .cuponDePago {
-        row-gap: 1em;
-    }
-
-    .confirmarOCancelar {
-        gap: 4em;
-    }
-
-    .boton {
-        width: 8em;
-    }
-
-    /* Formulario metodo de pago */
-
-    /* Footer */
-
-    .footer {
-        display: flex;
-        position: relative;
-        top: 6em;
-        flex-direction: column-reverse;
-        align-items: center;
-        height: auto;
-    }
-
-    .alumnos {
-        position: relative;
-        top: 2em;
-    }
-
-    .alumnos li {
-        font-size: 60%;
-    }
-
-    /* Footer */
-
-    .radio {
-        width: 2em;
-        height: 1.0em;
-        position: relative;
-    }
-}
-
-@media screen and (max-width: 64em) {
-    body {
-        font-size: 70%;
-    }
-
-    /* Header */
-
-    .header {
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .headerimg {
-        width: 4.5em;
-    }
-
-    /* Header */
 
     /* Titulos */
 
@@ -625,11 +444,11 @@ body {
     /* Planes */
 
     .planesYFormulario {
-        display: flex;
+        flex-direction: row;
+        column-gap: 6em;
     }
 
     .planesYFormulario .planes {
-        display: flex;
         flex-direction: column;
         align-items: center;
     }
@@ -737,21 +556,13 @@ body {
     /* Footer */
 
     .footer {
-        display: flex;
         position: relative;
-        top: 6em;
-        flex-direction: column-reverse;
+        top: 3em;
         align-items: center;
-        height: auto;
-    }
-
-    .alumnos {
-        position: relative;
-        top: 2em;
     }
 
     .alumnos li {
-        font-size: 60%;
+        font-size: 75%;
     }
 
     /* Footer */
@@ -763,9 +574,158 @@ body {
     }
 }
 
-@media screen and (min-width: 64em) {
+@media screen and (min-width: 54em) and (max-width: 78em) {
+    body {
+        font-size: 70%;
+    }
+
+    /* Titulos */
+
+    .titulos {
+        display: flex;
+        text-align: center;
+    }
+
+    .titulos h2 {
+        font-size: large;
+        font-weight: 600;
+    }
+
+    .titulos h4 {
+        font-size: small;
+    }
+
+    /* Titulos */
+
+    /* Header */
+
     .header {
         flex-direction: column;
         justify-content: center;
+    }
+
+    .headerimg {
+        width: 4.5em;
+    }
+
+    /* Header */
+
+    /* Planes */
+
+    .planesYFormulario .planes {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .planesYFormulario .planes .planes__plan {
+        padding: 1em;
+        height: 14em;
+    }
+
+    .planesYFormulario .planes .planes__plan .planes__plan__tipoDePlan {
+        padding-bottom: 0.3em;
+        font-size: x-large;
+    }
+
+    .planesYFormulario .planes .planes__plan .planes__plan__precio {
+        padding-bottom: 0.3em;
+        font-size: large;
+    }
+
+    .planesYFormulario .planes .planes__plan ul {
+        padding-left: 2em;
+    }
+
+    /* Planes */
+
+    /* Formulario datos de la persona */
+
+    .formulario {
+        justify-content: space-around;
+    }
+
+    .formulario .datosDeUsuario input {
+        height: 4em;
+    }
+
+    .formulario .datosDeUsuario input::placeholder {
+        font-size: 1.3em;
+    }
+
+    /* Formulario datos de la persona */
+
+    /* Formulario metodo de pago */
+
+    .formulario .metodoDePago {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2.5em;
+        margin-top: 1.2em;
+    }
+
+    .metodoDePago__tarjetaDeDebitoOCredito {
+        display: flex;
+        position: relative;
+        column-gap: 1.3em;
+        align-items: center;
+    }
+
+    .metodoDePago__tarjetaDeDebitoOCredito__numeroDeTarjeta {
+        display: flex;
+        flex-direction: column;
+        width: 15em;
+        height: 4em;
+        position: relative;
+    }
+
+    .metodoDePago__tarjetaDeDebitoOCredito__numeroDeTarjeta::placeholder {
+        font-size: 1.3em;
+    }
+
+    .metodoDePago__tarjetaDeDebitoOCredito__codigoDeSeguridad::placeholder {
+        font-size: 1.3em;
+    }
+
+    .metodoDePago__tarjetaDeDebitoOCredito__codigoDeSeguridad {
+        position: relative;
+        height: 4em;
+    }
+
+    .metodoDePago__transferenciaBancaria {
+        position: relative;
+    }
+
+    .cuponDePago {
+        row-gap: 1em;
+    }
+
+    .confirmarOCancelar {
+        gap: 4em;
+    }
+
+    .boton {
+        width: 8em;
+    }
+
+    /* Formulario metodo de pago */
+
+    /* Footer */
+
+    .footer {
+        position: relative;
+        top: 3em;
+        align-items: center;
+    }
+
+    .alumnos li {
+        font-size: 85%;
+    }
+
+    /* Footer */
+
+    .radio {
+        width: 2em;
+        height: 1.0em;
+        position: relative;
     }
 }
