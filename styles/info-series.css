@@ -115,7 +115,7 @@ main {
 
 .iframe-pelicula {
   position: relative;
-  left: 30rem;
+  left: 28%;;
   bottom: 30rem;
   border-radius: 2em;
   width: 35rem;
@@ -240,7 +240,7 @@ main {
   }
 
 .iframe-pelicula {
-  left: 18rem;
+  left: 28%;
   bottom: 31rem;
   border-radius: 2em;
   width: 25rem;
