@@ -9,9 +9,6 @@ body{
 background: linear-gradient(to bottom, #000000 0%, #1a1a1a 100%);
 }
 
-header {
-    position: fixed;
-}
 
 p.p-desc {
     font-size: 1.125rem;
