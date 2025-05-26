@@ -9,8 +9,8 @@ body {
 
 .pelicula-hero {
   position: relative;
-  width: 100vw;
-  height: 90vh;
+  width: 100%;
+  height: 90%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -152,8 +152,6 @@ main {
 @media (max-width: 1024px) {
 
   .pelicula-detalles h1 {
-
-    width: 20rem;
     margin-left: 3rem;
   }
 
@@ -210,7 +208,7 @@ main {
     position: none;
     margin: 0;
     width: 0rem;
-    height: 90vh;
+    height: 90%;
     left: 0%;
     transform: translateX(0%);
   }
@@ -316,20 +314,17 @@ main {
   }
 }
 
-@media screen and (height<600px) {
-  .peli-bg {
-    height: 100vh;
+@media screen and (width<690px){
+  .pelicula-detalles h1 {
+    max-width: 12.5rem;
+    font-size: 2rem;
   }
 
-  .pelicula-detalles {
-    margin-top: 5rem;
-  }
-
-  .recomendaciones {
-    margin-top: 5rem;
+  .descripcion {
+    font-size: .8125rem;
+    max-width: 28.125rem;
   }
 }
-
 
 /*
 @media screen and (max-width: 640px) {
