@@ -151,6 +151,11 @@ main {
 
 @media (max-width: 1024px) {
 
+  .pelicula-hero .peli-bg{
+    width: 100vw;
+    height: 40rem;
+  }
+
   .pelicula-detalles h1 {
     margin-left: 3rem;
   }
@@ -215,6 +220,7 @@ main {
 
   .pelicula-hero .peli-bg{
     width: 100vw;
+    height: 40rem;
   }
 
   .pelicula-detalles{
