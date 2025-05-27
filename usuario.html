@@ -46,9 +46,23 @@
                 <h2>Metodo de pago</h2>
                 <article class="metodoDePago_tarjetaDeDebitoOCredito">
                     <input class="radio" type="radio" name="metodoDePago" id="tarjetaDeDebitoOCredito" />
-                    <input class="metodoDePago_tarjetaDeDebitoOCredito_numeroDeTarjeta" type="tel" pattern="[0-9]{16}" name="tarjetaDeDebitoOCredito" id="tarjetaDeDebitoOCredito" placeholder="N&uacute;mero de tarjeta" required>
-                    <input class="metodoDePago_tarjetaDeDebitoOCredito_codigoDeSeguridad" type="tel" pattern="[0-9]{3}" name="codigoDeSeguridad" id="codigoDeSeguridad" placeholder="Clave" required>
+                    <input class="metodoDePago_tarjetaDeDebitoOCredito_numeroDeTarjeta" type="tel" pattern="[0-9]{16}" name="tarjetaDeDebitoOCredito" id="tarjetaDeDebitoOCredito" placeholder="N&uacute;mero de tarjeta">
+                    <input class="metodoDePago_tarjetaDeDebitoOCredito_codigoDeSeguridad" type="tel" pattern="[0-9]{3}" name="codigoDeSeguridad" id="codigoDeSeguridad" placeholder="Clave">
                 </article>
+                <article class="cuponDePago">
+                        <article>
+                            <input class="radio" type="radio" name="metodoDePago" id="cuponDePago" />
+                            <label class="transferenciaBancaria" for="cuponDePago">Cup&oacute;n de pago</label>
+                        </article>
+                        
+                        <article class="seleccionDeCuponDePago">
+                            <input class="metodoDePago__cuponDePago" type="checkbox" id="pagoFacil" />
+                            <label class="cuponDePago__pagoFacil" for="pagoFacil">Pago facil</label>
+
+                            <input class="metodoDePago__cuponDePago" type="checkbox" id="rapiPago" />
+                            <label class="cuponDePago__rapiPago" for="rapiPago">RapiPago</label>
+                        </article>
+                    </article>
 
                 <article class="metodoDePago__transferenciaBancaria">
                     <input class="radio" type="radio" name="metodoDePago" id="transferenciaBancaria" />
