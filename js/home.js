@@ -9,16 +9,26 @@ if(!peliculasJSON){
     peliculasyseries = JSON.parse(peliculasJSON);
 }
 
-AgregarImgPeli(peliculasyseries);
+AgregarImgPeliYSerie(peliculasyseries);
 
-function AgregarImgPeli(cssSelector){
-        const nodoRaiz = document.querySelector(".content");
-        for(let elemento of cssSelector){
-            const nodoPeliculaYSerie = document.createElement("div");
+function AgregarImgPeliYSerie(cssSelector){
+    const nodoRaiz = document.querySelector(".content");
+    for(let elemento of cssSelector){
+        const nodoPeliculaYSerie = document.createElement("div");
+
+        if(elemento.temporadas == 0){
             nodoPeliculaYSerie.innerHTML = `
-            <img src="${elemento.imagen}" alt="${elemento.nombre}" class="img">
-            <a href=./info-pelicula.html?nombre=${elemento.nombre}">
-        `;
-            nodoRaiz.appendChild(nodoPeliculaYSerie);
+            <a href="./info-pelicula.html?nombre=${elemento.titulo}">
+            <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
+            </a>
+            `;
+        }else{
+            nodoPeliculaYSerie.innerHTML = `
+            <a href="./info-series.html?nombre=${elemento.titulo}">
+            <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
+            </a>
+            `;
         }
+        nodoRaiz.appendChild(nodoPeliculaYSerie);
+    }
 }
