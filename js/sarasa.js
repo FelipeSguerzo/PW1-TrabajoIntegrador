@@ -10,6 +10,19 @@ const expresiones = {
     claveTarjeta: /^\d{3}$/
 }
 
+const inputs = document.querySelectorAll(".formulario input");
+console.log(inputs);
+
+function validacionInputs() {
+    inputs.forEach((input) => {
+        input.addEventListener("keyup", function(){
+            this.style.backgroundColor = "red";
+        });
+    });
+}
+
+validacionInputs();
+
 function validacionClaveDeLaTarjeta() {
     const claveErronea = "000";
     const claveErroneaEntero = parseInt(claveErronea);
