@@ -72,25 +72,22 @@
                         required>
 
                     <article class="pass">
-                        <input type="password" name="contrasenia" id="contrasenia" placeholder="Escriba su contraseña"
-                            required>
+                        <input type="password" name="contrasenia" placeholder="Escriba su contraseña" required>
                         <span class="fa-regular fa-eye-slash"></span>
                     </article>
 
                     <article class="pass">
-                        <input type="password" name="contrasenia" id="contrasenia" placeholder="Repetir contraseña"
-                            required>
+                        <input type="password" name="contrasenia" placeholder="Repetir contraseña" required>
                         <span class="fa-regular fa-eye-slash"></span>
                     </article>
                 </section>
 
                 <section class="metodoDePago">
                     <article class="metodoDePago__tarjetaDeDebitoOCredito">
-                        <input class="radio" type="radio" name="metodoDePago" id="tarjetaDeDebitoOCredito" />
+                        <input class="radio" type="radio" name="metodoDePago" />
                         <input class="metodoDePago__tarjetaDeDebitoOCredito__numeroDeTarjeta" type="number"
-                            name="tarjetaDeDebitoOCredito" id="tarjetaDeDebitoOCredito"
-                            placeholder="N&uacute;mero de tarjeta">
-                        <input class="metodoDePago__tarjetaDeDebitoOCredito__codigoDeSeguridad" type="number"
+                            name="tarjetaDeDebitoOCredito" placeholder="N&uacute;mero de tarjeta">
+                        <input class="metodoDePago__tarjetaDeDebitoOCredito__codigoDeSeguridad validacion-incorecta" type="number"
                             name="codigoDeSeguridad" id="codigoDeSeguridad" placeholder="Clave">
                     </article>
 
@@ -223,6 +220,8 @@
             </a>
         </section>
     </footer>
+
+    <script src="./js/sarasa.js"></script>
 </body>
 
 </html>
