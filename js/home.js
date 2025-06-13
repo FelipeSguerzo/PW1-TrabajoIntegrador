@@ -32,3 +32,46 @@ function AgregarImgPeliYSerie(cssSelector){
         nodoRaiz.appendChild(nodoPeliculaYSerie);
     }
 }
+
+const btnPeliculas = document.querySelector(".btn-peliculas");
+
+btnPeliculas.addEventListener("click", function(){
+    
+    const nodoRaiz = document.querySelector(".content");
+    nodoRaiz.innerHTML = "";
+
+    for(let elemento of peliculasyseries){
+        const nodoPeliculaYSerie = document.createElement("div");
+
+        if(elemento.temporadas == 0){
+            nodoPeliculaYSerie.innerHTML = `
+            <a href="./info-pelicula.html?nombre=${elemento.titulo}">
+            <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
+            </a>
+            `;
+        }
+        nodoRaiz.appendChild(nodoPeliculaYSerie);
+    }
+});
+
+const btnSeries = document.querySelector(".btn-series");
+
+btnSeries.addEventListener("click", function(){
+
+    const nodoRaiz = document.querySelector(".content");
+    nodoRaiz.innerHTML = "";
+
+    for(let elemento of peliculasyseries){
+        const nodoPeliculaYSerie = document.createElement("div");
+
+        if(elemento.temporadas != 0){
+            nodoPeliculaYSerie.innerHTML = `
+            <a href="./info-pelicula.html?nombre=${elemento.titulo}">
+            <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
+            </a>
+            `;
+        }
+        nodoRaiz.appendChild(nodoPeliculaYSerie);
+    }
+
+});

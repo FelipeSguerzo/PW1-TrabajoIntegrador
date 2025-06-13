@@ -1,5 +1,6 @@
 const DATA_PELICULAS = [
 {
+    "tipo": "pelicula",
     "imagen": "images/hulk_movie.jpg",
     "heroimg": "images/hulk_hero.png",
     "titulo": "The incredible Hulk",
@@ -39,39 +40,68 @@ const DATA_PELICULAS = [
 },
 
 {
-    "imagen": "images/the-office_series.jpg",
-    "heroimg": "images/the-office_hero.jpg",
-    "titulo": "The Office",
-    "clasificacion": 13,
-    "año": 2005,
+    "tipo": "pelicula",
+    "imagen": "images/supercool_movie.png",
+    "heroimg": "images/super-cool_hero.png",
+    "titulo": "Supercool",
+    "clasificacion": 18,
+    "año": 2007,
     "genero": [
-        "Comedia"
+        "Comedia",
+        "Adolescente"
     ],
-    "descripcion": "The Office es una serie de televisión de comedia que sigue el día a día de los empleados de una sucursal de la empresa papelera ficticia",
-    "resumen": "The Office , popular serie de comedia de situación estadounidense que narra la vida cotidiana de un grupo de empleados de la ficticia empresa Dunder Mifflin Paper Company en Scranton , Pensilvania",
-    "trailer": "https://www.youtube.com/watch?v=vyq1FCeFrng",
+    "descripcion": "Un adolescente intenta navegar por las complejidades de la vida, el amor y la amistad mientras enfrenta los desafíos de crecer.",
+    "resumen": "La historia sigue a un grupo de amigos mientras lidian con los altibajos de la adolescencia, explorando temas de identidad, pertenencia y el viaje hacia la adultez.",
+    "trailer": "https://www.youtube.com/watch?v=au2Zq8D9RaY",
     "elenco": [
-        "Steve Carell",
-        "Rainn Wilson",
-        "John Krasinski",
-        "Jenna Fischer",
-        "B. J. Novak"
+        "Michael Cera",
+        "Christopher Mintz-Plasse",
+        "Jonah Hill",
+        "Emma Stone",
     ],
     "directores":[
-        "Amy Heckerling",
-        "Greg Daniels",
-        "Bryan Gordon",
-        "Ken Kwapis",
-        "Ken Whittingham"
+        "Greg Mottola"
     ],
     "productores": [
-        ""
+        "Evan Goldberg",
+        "Greg Mottola",
     ],
-    "temporadas": 9,
-    "capitulos": 201
+    "temporadas": 0,
+    "capitulos": 0
 },
 
 {
+    "tipo": "pelicula",
+    "imagen": "images/baila-vini_movie.jpg",
+    "heroimg": "/images/baila-vini_hero.jpg",
+    "titulo": "Baila, Vini",
+    "clasificacion": 0,
+    "año": 2025,
+    "genero": [
+        "Documental"
+    ],
+    "descripcion": "Un viaje a través de la historia de la música y la cultura del vinilo.",
+    "resumen": "Baila, Vini es un documental de Netflix sobre el futbolista brasileño Vinícius Júnior",
+    "trailer": "https://www.youtube.com/watch?v=IucwRVDHroc",
+    "elenco": [
+        "Vinicius Júnior",
+        "Neymar Jr.",
+        "Thiago Silva",
+        "Gabriel Jesus"
+    ],
+    "directores":[
+        "Andrucha Waddington",
+        "Emilio Domingos"
+    ],
+    "productores": [
+        "Luisa Barbosa",
+        "Renata Brandão"
+    ],
+    "temporadas": 0,
+    "capitulos": 0
+},
+{
+    "tipo": "pelicula",
     "imagen": "images/shaolin-soccer_movie.png",
     "heroimg": "images/shaolin-soccer_hero.png",
     "titulo": "Shaolin soccer",
@@ -103,40 +133,8 @@ const DATA_PELICULAS = [
     "temporadas": 0,
     "capitulos": 0
 },
-
 {
-    "imagen": "images/death-note_series.jpg",
-    "heroimg": "images/death-note_hero.jpg",
-    "titulo": "Death note",
-    "clasificacion": 14,
-    "año": 2006,
-    "genero": [
-        "Susupense",
-        "Fantasía"
-    ],
-    "descripcion":"Un libro malévolo cae en manos de Yagami Light. Ese libro tiene unas instrucciones claras y encierra una magia oscura.",
-    "resumen": "Yagami no lo cree en un principio pero una vez lo prueba y comprueba que es cierto, toda su vida cambia por completo. El protagonista usará este artilugio para eliminar del mundo todos esas personas malas, criminales y seres oscuros y malvados que lo acechan.",
-    "trailer": "https://www.youtube.com/watch?v=NlJZ-YgAt-c",
-    "elenco": [
-        "Mamoru Miyano",
-        "Shido Nakamura",
-        "Noriko Hidaka",
-        "Kappei Yamaguchi",
-        "Aya Hirano",
-        "Nozomu Sasaki",
-        "Naoya Uchida"
-    ],
-    "directores":[
-        "Tetsurō Araki"
-    ],
-    "productores": [
-        ""
-    ],
-    "temporadas": 1,
-    "capitulos": 37
-},
-
-{
+    "tipo": "pelicula",
     "imagen":"/images/bad-boys_movie.jpg",
     "heroimg": "/images/bad-boys_hero.jpg",
     "titulo": "Bad Boys For Life",
@@ -177,6 +175,7 @@ const DATA_PELICULAS = [
 },
 
 {
+    "tipo": "serie",
     "imagen": "images/squid-game_series.jpg",
     "heroimg": "images/squid-game_hero.jpg",
     "titulo": "El juego del calamar",
@@ -217,36 +216,40 @@ const DATA_PELICULAS = [
 },
 
 {
-    "imagen": "images/baila-vini_movie.jpg",
-    "heroimg": "/images/baila-vini_hero.jpg",
-    "titulo": "Baila, Vini",
-    "clasificacion": 0,
-    "año": 2025,
+    "tipo": "serie",
+    "imagen": "images/death-note_series.jpg",
+    "heroimg": "images/death-note_hero.jpg",
+    "titulo": "Death note",
+    "clasificacion": 14,
+    "año": 2006,
     "genero": [
-        "Documental"
+        "Susupense",
+        "Fantasía"
     ],
-    "descripcion": "Un viaje a través de la historia de la música y la cultura del vinilo.",
-    "resumen": "Baila, Vini es un documental de Netflix sobre el futbolista brasileño Vinícius Júnior",
-    "trailer": "https://www.youtube.com/watch?v=IucwRVDHroc",
+    "descripcion":"Un libro malévolo cae en manos de Yagami Light. Ese libro tiene unas instrucciones claras y encierra una magia oscura.",
+    "resumen": "Yagami no lo cree en un principio pero una vez lo prueba y comprueba que es cierto, toda su vida cambia por completo. El protagonista usará este artilugio para eliminar del mundo todos esas personas malas, criminales y seres oscuros y malvados que lo acechan.",
+    "trailer": "https://www.youtube.com/watch?v=NlJZ-YgAt-c",
     "elenco": [
-        "Vinicius Júnior",
-        "Neymar Jr.",
-        "Thiago Silva",
-        "Gabriel Jesus"
+        "Mamoru Miyano",
+        "Shido Nakamura",
+        "Noriko Hidaka",
+        "Kappei Yamaguchi",
+        "Aya Hirano",
+        "Nozomu Sasaki",
+        "Naoya Uchida"
     ],
     "directores":[
-        "Andrucha Waddington",
-        "Emilio Domingos"
+        "Tetsurō Araki"
     ],
     "productores": [
-        "Luisa Barbosa",
-        "Renata Brandão"
+        ""
     ],
-    "temporadas": 0,
-    "capitulos": 0
+    "temporadas": 1,
+    "capitulos": 37
 },
 
 {
+    "tipo": "serie",
     "imagen": "images/breaking-bad_series.jpg",
     "heroimg": "images/breaking-bad_hero.jpg",
     "titulo": "Breaking Bad",
@@ -286,38 +289,8 @@ const DATA_PELICULAS = [
     "temporadas": 5,
     "capitulos": 62
 },
-
 {
-    "imagen": "images/supercool_movie.png",
-    "heroimg": "images/super-cool_hero.png",
-    "titulo": "Supercool",
-    "clasificacion": 18,
-    "año": 2007,
-    "genero": [
-        "Comedia",
-        "Adolescente"
-    ],
-    "descripcion": "Un adolescente intenta navegar por las complejidades de la vida, el amor y la amistad mientras enfrenta los desafíos de crecer.",
-    "resumen": "La historia sigue a un grupo de amigos mientras lidian con los altibajos de la adolescencia, explorando temas de identidad, pertenencia y el viaje hacia la adultez.",
-    "trailer": "https://www.youtube.com/watch?v=au2Zq8D9RaY",
-    "elenco": [
-        "Michael Cera",
-        "Christopher Mintz-Plasse",
-        "Jonah Hill",
-        "Emma Stone",
-    ],
-    "directores":[
-        "Greg Mottola"
-    ],
-    "productores": [
-        "Evan Goldberg",
-        "Greg Mottola",
-    ],
-    "temporadas": 0,
-    "capitulos": 0
-},
-
-{
+    "tipo": "serie",
     "imagen": "images/eternauta_series.jpg",
     "heroimg": "images/eternauta_hero.jpg",
     "titulo": "El eternauta",
@@ -353,5 +326,39 @@ const DATA_PELICULAS = [
     ],
     "temporadas": 1,
     "capitulos": 6
+},
+
+{
+    "tipo": "serie",
+    "imagen": "images/the-office_series.jpg",
+    "heroimg": "images/the-office_hero.jpg",
+    "titulo": "The Office",
+    "clasificacion": 13,
+    "año": 2005,
+    "genero": [
+        "Comedia"
+    ],
+    "descripcion": "The Office es una serie de televisión de comedia que sigue el día a día de los empleados de una sucursal de la empresa papelera ficticia",
+    "resumen": "The Office , popular serie de comedia de situación estadounidense que narra la vida cotidiana de un grupo de empleados de la ficticia empresa Dunder Mifflin Paper Company en Scranton , Pensilvania",
+    "trailer": "https://www.youtube.com/watch?v=vyq1FCeFrng",
+    "elenco": [
+        "Steve Carell",
+        "Rainn Wilson",
+        "John Krasinski",
+        "Jenna Fischer",
+        "B. J. Novak"
+    ],
+    "directores":[
+        "Amy Heckerling",
+        "Greg Daniels",
+        "Bryan Gordon",
+        "Ken Kwapis",
+        "Ken Whittingham"
+    ],
+    "productores": [
+        ""
+    ],
+    "temporadas": 9,
+    "capitulos": 201
 }
 ]
