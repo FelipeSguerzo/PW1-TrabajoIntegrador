@@ -1,6 +1,7 @@
-[
+const DATA_PELICULAS = [
 {
-    "imagen": "images/hulk_hero.png",
+    "imagen": "images/hulk_movie.jpg",
+    "heroimg": "images/hulk_hero.png",
     "titulo": "The incredible Hulk",
     "clasificacion": 13,
     "año": 2008,
@@ -38,7 +39,8 @@
 },
 
 {
-    "imagen": "images/the-office_hero.jpg",
+    "imagen": "images/the-office_series.jpg",
+    "heroimg": "images/the-office_hero.jpg",
     "titulo": "The Office",
     "clasificacion": 13,
     "año": 2005,
@@ -70,7 +72,8 @@
 },
 
 {
-    "imagen": "images/shaolin-soccer_hero.png",
+    "imagen": "images/shaolin-soccer_movie.png",
+    "heroimg": "images/shaolin-soccer_hero.png",
     "titulo": "Shaolin soccer",
     "clasificacion": 13,
     "año": 2001,
@@ -102,7 +105,8 @@
 },
 
 {
-    "imagen": "images/death-note_hero.jpg",
+    "imagen": "images/death-note_series.jpg",
+    "heroimg": "images/death-note_hero.jpg",
     "titulo": "Death note",
     "clasificacion": 14,
     "año": 2006,
@@ -133,7 +137,8 @@
 },
 
 {
-    "imagen": "/images/bad-boys_hero.jpg",
+    "imagen":"/images/bad-boys_movie.jpg",
+    "heroimg": "/images/bad-boys_hero.jpg",
     "titulo": "Bad Boys For Life",
     "clasificacion": 17,
     "año": 2020,
@@ -172,7 +177,8 @@
 },
 
 {
-    "imagen": "images/squid-game_hero.jpg",
+    "imagen": "images/squid-game_series.jpg",
+    "heroimg": "images/squid-game_hero.jpg",
     "titulo": "El juego del calamar",
     "clasificacion": 16,
     "año": 2021,
@@ -211,7 +217,8 @@
 },
 
 {
-    "imagen": "/images/baila-vini_hero.jpg",
+    "imagen": "images/baila-vini_movie.jpg",
+    "heroimg": "/images/baila-vini_hero.jpg",
     "titulo": "Baila, Vini",
     "clasificacion": 0,
     "año": 2025,
@@ -240,7 +247,8 @@
 },
 
 {
-    "imagen": "images/breaking-bad_hero.jpg",
+    "imagen": "images/breaking-bad_series.jpg",
+    "heroimg": "images/breaking-bad_hero.jpg",
     "titulo": "Breaking Bad",
     "clasificacion": 14,
     "año": 2008,
@@ -280,7 +288,8 @@
 },
 
 {
-    "imagen": "images/super-cool_hero.png",
+    "imagen": "images/supercool_movie.png",
+    "heroimg": "images/super-cool_hero.png",
     "titulo": "Supercool",
     "clasificacion": 18,
     "año": 2007,
@@ -309,7 +318,8 @@
 },
 
 {
-    "imagen": "images/eternauta_hero.jpg",
+    "imagen": "images/eternauta_series.jpg",
+    "heroimg": "images/eternauta_hero.jpg",
     "titulo": "El eternauta",
     "clasificacion": 14,
     "año": 2025,
