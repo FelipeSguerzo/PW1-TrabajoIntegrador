@@ -65,11 +65,30 @@ btnSeries.addEventListener("click", function(){
         if(elemento.temporadas !=0){
             const nodoPeliculaYSerie = document.createElement("div");
             nodoPeliculaYSerie.innerHTML = `
-            <a href="./info-pelicula.html?nombre=${elemento.titulo}">
+            <a href="./info-series.html?nombre=${elemento.titulo}">
             <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
             </a>
             `;
             nodoRaiz.appendChild(nodoPeliculaYSerie);
         }
     }
+});
+
+const btnHome = document.querySelector(".btn-home");
+
+btnHome.addEventListener("click", function(){
+
+    const nodoRaiz = document.querySelector(".content");
+    nodoRaiz.innerHTML = '';
+
+    for(let elemento of peliculasyseries){
+        const nodoPeliculaYSerie = document.createElement("div");
+
+        nodoPeliculaYSerie.innerHTML = `
+        <a href="./info-pelicula.html?nombre=${elemento.titulo}">
+        <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
+        </a>
+        `;
+        nodoRaiz.appendChild(nodoPeliculaYSerie);  
+    } 
 });
