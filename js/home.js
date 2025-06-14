@@ -18,13 +18,13 @@ function AgregarImgPeliYSerie(cssSelector){
 
         if(elemento.temporadas == 0){
             nodoPeliculaYSerie.innerHTML = `
-            <a href="./info-pelicula.html?nombre=${elemento.titulo}">
+            <a href="./info-pelicula.html?titulo=${elemento.titulo}">
             <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
             </a>
             `;
         }else{
             nodoPeliculaYSerie.innerHTML = `
-            <a href="./info-series.html?nombre=${elemento.titulo}">
+            <a href="./info-series.html?titulo=${elemento.titulo}">
             <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
             </a>
             `;
@@ -45,7 +45,7 @@ btnPeliculas.addEventListener("click", function(){
 
         if(elemento.temporadas == 0){
             nodoPeliculaYSerie.innerHTML = `
-            <a href="./info-pelicula.html?nombre=${elemento.titulo}">
+            <a href="./info-pelicula.html?titulo=${elemento.titulo}">
             <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
             </a>
             `;
@@ -65,7 +65,7 @@ btnSeries.addEventListener("click", function(){
         if(elemento.temporadas !=0){
             const nodoPeliculaYSerie = document.createElement("div");
             nodoPeliculaYSerie.innerHTML = `
-            <a href="./info-series.html?nombre=${elemento.titulo}">
+            <a href="./info-series.html?titulo=${elemento.titulo}">
             <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
             </a>
             `;
@@ -85,7 +85,7 @@ btnHome.addEventListener("click", function(){
         const nodoPeliculaYSerie = document.createElement("div");
 
         nodoPeliculaYSerie.innerHTML = `
-        <a href="./info-pelicula.html?nombre=${elemento.titulo}">
+        <a href="./info-pelicula.html?titulo=${elemento.titulo}">
         <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
         </a>
         `;
@@ -104,7 +104,7 @@ btnNingunGenero.addEventListener("click", function(){
         const nodoPeliculaYSerie = document.createElement("div");
 
         nodoPeliculaYSerie.innerHTML = `
-        <a href="./info-pelicula.html?nombre=${elemento.titulo}">
+        <a href="./info-pelicula.html?titulo=${elemento.titulo}">
         <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
         </a>
         `;
@@ -125,7 +125,7 @@ btnAccion.addEventListener("click", function(){
                     const nodoPeliculaYSerie = document.createElement("div");
 
                     nodoPeliculaYSerie.innerHTML = `
-                    <a href="./info-pelicula.html?nombre=${elemento.titulo}">
+                    <a href="./info-pelicula.html?titulo=${elemento.titulo}">
                     <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
                     </a>
                     `;
@@ -134,7 +134,7 @@ btnAccion.addEventListener("click", function(){
                     const nodoPeliculaYSerie = document.createElement("div");
 
                     nodoPeliculaYSerie.innerHTML = `
-                    <a href="./info-series.html?nombre=${elemento.titulo}">
+                    <a href="./info-series.html?titulo=${elemento.titulo}">
                     <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
                     </a>
                     `;
@@ -158,7 +158,7 @@ btnAdolescente.addEventListener("click", function(){
                     const nodoPeliculaYSerie = document.createElement("div");
 
                     nodoPeliculaYSerie.innerHTML = `
-                    <a href="./info-pelicula.html?nombre=${elemento.titulo}">
+                    <a href="./info-pelicula.html?titulo=${elemento.titulo}">
                     <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
                     </a>
                     `;
@@ -167,7 +167,7 @@ btnAdolescente.addEventListener("click", function(){
                     const nodoPeliculaYSerie = document.createElement("div");
 
                     nodoPeliculaYSerie.innerHTML = `
-                    <a href="./info-series.html?nombre=${elemento.titulo}">
+                    <a href="./info-series.html?titulo=${elemento.titulo}">
                     <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
                     </a>
                     `;
@@ -191,7 +191,7 @@ btnCF.addEventListener("click", function(){
                     const nodoPeliculaYSerie = document.createElement("div");
 
                     nodoPeliculaYSerie.innerHTML = `
-                    <a href="./info-pelicula.html?nombre=${elemento.titulo}">
+                    <a href="./info-pelicula.html?titulo=${elemento.titulo}">
                     <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
                     </a>
                     `;
@@ -200,7 +200,7 @@ btnCF.addEventListener("click", function(){
                     const nodoPeliculaYSerie = document.createElement("div");
 
                     nodoPeliculaYSerie.innerHTML = `
-                    <a href="./info-series.html?nombre=${elemento.titulo}">
+                    <a href="./info-series.html?titulo=${elemento.titulo}">
                     <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
                     </a>
                     `;
@@ -224,7 +224,7 @@ btnComedia.addEventListener("click", function(){
                     const nodoPeliculaYSerie = document.createElement("div");
 
                     nodoPeliculaYSerie.innerHTML = `
-                    <a href="./info-pelicula.html?nombre=${elemento.titulo}">
+                    <a href="./info-pelicula.html?titulo=${elemento.titulo}">
                     <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
                     </a>
                     `;
@@ -233,7 +233,7 @@ btnComedia.addEventListener("click", function(){
                     const nodoPeliculaYSerie = document.createElement("div");
 
                     nodoPeliculaYSerie.innerHTML = `
-                    <a href="./info-series.html?nombre=${elemento.titulo}">
+                    <a href="./info-series.html?titulo=${elemento.titulo}">
                     <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
                     </a>
                     `;
@@ -257,7 +257,7 @@ btnDrama.addEventListener("click", function(){
                     const nodoPeliculaYSerie = document.createElement("div");
 
                     nodoPeliculaYSerie.innerHTML = `
-                    <a href="./info-pelicula.html?nombre=${elemento.titulo}">
+                    <a href="./info-pelicula.html?titulo=${elemento.titulo}">
                     <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
                     </a>
                     `;
@@ -266,7 +266,7 @@ btnDrama.addEventListener("click", function(){
                     const nodoPeliculaYSerie = document.createElement("div");
 
                     nodoPeliculaYSerie.innerHTML = `
-                    <a href="./info-series.html?nombre=${elemento.titulo}">
+                    <a href="./info-series.html?titulo=${elemento.titulo}">
                     <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
                     </a>
                     `;
@@ -290,7 +290,7 @@ btnDocumental.addEventListener("click", function(){
                     const nodoPeliculaYSerie = document.createElement("div");
 
                     nodoPeliculaYSerie.innerHTML = `
-                    <a href="./info-pelicula.html?nombre=${elemento.titulo}">
+                    <a href="./info-pelicula.html?titulo=${elemento.titulo}">
                     <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
                     </a>
                     `;
@@ -299,7 +299,7 @@ btnDocumental.addEventListener("click", function(){
                     const nodoPeliculaYSerie = document.createElement("div");
 
                     nodoPeliculaYSerie.innerHTML = `
-                    <a href="./info-series.html?nombre=${elemento.titulo}">
+                    <a href="./info-series.html?titulo=${elemento.titulo}">
                     <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
                     </a>
                     `;
@@ -323,7 +323,7 @@ btnFantasia.addEventListener("click", function(){
                     const nodoPeliculaYSerie = document.createElement("div");
 
                     nodoPeliculaYSerie.innerHTML = `
-                    <a href="./info-pelicula.html?nombre=${elemento.titulo}">
+                    <a href="./info-pelicula.html?titulo=${elemento.titulo}">
                     <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
                     </a>
                     `;
@@ -332,7 +332,7 @@ btnFantasia.addEventListener("click", function(){
                     const nodoPeliculaYSerie = document.createElement("div");
 
                     nodoPeliculaYSerie.innerHTML = `
-                    <a href="./info-series.html?nombre=${elemento.titulo}">
+                    <a href="./info-series.html?titulo=${elemento.titulo}">
                     <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
                     </a>
                     `;
@@ -356,7 +356,7 @@ btnSuspenso.addEventListener("click", function(){
                     const nodoPeliculaYSerie = document.createElement("div");
 
                     nodoPeliculaYSerie.innerHTML = `
-                    <a href="./info-pelicula.html?nombre=${elemento.titulo}">
+                    <a href="./info-pelicula.html?titulo=${elemento.titulo}">
                     <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
                     </a>
                     `;
@@ -365,7 +365,7 @@ btnSuspenso.addEventListener("click", function(){
                     const nodoPeliculaYSerie = document.createElement("div");
 
                     nodoPeliculaYSerie.innerHTML = `
-                    <a href="./info-series.html?nombre=${elemento.titulo}">
+                    <a href="./info-series.html?titulo=${elemento.titulo}">
                     <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
                     </a>
                     `;

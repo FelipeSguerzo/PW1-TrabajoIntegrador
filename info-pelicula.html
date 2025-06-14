@@ -25,23 +25,22 @@
         </ul>
         </nav>
     </header>
-    <section class="pelicula-hero">
-      <img class="peli-bg" src="assets/EjemploPeli1.avif" alt="Pelicula 1" />
 
+    <section class="pelicula-hero">
+      <img class="peli-bg" id="imagen"/>
       <section class="pelicula-detalles">
         <section class="detalles-container">
-          <h1 class="pelicula-titulo">ROMPER EL CIRCULO</h1>
-          <section class="genero">
+          <h1 class="pelicula-titulo" id="pelicula-titulo"></h1>
+          <section class="genero" id="genero">
             <ul class="genero-li">
-              <li>13+</li>
-              <li>2024</li>
-              <li>DRAMA</li>
-              <li>DRAMA ROMANTICO</li>
+              <li id="año"></li>
+              <li id="generos"></li>
+              <li id="clasificacion"></li>
             </ul>
           </section>
           <section class="pelicula-descripcion">
-            <p class="descripcion">
-              <span class="span-titulo">Romper el circulo: </span>Blake
+            <p class="descripcion" id="descripcion">
+              <span class="span-titulo" id="pelicula-titulo-desc"></span> Blake
               Lively estelariza esta adaptación de la novela de Colleen Hoover
               sobre amor, resiliencia y la fortaleza que requiere romper ciclos.
             </p>
@@ -91,33 +90,20 @@
 
           <section class="container-pelicula_desc">
             <section class="titulo_pelicula-descripcion">
-              <h1>Romper el circulo</h1>
+              <h1 id="titulo-detallado"></h1>
             </section>
-            <section class="pelicula_descripcion-detallada">
+            <section id="pelicula_descripcion-detallada">
               <article>
-                <p>
-                  Blake Lively estelariza esta adaptación de la exitosa novela
-                  de Colleen Hoover sobre la cautivadora historia de Lily Bloom
-                  (Lively), una mujer que luego de superar una infancia
-                  traumática termina reviviendo el mismo trauma con su marido.
+                <p id="descripcion-detallada">
                 </p>
-                <p>
-                  <span>Elenco: </span>Blake Lively, Justin Baldoni, Jenny
-                  Slate, Brandon Sklenar, Hasan Minhaj, Kevin McKidd, Amy
-                  Morton, Alex Neustaedter, Isabella Ferreira, Emily Foxler,
-                  Robyn Lively
-                </p>
-                <p><span>Directores: </span>Justin Baldoni</p>
-                <p>
-                  <span>Productores: </span>Christy Hall, Jamey Heath, Blake
-                  Lively, Alex Saks, Andrea Ajemian, Todd Black, Andrew Calof,
-                  Colleen Hoover, John Pierson, Steve Sarowitz
-                </p>
+                <p id="elenco"></p>
+                <p id="director"></p>
+                <p id="productores"></p>
               </article>
               <article>
-                <p><span>Géneros: </span>Drama, Drama Romántico</p>
-                <p><span>Año de Lanzamiento: </span>2024</p>
-                <p><span>Clasificación: 13+</span></p>
+                <p id="generos-detallado"></p>
+                <p id="año-detallado"><span></p>
+                <p id="clasificacion-detallado"></p>
               </article>
             </section>
           </section>
@@ -224,6 +210,8 @@
             </a>
         </section>
     </footer>
+    <script src="js/peliculasyseries.js"></script>
     <script src="js/home.js"></script>
+    <script src="js/info-peli.js"></script>
   </body>
 </html>

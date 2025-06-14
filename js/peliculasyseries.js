@@ -13,7 +13,7 @@ const DATA_PELICULAS = [
     "resumen": "Bruce Banner recorre el mundo en busca de un antídoto para librarse de su alter ego. Además tendrá que hacer frente a Emil, un nuevo enemigo, lo que convertirá a Nueva York en el escenario de la última batalla entre las dos criaturas más poderosas.",
     "trailer": "https://www.youtube.com/watch?v=xbqNb2PFKKA",
     "elenco": [
-        "Edward Norton",
+        "Elenco: Edward Norton",
         "Liv Tyler",
         "Tim Roth",
         "William Hurt",
@@ -23,10 +23,10 @@ const DATA_PELICULAS = [
         "Peter Mensah"
     ],
     "directores":[
-        "Louis Leterrier"
+        "Director: Louis Leterrier"
     ],
     "productores": [
-        "Avi Arad",
+        "Productores: Avi Arad",
         "Kevin Feige",
         "Gale Anne Hurd",
         "Stan Lee",
@@ -52,16 +52,16 @@ const DATA_PELICULAS = [
     "resumen": "La historia sigue a un grupo de amigos mientras lidian con los altibajos de la adolescencia, explorando temas de identidad, pertenencia y el viaje hacia la adultez.",
     "trailer": "https://www.youtube.com/watch?v=au2Zq8D9RaY",
     "elenco": [
-        "Michael Cera",
+        "Elenco: Michael Cera",
         "Christopher Mintz-Plasse",
         "Jonah Hill",
         "Emma Stone",
     ],
     "directores":[
-        "Greg Mottola"
+        "Director: Greg Mottola"
     ],
     "productores": [
-        "Evan Goldberg",
+        "Productores: Evan Goldberg",
         "Greg Mottola",
     ],
     "temporadas": 0,
@@ -77,21 +77,21 @@ const DATA_PELICULAS = [
     "genero": [
         "Documental"
     ],
-    "descripcion": "Un viaje a través de la historia de la música y la cultura del vinilo.",
+    "descripcion": "Narra la vida y carrera de Vinícius Júnior, el futbolista brasileño, desde sus inicios hasta su consagración como una estrella mundial.",
     "resumen": "Baila, Vini es un documental de Netflix sobre el futbolista brasileño Vinícius Júnior",
     "trailer": "https://www.youtube.com/watch?v=IucwRVDHroc",
     "elenco": [
-        "Vinicius Júnior",
+        "Elenco: Vinicius Júnior",
         "Neymar Jr.",
         "Thiago Silva",
         "Gabriel Jesus"
     ],
     "directores":[
-        "Andrucha Waddington",
+        "Directores: Andrucha Waddington",
         "Emilio Domingos"
     ],
     "productores": [
-        "Luisa Barbosa",
+        "Productores: Luisa Barbosa",
         "Renata Brandão"
     ],
     "temporadas": 0,
@@ -111,7 +111,7 @@ const DATA_PELICULAS = [
     "resumen": "Un día conoce a Fung, un antiguo futbolista fracasado, ambos establecerán una buena relación de la que nacerá la idea de formar un equipo que combine el futbol con las artes marciales.",
     "trailer": "https://www.youtube.com/watch?v=KEWUDWYDdYs",
     "elenco": [
-        "Stephen Chow",
+        "Elenco: Stephen Chow",
         "Wei Zhao",
         "Wong yat fei",
         "Karen Mok",
@@ -121,10 +121,10 @@ const DATA_PELICULAS = [
         "Zhang Ming Ming"
     ],
     "directores":[
-        "Stephen Chow"
+        "Director: Stephen Chow"
     ],
     "productores": [
-        "Yeung Kwok Fai"
+        "Productor: Yeung Kwok Fai"
     ],
     "temporadas": 0,
     "capitulos": 0
@@ -143,7 +143,7 @@ const DATA_PELICULAS = [
     "resumen": "Mike y Marcus se ven obligados a trabajar juntos una vez más cuando un nuevo enemigo aparece en la escena, poniendo en peligro todo lo que han construido.",
     "trailer": "https://www.youtube.com/watch?v=enizDUYZOCI",
     "elenco": [
-        "Will Smith",
+        "Elenco: Will Smith",
         "Martin Lawrence",
         "Vanessa Hudgens",
         "Alexander Ludwig",
@@ -153,11 +153,11 @@ const DATA_PELICULAS = [
         "Kate del Castillo"
     ],
     "directores":[
-        "Adil El Arbi",
+        "Directores: Adil El Arbi",
         "Bilall Fallah"
     ],
     "productores": [
-        "Jerry Bruckheimer",
+        "Productores: Jerry Bruckheimer",
         "Will Smith",
         "Doug Belgrad",
         "Chad Oman",
@@ -183,7 +183,7 @@ const DATA_PELICULAS = [
     "resumen": "A medida que los jugadores compiten en juegos infantiles con consecuencias mortales, deben enfrentarse a sus propios demonios y a la naturaleza humana.",
     "trailer": "https://www.youtube.com/watch?v=oqxAJKy0ii4",
     "elenco": [
-        "Jung-jae Lee",
+        "Elenco: Jung-jae Lee",
         "Lee Byung-hun",
         "Wi Ha-Joon",
         "Ha-Neul Kang",
@@ -199,10 +199,10 @@ const DATA_PELICULAS = [
         "Dai-Su Oh"
     ],
     "directores":[
-        "Hwang Dong-hyuk"
+        "Director: Hwang Dong-hyuk"
     ],
     "productores": [
-        "Hwang Dong-hyuk",
+        "Productores: Hwang Dong-hyuk",
         "Kim Ji-yeon"
     ],
     "temporadas": 3,
@@ -223,7 +223,7 @@ const DATA_PELICULAS = [
     "resumen": "Yagami no lo cree en un principio pero una vez lo prueba y comprueba que es cierto, toda su vida cambia por completo. El protagonista usará este artilugio para eliminar del mundo todos esas personas malas, criminales y seres oscuros y malvados que lo acechan.",
     "trailer": "https://www.youtube.com/watch?v=NlJZ-YgAt-c",
     "elenco": [
-        "Mamoru Miyano",
+        "Elenco: Mamoru Miyano",
         "Shido Nakamura",
         "Noriko Hidaka",
         "Kappei Yamaguchi",
@@ -232,7 +232,7 @@ const DATA_PELICULAS = [
         "Naoya Uchida"
     ],
     "directores":[
-        "Tetsurō Araki"
+        "Director: Tetsurō Araki"
     ],
     "productores": [
         ""
@@ -254,7 +254,7 @@ const DATA_PELICULAS = [
     "resumen": "Walter White, un profesor de química, se asocia con un exalumno para producir y vender metanfetaminas tras ser diagnosticado con cáncer.",
     "trailer": "https://www.youtube.com/watch?v=HhesaQXLuRY",
     "elenco": [
-        "Bryan Cranston",
+        "Elenco: Bryan Cranston",
         "Aaron Paul",
         "Anna Gunn",
         "Dean Norris",
@@ -264,7 +264,7 @@ const DATA_PELICULAS = [
         "Jonathan Banks"
     ],
     "directores":[
-        "Vince Gilligan",
+        "Directores: Vince Gilligan",
         "Adam Bernstein",
         "Michelle MacLaren",
         "Michael Slovis",
@@ -276,7 +276,7 @@ const DATA_PELICULAS = [
         "Bryan Cranston"
     ],
     "productores": [
-        "Karen Moore"
+        "Productor: Karen Moore"
     ],
     "temporadas": 5,
     "capitulos": 62
@@ -295,7 +295,7 @@ const DATA_PELICULAS = [
     "resumen": "El eternauta es una historia de ciencia ficción que explora la lucha de la humanidad contra fuerzas externas y la importancia de la amistad y la solidaridad.",
     "trailer": "https://www.youtube.com/watch?v=ykLTd5aTa88",
     "elenco": [
-        "Ricardo Darín",
+        "Elenco: Ricardo Darín",
         "Carla Peterson",
         "Cesar Troncoso",
         "Andrea Pietra",
@@ -306,10 +306,10 @@ const DATA_PELICULAS = [
         "Mora Fisz"
     ],
     "directores":[
-        "Bruno Stagnaro"
+        "Director: Bruno Stagnaro"
     ],
     "productores": [
-        "Micaela Buye",
+        "Productores: Micaela Buye",
         "Hugo Sigman",
         "Matias Mosteirín",
         "Leticia Cristi",
@@ -332,14 +332,14 @@ const DATA_PELICULAS = [
     "resumen": "The Office , popular serie de comedia de situación estadounidense que narra la vida cotidiana de un grupo de empleados de la ficticia empresa Dunder Mifflin Paper Company en Scranton , Pensilvania",
     "trailer": "https://www.youtube.com/watch?v=vyq1FCeFrng",
     "elenco": [
-        "Steve Carell",
+        "Elenco: Steve Carell",
         "Rainn Wilson",
         "John Krasinski",
         "Jenna Fischer",
         "B. J. Novak"
     ],
     "directores":[
-        "Amy Heckerling",
+        "Directores: Amy Heckerling",
         "Greg Daniels",
         "Bryan Gordon",
         "Ken Kwapis",
