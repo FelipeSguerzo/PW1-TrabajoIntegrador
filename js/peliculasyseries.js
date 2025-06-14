@@ -1,6 +1,5 @@
 const DATA_PELICULAS = [
 {
-    "tipo": "pelicula",
     "imagen": "images/hulk_movie.jpg",
     "heroimg": "images/hulk_hero.png",
     "titulo": "The incredible Hulk",
@@ -40,7 +39,6 @@ const DATA_PELICULAS = [
 },
 
 {
-    "tipo": "pelicula",
     "imagen": "images/supercool_movie.png",
     "heroimg": "images/super-cool_hero.png",
     "titulo": "Supercool",
@@ -71,7 +69,6 @@ const DATA_PELICULAS = [
 },
 
 {
-    "tipo": "pelicula",
     "imagen": "images/baila-vini_movie.jpg",
     "heroimg": "/images/baila-vini_hero.jpg",
     "titulo": "Baila, Vini",
@@ -101,7 +98,6 @@ const DATA_PELICULAS = [
     "capitulos": 0
 },
 {
-    "tipo": "pelicula",
     "imagen": "images/shaolin-soccer_movie.png",
     "heroimg": "images/shaolin-soccer_hero.png",
     "titulo": "Shaolin soccer",
@@ -134,7 +130,6 @@ const DATA_PELICULAS = [
     "capitulos": 0
 },
 {
-    "tipo": "pelicula",
     "imagen":"/images/bad-boys_movie.jpg",
     "heroimg": "/images/bad-boys_hero.jpg",
     "titulo": "Bad Boys For Life",
@@ -175,7 +170,6 @@ const DATA_PELICULAS = [
 },
 
 {
-    "tipo": "serie",
     "imagen": "images/squid-game_series.jpg",
     "heroimg": "images/squid-game_hero.jpg",
     "titulo": "El juego del calamar",
@@ -183,7 +177,7 @@ const DATA_PELICULAS = [
     "año": 2021,
     "genero": [
         "Drama",
-        "Suspense"
+        "Suspenso"
     ],
     "descripcion": "Un grupo de personas con problemas financieros acepta una misteriosa invitación para participar en un juego de supervivencia con un premio en efectivo.",
     "resumen": "A medida que los jugadores compiten en juegos infantiles con consecuencias mortales, deben enfrentarse a sus propios demonios y a la naturaleza humana.",
@@ -216,14 +210,13 @@ const DATA_PELICULAS = [
 },
 
 {
-    "tipo": "serie",
     "imagen": "images/death-note_series.jpg",
     "heroimg": "images/death-note_hero.jpg",
     "titulo": "Death note",
     "clasificacion": 14,
     "año": 2006,
     "genero": [
-        "Susupense",
+        "Suspenso",
         "Fantasía"
     ],
     "descripcion":"Un libro malévolo cae en manos de Yagami Light. Ese libro tiene unas instrucciones claras y encierra una magia oscura.",
@@ -249,7 +242,6 @@ const DATA_PELICULAS = [
 },
 
 {
-    "tipo": "serie",
     "imagen": "images/breaking-bad_series.jpg",
     "heroimg": "images/breaking-bad_hero.jpg",
     "titulo": "Breaking Bad",
@@ -290,7 +282,6 @@ const DATA_PELICULAS = [
     "capitulos": 62
 },
 {
-    "tipo": "serie",
     "imagen": "images/eternauta_series.jpg",
     "heroimg": "images/eternauta_hero.jpg",
     "titulo": "El eternauta",
@@ -329,7 +320,6 @@ const DATA_PELICULAS = [
 },
 
 {
-    "tipo": "serie",
     "imagen": "images/the-office_series.jpg",
     "heroimg": "images/the-office_hero.jpg",
     "titulo": "The Office",
