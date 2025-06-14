@@ -59,19 +59,17 @@ const btnSeries = document.querySelector(".btn-series");
 btnSeries.addEventListener("click", function(){
 
     const nodoRaiz = document.querySelector(".content");
-    nodoRaiz.innerHTML = "";
+    nodoRaiz.innerHTML = '';
 
     for(let elemento of peliculasyseries){
-        const nodoPeliculaYSerie = document.createElement("div");
-
-        if(elemento.temporadas != 0){
+        if(elemento.temporadas !=0){
+            const nodoPeliculaYSerie = document.createElement("div");
             nodoPeliculaYSerie.innerHTML = `
             <a href="./info-pelicula.html?nombre=${elemento.titulo}">
             <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
             </a>
             `;
+            nodoRaiz.appendChild(nodoPeliculaYSerie);
         }
-        nodoRaiz.appendChild(nodoPeliculaYSerie);
     }
-
 });
