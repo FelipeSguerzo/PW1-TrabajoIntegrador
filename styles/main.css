@@ -53,6 +53,8 @@ main {
     border-radius: 0.313rem;
     position: absolute; /* VER */
     left: 51.5%;
+    font-size: 1.35rem;
+    font-family: sans-serif;
 }
 
 .dropdown-container:hover .dropdown-content{

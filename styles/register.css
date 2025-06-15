@@ -115,7 +115,7 @@ body {
     position: relative;
 }
 
-.formulario .datosDeUsuario input {
+.form-datos {
     width: 25em;
     height: 3em;
     border-radius: 0.5em;
@@ -125,7 +125,7 @@ body {
     border: none;
 }
 
-.formulario .datosDeUsuario input::placeholder {
+.form-datos::placeholder {
     color: white;
     opacity: 0.6;
 }
@@ -184,6 +184,16 @@ input[type=number]::-webkit-outer-spin-button {
     padding-left: 1em;
     background-color: #5a5760;
     border: none;
+}
+
+.codigoDeSeguridad-incorrecto {
+    display: none;
+    color: rgb(228, 19, 19);
+    font-size: 1.1em;
+    width: fit-content;
+    position: relative;
+    left: 3.3em;
+    bottom: 1.2em;
 }
 
 .metodoDePago__tarjetaDeDebitoOCredito__codigoDeSeguridad::placeholder {
@@ -251,6 +261,18 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 /* Botones de confirmacion o cancelar */
+
+/* Validaciones */
+
+.validacion-incorrecta {
+    border: .25rem solid red;
+}
+
+.validacion-correcta {
+    border: .25rem solid green;
+}
+
+/* Validaciones */
 
 .radio {
     width: 4em;
@@ -333,11 +355,11 @@ input[type=number]::-webkit-outer-spin-button {
         align-items: center;
     }
 
-    .formulario .datosDeUsuario input {
+    .form-datos {
         height: 4em;
     }
 
-    .formulario .datosDeUsuario input::placeholder {
+    .form-datos::placeholder {
         font-size: 1.3em;
     }
 
@@ -490,11 +512,11 @@ input[type=number]::-webkit-outer-spin-button {
         align-items: center;
     }
 
-    .formulario .datosDeUsuario input {
+    .form-datos {
         height: 4em;
     }
 
-    .formulario .datosDeUsuario input::placeholder {
+    .form-datos::placeholder {
         font-size: 1.3em;
     }
 
@@ -650,11 +672,11 @@ input[type=number]::-webkit-outer-spin-button {
         justify-content: space-around;
     }
 
-    .formulario .datosDeUsuario input {
+    .form-datos {
         height: 4em;
     }
 
-    .formulario .datosDeUsuario input::placeholder {
+    .form-datos::placeholder {
         font-size: 1.3em;
     }
 

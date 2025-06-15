@@ -68,3 +68,14 @@ return letras.length>=2 && numeros.length>=2 && caracteresEspeciales.length>=2;
 }
 
 
+function eliminarUsuario(username){
+    const usuarios = getUsuarios();
+    const usuariosANoEliminar = []
+    for(let i=0;i<usuarios.length;i++){
+        if(usuarios[i].username!==username){
+            usuariosANoEliminar.push(usuarios[i]);
+        }
+    }
+    
+    localStorage.setItem("usuarios",JSON.stringify(usuariosANoEliminar));
+}
