@@ -62,22 +62,27 @@
 
             <form method="get" class="formulario" action="./index.html">
                 <section class="datosDeUsuario">
-                    <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" required>
-
-                    <input type="text" name="apellido" id="apellido" placeholder="Ingrese su apellido" required>
-
-                    <input type="email" name="email" id="email" placeholder="Ingrese su E-mail" required>
-
-                    <input type="text" name="nombreDeUsuario" id="nombreDeUsuario" placeholder="Nombre de usuario"
+                    <input class="form-datos" type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre"
                         required>
 
+                    <input class="form-datos" type="text" name="apellido" id="apellido"
+                        placeholder="Ingrese su apellido" required>
+
+                    <input class="form-datos" type="email" name="email" id="email" placeholder="Ingrese su E-mail"
+                        required>
+
+                    <input class="form-datos" type="text" name="nombreDeUsuario" id="nombreDeUsuario"
+                        placeholder="Nombre de usuario" required>
+
                     <article class="pass">
-                        <input type="password" name="contrasenia" placeholder="Escriba su contraseña" required>
+                        <input class="form-datos" type="password" name="contrasenia" placeholder="Escriba su contraseña"
+                            required>
                         <span class="fa-regular fa-eye-slash"></span>
                     </article>
 
                     <article class="pass">
-                        <input type="password" name="contrasenia" placeholder="Repetir contraseña" required>
+                        <input class="form-datos" type="password" name="contrasenia" placeholder="Repetir contraseña"
+                            required>
                         <span class="fa-regular fa-eye-slash"></span>
                     </article>
                 </section>
@@ -87,10 +92,11 @@
                         <input class="radio" type="radio" name="metodoDePago" />
                         <input class="metodoDePago__tarjetaDeDebitoOCredito__numeroDeTarjeta" type="number"
                             name="tarjetaDeDebitoOCredito" placeholder="N&uacute;mero de tarjeta">
-                        <input class="metodoDePago__tarjetaDeDebitoOCredito__codigoDeSeguridad validacion-incorecta" type="number"
-                            name="codigoDeSeguridad" id="codigoDeSeguridad" placeholder="Clave">
+                        <input class="metodoDePago__tarjetaDeDebitoOCredito__codigoDeSeguridad" type="number"
+                            name="codigoDeSeguridad" id="codigoDeSeguridad" placeholder="Clave" required>
                     </article>
-
+                    <p class="codigoDeSeguridad-incorrecto">Clave incorrecta</p>
+                    
                     <article class="cuponDePago">
                         <article>
                             <input class="radio" type="radio" name="metodoDePago" id="cuponDePago" />
