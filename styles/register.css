@@ -186,16 +186,6 @@ input[type=number]::-webkit-outer-spin-button {
     border: none;
 }
 
-.codigoDeSeguridad-incorrecto {
-    display: none;
-    color: rgb(228, 19, 19);
-    font-size: 1.1em;
-    width: fit-content;
-    position: relative;
-    left: 3.3em;
-    bottom: 1.2em;
-}
-
 .metodoDePago__tarjetaDeDebitoOCredito__codigoDeSeguridad::placeholder {
     color: white;
     opacity: 0.6;
@@ -270,6 +260,26 @@ input[type=number]::-webkit-outer-spin-button {
 
 .validacion-correcta {
     border: .25rem solid green;
+}
+
+.codigoDeSeguridad-incorrecto {
+    display: none;
+    color: rgb(228, 19, 19);
+    font-size: 1.1em;
+    width: fit-content;
+    /* position: relative;
+    left: 3.3em;
+    bottom: 1.2em; */
+}
+
+.numeroDeTarjeta-incorrecto {
+    display: none;
+    color: rgb(228, 19, 19);
+    font-size: 1.1em;
+    width: fit-content;
+    /* position: relative;
+    left: 3.3em;
+    bottom: 1.2em; */
 }
 
 /* Validaciones */
