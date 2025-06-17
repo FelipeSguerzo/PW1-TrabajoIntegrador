@@ -11,13 +11,13 @@
 // - QUE NO TENGA ESPACIOS
 // - TIENE QUE SER REQUERIDO UNO DE LOS TRES METODOS DE PAGO (CREO)
 
+const formulario = document.querySelector(".formulario");
+const inputs = document.querySelectorAll(".metodoDePago__tarjetaDeDebitoOCredito__codigoDeSeguridad, .metodoDePago__tarjetaDeDebitoOCredito__numeroDeTarjeta");
 const expresiones = {
     numeroDeTarjeta: /^\d{16}$/,
     claveTarjeta: /^\d{3}$/
 }
 
-const inputs = document.querySelectorAll(".metodoDePago__tarjetaDeDebitoOCredito__codigoDeSeguridad, .metodoDePago__tarjetaDeDebitoOCredito__numeroDeTarjeta");
-console.log(inputs);
 
 function longitudNumeroDeTarjeta() {
     let numeroDeTarjeta = document.querySelector(".metodoDePago__tarjetaDeDebitoOCredito__numeroDeTarjeta").value;
@@ -100,6 +100,14 @@ function validacion() {
         });
     });
 }
+
+// formulario.addEventListener("submit", (e) => {
+//     e.preventDefault();
+
+//     if (numeroDeTarjetaValido() == true) {
+//         formulario.submit();
+//     }
+// });
 
 // function mensajeInvalido() {
 //     let parrafo = document.createElement("p");
