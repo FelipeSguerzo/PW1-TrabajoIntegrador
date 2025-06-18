@@ -12,6 +12,7 @@ const DATA_PELICULAS = [
     "descripcion": "En The Incredible Hulk, Bruce Banner se convierte en Hulk como un peón involuntario en un esquema militar para revitalizar el programa del supersoldado a través de radiación gamma.",
     "resumen": "Bruce Banner recorre el mundo en busca de un antídoto para librarse de su alter ego. Además tendrá que hacer frente a Emil, un nuevo enemigo, lo que convertirá a Nueva York en el escenario de la última batalla entre las dos criaturas más poderosas.",
     "trailer": "https://www.youtube.com/watch?v=xbqNb2PFKKA",
+    "iframe": "https://www.youtube.com/embed/xbqNb2PFKKA?si=5rnsgDP6cUfOwseY",
     "elenco": [
         "Elenco: Edward Norton",
         "Liv Tyler",
@@ -51,6 +52,7 @@ const DATA_PELICULAS = [
     "descripcion": "Un adolescente intenta navegar por las complejidades de la vida, el amor y la amistad mientras enfrenta los desafíos de crecer.",
     "resumen": "La historia sigue a un grupo de amigos mientras lidian con los altibajos de la adolescencia, explorando temas de identidad, pertenencia y el viaje hacia la adultez.",
     "trailer": "https://www.youtube.com/watch?v=au2Zq8D9RaY",
+    "iframe": "https://www.youtube.com/embed/au2Zq8D9RaY?si=uD-8ST23VjoB2dCU",
     "elenco": [
         "Elenco: Michael Cera",
         "Christopher Mintz-Plasse",
@@ -80,6 +82,7 @@ const DATA_PELICULAS = [
     "descripcion": "Narra la vida y carrera de Vinícius Júnior, el futbolista brasileño, desde sus inicios hasta su consagración como una estrella mundial.",
     "resumen": "Baila, Vini es un documental de Netflix sobre el futbolista brasileño Vinícius Júnior",
     "trailer": "https://www.youtube.com/watch?v=IucwRVDHroc",
+    "iframe": "https://www.youtube.com/embed/IucwRVDHroc?si=5Hydl02FM8oIOmxS",
     "elenco": [
         "Elenco: Vinicius Júnior",
         "Neymar Jr.",
@@ -110,6 +113,7 @@ const DATA_PELICULAS = [
     "descripcion": "Sing es alumno del Shaolin y su verdadera ambición es popularizar y aproximar el arte del kung fu a la sociedad moderna.",
     "resumen": "Un día conoce a Fung, un antiguo futbolista fracasado, ambos establecerán una buena relación de la que nacerá la idea de formar un equipo que combine el futbol con las artes marciales.",
     "trailer": "https://www.youtube.com/watch?v=KEWUDWYDdYs",
+    "iframe": "https://www.youtube.com/embed/KEWUDWYDdYs?si=P2JutV9XXuDTRntV",
     "elenco": [
         "Elenco: Stephen Chow",
         "Wei Zhao",
@@ -142,6 +146,7 @@ const DATA_PELICULAS = [
     "descripcion": "Los detectives de Miami, Mike Lowrey y Marcus Burnett, se reúnen una última vez para acabar con un cartel de drogas que amenaza sus vidas.",
     "resumen": "Mike y Marcus se ven obligados a trabajar juntos una vez más cuando un nuevo enemigo aparece en la escena, poniendo en peligro todo lo que han construido.",
     "trailer": "https://www.youtube.com/watch?v=enizDUYZOCI",
+    "iframe": "https://www.youtube.com/embed/enizDUYZOCI?si=4nXW1Q5GUX1iktjK",
     "elenco": [
         "Elenco: Will Smith",
         "Martin Lawrence",
@@ -182,6 +187,7 @@ const DATA_PELICULAS = [
     "descripcion": "Un grupo de personas con problemas financieros acepta una misteriosa invitación para participar en un juego de supervivencia con un premio en efectivo.",
     "resumen": "A medida que los jugadores compiten en juegos infantiles con consecuencias mortales, deben enfrentarse a sus propios demonios y a la naturaleza humana.",
     "trailer": "https://www.youtube.com/watch?v=oqxAJKy0ii4",
+    "iframe": "https://www.youtube.com/embed/oqxAJKy0ii4?si=W8Sa-153t-5EAXdh",
     "elenco": [
         "Elenco: Jung-jae Lee",
         "Lee Byung-hun",
@@ -222,6 +228,7 @@ const DATA_PELICULAS = [
     "descripcion":"Un libro malévolo cae en manos de Yagami Light. Ese libro tiene unas instrucciones claras y encierra una magia oscura.",
     "resumen": "Yagami no lo cree en un principio pero una vez lo prueba y comprueba que es cierto, toda su vida cambia por completo. El protagonista usará este artilugio para eliminar del mundo todos esas personas malas, criminales y seres oscuros y malvados que lo acechan.",
     "trailer": "https://www.youtube.com/watch?v=NlJZ-YgAt-c",
+    "iframe": "https://www.youtube.com/embed/NlJZ-YgAt-c?si=QT0f0Ty4FVurOdq5",
     "elenco": [
         "Elenco: Mamoru Miyano",
         "Shido Nakamura",
@@ -253,6 +260,7 @@ const DATA_PELICULAS = [
     "descripcion": "Un profesor de química se convierte en fabricante de metanfetaminas para asegurar el futuro financiero de su familia.",
     "resumen": "Walter White, un profesor de química, se asocia con un exalumno para producir y vender metanfetaminas tras ser diagnosticado con cáncer.",
     "trailer": "https://www.youtube.com/watch?v=HhesaQXLuRY",
+    "iframe": "https://www.youtube.com/embed/HhesaQXLuRY?si=TIbyVr-xCL4qO-6o",
     "elenco": [
         "Elenco: Bryan Cranston",
         "Aaron Paul",
@@ -294,6 +302,7 @@ const DATA_PELICULAS = [
     "descripcion": "Un grupo de amigos se enfrenta a una invasión alienígena mientras intentan sobrevivir en un mundo post-apocalíptico.",
     "resumen": "El eternauta es una historia de ciencia ficción que explora la lucha de la humanidad contra fuerzas externas y la importancia de la amistad y la solidaridad.",
     "trailer": "https://www.youtube.com/watch?v=ykLTd5aTa88",
+    "iframe": "https://www.youtube.com/embed/ykLTd5aTa88?si=k3ofAxCLHR7CcXHh",
     "elenco": [
         "Elenco: Ricardo Darín",
         "Carla Peterson",
@@ -331,6 +340,7 @@ const DATA_PELICULAS = [
     "descripcion": "The Office es una serie de televisión de comedia que sigue el día a día de los empleados de una sucursal de la empresa papelera ficticia",
     "resumen": "The Office , popular serie de comedia de situación estadounidense que narra la vida cotidiana de un grupo de empleados de la ficticia empresa Dunder Mifflin Paper Company en Scranton , Pensilvania",
     "trailer": "https://www.youtube.com/watch?v=vyq1FCeFrng",
+    "iframe": "https://www.youtube.com/embed/vyq1FCeFrng?si=ie9e1jLa7AX0mRPW",
     "elenco": [
         "Elenco: Steve Carell",
         "Rainn Wilson",
@@ -348,7 +358,7 @@ const DATA_PELICULAS = [
     "productores": [
         ""
     ],
-    "temporadas": 9,
+    "temporadas": 9             ,
     "capitulos": 201
 }
 ]

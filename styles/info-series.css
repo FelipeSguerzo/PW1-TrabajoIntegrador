@@ -30,6 +30,7 @@ main{
   height: 100%;
   object-fit: cover;
   display: block;
+  opacity: 0.5;
 }
 
 .pelicula-detalles {
@@ -346,6 +347,33 @@ main {
     display: none;
   }
 
+    .verAhora-y-capitulo{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+  }
+
+  .temporadas-movil{
+    margin-bottom: 1rem;
+    display: flex;
+    width: 6.05rem;
+    background: #242323;
+    color: #d1c8c8;
+    border-radius: 0.3125rem;
+    padding: .5em;
+    margin-right: 2.5rem;
+  }
+
+    .capitulos-movil{
+    margin-bottom: 1rem;
+    display: flex;
+    background: #242323;
+    color: #d1c8c8;
+    border-radius: 0.3125rem;
+    padding: .5em;
+    width: 6.05rem;
+  }
+
     .temporada-capitulo{
     display: none;
   }
@@ -367,6 +395,7 @@ main {
     margin-bottom: 1rem;
     width: 25rem;
     min-height: 15rem;
+    border-radius: 2em;
   }
 
   .similares{
@@ -473,9 +502,16 @@ main {
   text-transform: uppercase;
   }
 
-  .temporadas-movil{
-    width: 6.05rem;
+  .verAhora-y-capitulo{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+  }
 
+  .temporadas-movil{
+    margin-bottom: 1rem;
+    display: flex;
+    width: 6.05rem;
     background: #242323;
     color: #d1c8c8;
     border-radius: 0.3125rem;
@@ -484,12 +520,13 @@ main {
   }
 
   .capitulos-movil{
+    margin-bottom: 1rem;
+    display: flex;
     background: #242323;
     color: #d1c8c8;
     border-radius: 0.3125rem;
     padding: .5em;
     width: 6.05rem;
-    margin-left: -2.5rem;
   }
 
   .ifremaContenedor-movil{
@@ -498,6 +535,7 @@ main {
 
   .iframe-pelicula-movil{
     width: 17rem;
+    border-radius: 2em;
   }
   
   .recomendacion-titulo {
