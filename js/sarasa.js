@@ -13,11 +13,24 @@
 
 const formulario = document.querySelector(".formulario");
 const inputs = document.querySelectorAll(".metodoDePago__tarjetaDeDebitoOCredito__codigoDeSeguridad, .metodoDePago__tarjetaDeDebitoOCredito__numeroDeTarjeta");
+const radio = document.getElementById("radioTarjeta");
+
 const expresiones = {
     numeroDeTarjeta: /^\d{16}$/,
     claveTarjeta: /^\d{3}$/
 }
 
+function habilitarTarjeta() {
+    radio.addEventListener("change", function () {
+        if (this.checked) {
+            document.querySelector(".metodoDePago__tarjetaDeDebitoOCredito__numeroDeTarjeta").disabled = false;
+        } else {
+            document.querySelector(".metodoDePago__tarjetaDeDebitoOCredito__numeroDeTarjeta").disabled = true;
+        }
+    });
+}
+
+habilitarTarjeta();
 
 function longitudNumeroDeTarjeta() {
     let numeroDeTarjeta = document.querySelector(".metodoDePago__tarjetaDeDebitoOCredito__numeroDeTarjeta").value;

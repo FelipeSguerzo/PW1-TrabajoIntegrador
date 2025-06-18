@@ -267,9 +267,6 @@ input[type=number]::-webkit-outer-spin-button {
     color: rgb(228, 19, 19);
     font-size: 1.1em;
     width: fit-content;
-    /* position: relative;
-    left: 3.3em;
-    bottom: 1.2em; */
 }
 
 .numeroDeTarjeta-incorrecto {
@@ -277,9 +274,6 @@ input[type=number]::-webkit-outer-spin-button {
     color: rgb(228, 19, 19);
     font-size: 1.1em;
     width: fit-content;
-    /* position: relative;
-    left: 3.3em;
-    bottom: 1.2em; */
 }
 
 .validaciones {

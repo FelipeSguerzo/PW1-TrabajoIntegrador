@@ -105,15 +105,11 @@
 
                 <section class="metodoDePago">
                     <article class="metodoDePago__tarjetaDeDebitoOCredito">
-                        <input class="radio" type="radio" name="metodoDePago" />
+                        <input class="radio" type="radio" name="metodoDePago" id="radioTarjeta"/>
                         <input class="metodoDePago__tarjetaDeDebitoOCredito__numeroDeTarjeta" type="number"
-                            name="tarjetaDeDebitoOCredito" placeholder="N&uacute;mero de tarjeta" required />
+                            name="tarjetaDeDebitoOCredito" placeholder="N&uacute;mero de tarjeta" disabled/>
                         <input class="metodoDePago__tarjetaDeDebitoOCredito__codigoDeSeguridad" type="number"
-                            name="codigoDeSeguridad" id="codigoDeSeguridad" placeholder="Clave" required />
-                        <!-- <article class="validaciones">
-                            <p class="codigoDeSeguridad-incorrecto">Clave inv&aacute;lida</p>
-                            <p class="numeroDeTarjeta-incorrecto">Tarjeta inv&aacute;lida</p>
-                        </article> -->
+                            name="codigoDeSeguridad" id="codigoDeSeguridad" placeholder="Clave" />
                     </article>
                     <p class="codigoDeSeguridad-incorrecto">Clave inv&aacute;lida</p>
                     <p class="numeroDeTarjeta-incorrecto">Tarjeta inv&aacute;lida</p>
