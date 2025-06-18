@@ -41,9 +41,8 @@ btnPeliculas.addEventListener("click", function(){
     nodoRaiz.innerHTML = "";
 
     for(let elemento of peliculasyseries){
-        const nodoPeliculaYSerie = document.createElement("div");
-
         if(elemento.temporadas == 0){
+            const nodoPeliculaYSerie = document.createElement("div");
             nodoPeliculaYSerie.innerHTML = `
             <a href="./info-pelicula.html?titulo=${elemento.titulo}">
             <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
