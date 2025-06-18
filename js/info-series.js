@@ -24,6 +24,8 @@ if(tituloPeli){
     document.getElementById("iframe-movil").src = tituloPeli.iframe;
     document.getElementById("temporada").textContent = tituloPeli.temporadas;
     document.getElementById("capitulos").textContent = tituloPeli.capitulos;
+    document.getElementById("temporadasTemporada1").textContent = tituloPeli.temporadas;
+    document.getElementById("capitulosTemporada1").textContent = tituloPeli.capitulos;
     if(tituloPeli.clasificacion !=0){
         document.getElementById("clasificacion-detallado").textContent = tituloPeli.clasificacion;
     }

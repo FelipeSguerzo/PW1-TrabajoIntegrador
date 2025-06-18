@@ -17,6 +17,7 @@ if(tituloPeli){
     document.getElementById("elenco").textContent = tituloPeli.elenco;
     document.getElementById("generos-detallado").textContent = tituloPeli.genero;
     document.getElementById("año-detallado").textContent = tituloPeli.año;
+    document.getElementById("iframe").src = tituloPeli.iframe;
     if(tituloPeli.clasificacion !=0){
         document.getElementById("clasificacion-detallado").textContent = tituloPeli.clasificacion;
     }

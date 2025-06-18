@@ -12,6 +12,7 @@ const DATA_PELICULAS = [
     "descripcion": "En The Incredible Hulk, Bruce Banner se convierte en Hulk como un peón involuntario en un esquema militar para revitalizar el programa del supersoldado a través de radiación gamma.",
     "resumen": "Bruce Banner recorre el mundo en busca de un antídoto para librarse de su alter ego. Además tendrá que hacer frente a Emil, un nuevo enemigo, lo que convertirá a Nueva York en el escenario de la última batalla entre las dos criaturas más poderosas.",
     "trailer": "https://www.youtube.com/watch?v=xbqNb2PFKKA",
+    "iframe": "https://www.youtube.com/embed/xbqNb2PFKKA?si=5rnsgDP6cUfOwseY",
     "elenco": [
         "Elenco: Edward Norton",
         "Liv Tyler",
@@ -51,6 +52,7 @@ const DATA_PELICULAS = [
     "descripcion": "Un adolescente intenta navegar por las complejidades de la vida, el amor y la amistad mientras enfrenta los desafíos de crecer.",
     "resumen": "La historia sigue a un grupo de amigos mientras lidian con los altibajos de la adolescencia, explorando temas de identidad, pertenencia y el viaje hacia la adultez.",
     "trailer": "https://www.youtube.com/watch?v=au2Zq8D9RaY",
+    "iframe": "https://www.youtube.com/embed/au2Zq8D9RaY?si=uD-8ST23VjoB2dCU",
     "elenco": [
         "Elenco: Michael Cera",
         "Christopher Mintz-Plasse",
@@ -80,6 +82,7 @@ const DATA_PELICULAS = [
     "descripcion": "Narra la vida y carrera de Vinícius Júnior, el futbolista brasileño, desde sus inicios hasta su consagración como una estrella mundial.",
     "resumen": "Baila, Vini es un documental de Netflix sobre el futbolista brasileño Vinícius Júnior",
     "trailer": "https://www.youtube.com/watch?v=IucwRVDHroc",
+    "iframe": "https://www.youtube.com/embed/IucwRVDHroc?si=5Hydl02FM8oIOmxS",
     "elenco": [
         "Elenco: Vinicius Júnior",
         "Neymar Jr.",
@@ -110,6 +113,7 @@ const DATA_PELICULAS = [
     "descripcion": "Sing es alumno del Shaolin y su verdadera ambición es popularizar y aproximar el arte del kung fu a la sociedad moderna.",
     "resumen": "Un día conoce a Fung, un antiguo futbolista fracasado, ambos establecerán una buena relación de la que nacerá la idea de formar un equipo que combine el futbol con las artes marciales.",
     "trailer": "https://www.youtube.com/watch?v=KEWUDWYDdYs",
+    "iframe": "https://www.youtube.com/embed/KEWUDWYDdYs?si=P2JutV9XXuDTRntV",
     "elenco": [
         "Elenco: Stephen Chow",
         "Wei Zhao",
@@ -142,6 +146,7 @@ const DATA_PELICULAS = [
     "descripcion": "Los detectives de Miami, Mike Lowrey y Marcus Burnett, se reúnen una última vez para acabar con un cartel de drogas que amenaza sus vidas.",
     "resumen": "Mike y Marcus se ven obligados a trabajar juntos una vez más cuando un nuevo enemigo aparece en la escena, poniendo en peligro todo lo que han construido.",
     "trailer": "https://www.youtube.com/watch?v=enizDUYZOCI",
+    "iframe": "https://www.youtube.com/embed/enizDUYZOCI?si=4nXW1Q5GUX1iktjK",
     "elenco": [
         "Elenco: Will Smith",
         "Martin Lawrence",
