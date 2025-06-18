@@ -20,6 +20,7 @@ body {
   height: 100%;
   object-fit: cover;
   display: block;
+  opacity: 0.5;
 }
 
 .pelicula-detalles {
@@ -42,7 +43,6 @@ body {
 }
 
 .pelicula-detalles h1 {
-  color: white;
   font-size: 3.125rem;
 }
 

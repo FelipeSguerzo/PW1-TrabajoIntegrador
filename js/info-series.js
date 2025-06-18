@@ -17,11 +17,14 @@ if(tituloPeli){
     document.getElementById("elenco").textContent = tituloPeli.elenco;
     document.getElementById("generos-detallado").textContent = tituloPeli.genero;
     document.getElementById("año-detallado").textContent = tituloPeli.año;
+    document.getElementById("director").textContent = tituloPeli.directores;
+    document.getElementById("productores").textContent = tituloPeli.productores;
+    document.getElementById("btn-ver").href = tituloPeli.trailer;
+    document.getElementById("iframe").src = tituloPeli.iframe;
+    document.getElementById("iframe-movil").src = tituloPeli.iframe;
+    document.getElementById("temporada").textContent = tituloPeli.temporadas;
+    document.getElementById("capitulos").textContent = tituloPeli.capitulos;
     if(tituloPeli.clasificacion !=0){
         document.getElementById("clasificacion-detallado").textContent = tituloPeli.clasificacion;
     }
-    document.getElementById("btn-ver").href = tituloPeli.trailer;
-    document.getElementById("director").textContent = tituloPeli.directores;
-    document.getElementById("productores").textContent = tituloPeli.productores;
 }
-

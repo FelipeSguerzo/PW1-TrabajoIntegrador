@@ -30,6 +30,7 @@ main{
   height: 100%;
   object-fit: cover;
   display: block;
+  opacity: 0.5;
 }
 
 .pelicula-detalles {

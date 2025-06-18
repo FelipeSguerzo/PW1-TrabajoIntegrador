@@ -182,6 +182,7 @@ const DATA_PELICULAS = [
     "descripcion": "Un grupo de personas con problemas financieros acepta una misteriosa invitación para participar en un juego de supervivencia con un premio en efectivo.",
     "resumen": "A medida que los jugadores compiten en juegos infantiles con consecuencias mortales, deben enfrentarse a sus propios demonios y a la naturaleza humana.",
     "trailer": "https://www.youtube.com/watch?v=oqxAJKy0ii4",
+    "iframe": "https://www.youtube.com/embed/oqxAJKy0ii4?si=W8Sa-153t-5EAXdh",
     "elenco": [
         "Elenco: Jung-jae Lee",
         "Lee Byung-hun",
@@ -222,6 +223,7 @@ const DATA_PELICULAS = [
     "descripcion":"Un libro malévolo cae en manos de Yagami Light. Ese libro tiene unas instrucciones claras y encierra una magia oscura.",
     "resumen": "Yagami no lo cree en un principio pero una vez lo prueba y comprueba que es cierto, toda su vida cambia por completo. El protagonista usará este artilugio para eliminar del mundo todos esas personas malas, criminales y seres oscuros y malvados que lo acechan.",
     "trailer": "https://www.youtube.com/watch?v=NlJZ-YgAt-c",
+    "iframe": "https://www.youtube.com/embed/NlJZ-YgAt-c?si=QT0f0Ty4FVurOdq5",
     "elenco": [
         "Elenco: Mamoru Miyano",
         "Shido Nakamura",
@@ -253,6 +255,7 @@ const DATA_PELICULAS = [
     "descripcion": "Un profesor de química se convierte en fabricante de metanfetaminas para asegurar el futuro financiero de su familia.",
     "resumen": "Walter White, un profesor de química, se asocia con un exalumno para producir y vender metanfetaminas tras ser diagnosticado con cáncer.",
     "trailer": "https://www.youtube.com/watch?v=HhesaQXLuRY",
+    "iframe": "https://www.youtube.com/embed/HhesaQXLuRY?si=TIbyVr-xCL4qO-6o",
     "elenco": [
         "Elenco: Bryan Cranston",
         "Aaron Paul",
@@ -294,6 +297,7 @@ const DATA_PELICULAS = [
     "descripcion": "Un grupo de amigos se enfrenta a una invasión alienígena mientras intentan sobrevivir en un mundo post-apocalíptico.",
     "resumen": "El eternauta es una historia de ciencia ficción que explora la lucha de la humanidad contra fuerzas externas y la importancia de la amistad y la solidaridad.",
     "trailer": "https://www.youtube.com/watch?v=ykLTd5aTa88",
+    "iframe": "https://www.youtube.com/embed/ykLTd5aTa88?si=k3ofAxCLHR7CcXHh",
     "elenco": [
         "Elenco: Ricardo Darín",
         "Carla Peterson",
@@ -331,6 +335,7 @@ const DATA_PELICULAS = [
     "descripcion": "The Office es una serie de televisión de comedia que sigue el día a día de los empleados de una sucursal de la empresa papelera ficticia",
     "resumen": "The Office , popular serie de comedia de situación estadounidense que narra la vida cotidiana de un grupo de empleados de la ficticia empresa Dunder Mifflin Paper Company en Scranton , Pensilvania",
     "trailer": "https://www.youtube.com/watch?v=vyq1FCeFrng",
+    "iframe": "https://www.youtube.com/embed/vyq1FCeFrng?si=ie9e1jLa7AX0mRPW",
     "elenco": [
         "Elenco: Steve Carell",
         "Rainn Wilson",
@@ -348,7 +353,7 @@ const DATA_PELICULAS = [
     "productores": [
         ""
     ],
-    "temporadas": 9,
+    "temporadas": 9             ,
     "capitulos": 201
 }
 ]

@@ -25,54 +25,35 @@
     </header>
 
     <section class="pelicula-hero">
-        <img class="peli-bg" src="./images/better-call-saul.jpg" alt="Better Call Saul" />
+        <img class="peli-bg" id="imagen" src=""/>
 
         <section class="pelicula-detalles">
             <section class="detalles-container">
-                <h1 class="pelicula-titulo">BETTER CALL SAUL</h1>
+                <h1 class="pelicula-titulo" id="pelicula-titulo"></h1>
                 <section class="genero">
                     <ul>
-                        <li>16+</li>
-                        <p>|</p>
-                        <li>2015</li>
-                        <p>|</p>
-                        <li>DRAMA</li>
-                        <p>|</p>
-                        <li>6 TEMPORADAS</li>
+                        <li id="clasificacion"></li>
+                        <li id="año"></li>
+                        <li id="generos"></li>
                     </ul>
                 </section>
                 <section class="pelicula-descripcion">
                     <p class="descripcion">
-                        <span class="span-titulo">Better Call Saul: </span>
-                        Una serie nominada al Emmy que deriva de "Breaking Bad" y sigue la metamorfosis del abogado
-                        Jimmy McGill en Saul Goodman, el asesor inescrupuloso de Walter White.
+                        <span class="span-titulo" id="descripcion"></span>
                     </p>
                 </section>
-                <a class="btn-verAhora" href="https://www.youtube.com/watch?v=kXiw_wEcUVQ&ab_channel=Wave427"
-                    target="_blank"><button class="btn-comprar">Ver
-                        ahora</button></a>
+                <a class="btn-verAhora" id="btn-ver" href="" target="_blank">
+                    <button class="btn-comprar">Ver ahora</button>
+                </a>
 
                 <form class="temporada-capitulo" action="get">
-                    <select class="temporadas" name="temporada" id="temporada">
-                        <option value="temporada1">Temporada 1</option>
-                        <option value="temporada2">Temporada 2</option>
-                        <option value="temporada3">Temporada 3</option>
-                        <option value="temporada4">Temporada 4</option>
-                        <option value="temporada5">Temporada 5</option>
-                        <option value="temporada6">Temporada 6</option>
+                    <select class="temporadas" name="temporada">
+                        <option id="temporada" value="temporada1"></option>
                     </select>
 
                     <select class="capitulos" name="capitulo" id="capitulo">
-                        <option value="capitulosTemporada1">Capitulo 1</option>
-                        <option value="capitulosTemporada1">Capitulo 2</option>
-                        <option value="capitulosTemporada1">Capitulo 3</option>
-                        <option value="capitulosTemporada1">Capitulo 4</option>
-                        <option value="capitulosTemporada1">Capitulo 5</option>
-                        <option value="capitulosTemporada1">Capitulo 6</option>
-                        <option value="capitulosTemporada1">Capitulo 7</option>
-                        <option value="capitulosTemporada1">Capitulo 8</option>
-                        <option value="capitulosTemporada1">Capitulo 9</option>
-                        <option value="capitulosTemporada1">Capitulo 10</option>
+                        <option id="capitulos" value="capitulosTemporada1"></option>
+
                     </select>
                 </form>
             </section>
@@ -105,7 +86,7 @@
                     </select>
 
                     <section class="ifremaContenedor-movil">
-                        <iframe class="iframe-pelicula-movil"
+                        <iframe class="iframe-pelicula-movil" id="iframe-movil"
                             src="https://www.youtube.com/embed/Ylv21uNzW4k?si=MPPbtb2I7o3xOWAs"
                             title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -116,7 +97,7 @@
         </section>
 
         <section class="ifremaContenedor">
-            <iframe class="iframe-pelicula" src="https://www.youtube.com/embed/Ylv21uNzW4k?si=MPPbtb2I7o3xOWAs"
+            <iframe class="iframe-pelicula" id="iframe" src="https://www.youtube.com/embed/NlJZ-YgAt-c?si=QT0f0Ty4FVurOdq5"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
@@ -149,25 +130,19 @@
 
                 <section class="container-pelicula_desc">
                     <section class="titulo_pelicula-descripcion">
-                        <h1>Better Call Saul</h1>
+                        <h1 id="titulo-detallado"></h1>
                     </section>
                     <section class="pelicula_descripcion-detallada">
                         <article>
-                            <p>
-                                <span>Elenco: </span> Bob Odenkirk, Rhea Seehorn, Jonathan Banks, Michael McKean,
-                                Giancarlo Esposito, Michael Mando, Patrick Fabian, Tony Dalton, Kerry Condon y Brandon
-                                K. Hampton
-                            </p>
-                            <p><span>Directores: </span>Vince Gilligan y Peter Gould</p>
-                            <p>
-                                <span>Productores: </span>Vince Gilligan, Peter Gould, Mark Johnson, Melissa Bernstein,
-                                Thomas Schnauz, Gennifer Hutchison
-                            </p>
+                            <p id="descripcion-detallada"></p>
+                            <p id="elenco"></p>
+                            <p id="director"></p>
+                            <p id="productores"></p>
                         </article>
                         <article>
-                            <p><span>Géneros: </span>Drama, Inusual, Crudo, Sobre crímenes</p>
-                            <p><span>Año de Lanzamiento: </span>2015</p>
-                            <p><span>Clasificación: 16+</span></p>
+                            <p id="generos-detallado"></p>
+                            <p id="año-detallado"></p>
+                            <p id="clasificacion-detallado">></p>
                         </article>
                     </section>
                 </section>
@@ -275,6 +250,9 @@
             </a>
         </section>
     </footer>
+    <script src="js/peliculasyseries.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/info-series.js"></script>
 </body>
 
 </html>
