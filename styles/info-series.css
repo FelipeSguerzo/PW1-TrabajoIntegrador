@@ -216,6 +216,105 @@ main {
     display: none;
   }
 
+.recomendacion-titulo{
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.carousel{
+  width: 100%;
+  margin: 0px 0px;
+}
+
+@media(min-width: 768px) {
+
+  .carousel{
+    margin: 0px 60px;
+  }
+}
+.carrusel-list{
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  height: 304px;
+  padding: 10px 0px;
+  margin: 0px auto;
+  max-width: 90vw;
+  overflow: hidden;
+}
+
+.carrusel-track{
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  transition: .5s ease-in-out;
+}
+
+.carrusel{
+  position: relative;
+  width: 210px;
+  padding: 0 18px;
+  float: left;
+  box-sizing: border-box;
+  display: flex;
+  height: 100%;
+}
+
+.carrusel a img{
+  object-fit: cover;
+  height: 300px;
+  width: 200px;
+  border-radius: 15px;
+  transition: .3s ease-in-out;
+}
+
+
+
+@media(min-width: 768px){
+
+  .carrusel{
+    width: 275px;
+  }
+
+  .carrusel a img{
+    width: 250px;
+  }
+}
+
+.carrusel-arrow{
+  border-radius: 30px;
+  background-color: white;
+  position: absolute;
+  z-index: 4;
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  border: 0;
+  cursor: pointer;
+}
+
+.carrusel-arrow:focus{
+  outline: 0;
+}
+
+.carrusel-arrow svg{
+  width: 12px;
+  height: 100%;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.carrusel-prev{
+  left: 0;
+}
+
+.carrusel-next{
+  right: 0;
+}
+
   @media (max-width: 1574px) {
 
     .pelicula-hero .peli-bg{
@@ -226,6 +325,10 @@ main {
     .pelicula-detalles{
       margin-top: 9rem;
       margin-left: 1rem;
+    }
+
+    .recomendacion-titulo{
+      margin-top: 10rem;
     }
 
     .ifremaContenedor {
@@ -269,7 +372,7 @@ main {
     }
 
     .pelicula{
-      margin-top: 8rem;
+      margin-top: 0rem;
     }
 
     .similares{
@@ -324,6 +427,12 @@ main {
     width: 100%;
     font-size: 3rem;
   }
+
+.recomendacion-titulo{
+  text-align: center;
+  margin-top: 10rem;
+  margin-bottom: 2rem;
+}
 
   .pelicula-detalles .detalles-container .pelicula-descripcion p{
     width: 100%;
@@ -415,6 +524,10 @@ main {
 
   p{
     font-size: 1rem;
+  }
+
+  .pelicula{
+    margin-top: 0;
   }
 }
 
@@ -530,7 +643,7 @@ main {
   }
   
   .recomendacion-titulo {
-    margin-top: 0rem;
+    margin-top: 3rem;
     font-size: 1.8rem;
   }
 
