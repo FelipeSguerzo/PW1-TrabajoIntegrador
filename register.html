@@ -69,7 +69,7 @@
                 </article>
             </section>
 
-            <form method="get" class="formulario" action="./index.html">
+            <form method="get" class="formulario" action="./index.html" novalidate>
                 <section class="datosDeUsuario">
                     <input class="form-datos" type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre"
                         required />
@@ -109,22 +109,22 @@
                         <input class="metodoDePago__tarjetaDeDebitoOCredito__numeroDeTarjeta" type="number"
                             name="tarjetaDeDebitoOCredito" placeholder="N&uacute;mero de tarjeta" disabled/>
                         <input class="metodoDePago__tarjetaDeDebitoOCredito__codigoDeSeguridad" type="number"
-                            name="codigoDeSeguridad" id="codigoDeSeguridad" placeholder="Clave" />
+                            name="codigoDeSeguridad" id="codigoDeSeguridad" placeholder="Clave" disabled/>
                     </article>
                     <p class="codigoDeSeguridad-incorrecto">Clave inv&aacute;lida</p>
                     <p class="numeroDeTarjeta-incorrecto">Tarjeta inv&aacute;lida</p>
 
                     <article class="cuponDePago">
                         <article>
-                            <input class="radio" type="radio" name="metodoDePago" id="cuponDePago" />
-                            <label class="transferenciaBancaria" for="cuponDePago">Cup&oacute;n de pago</label>
+                            <input class="radio" type="radio" name="metodoDePago" id="cuponDePagoRadio" />
+                            <label class="transferenciaBancaria" for="cuponDePagoRadio">Cup&oacute;n de pago</label>
                         </article>
 
                         <article class="seleccionDeCuponDePago">
-                            <input class="metodoDePago__cuponDePago" type="checkbox" id="pagoFacil" />
+                            <input class="metodoDePago__cuponDePago" type="checkbox" id="pagoFacil" disabled/>
                             <label class="cuponDePago__pagoFacil" for="pagoFacil">Pago facil</label>
 
-                            <input class="metodoDePago__cuponDePago" type="checkbox" id="rapiPago" />
+                            <input class="metodoDePago__cuponDePago" type="checkbox" id="rapiPago" disabled/>
                             <label class="cuponDePago__rapiPago" for="rapiPago">RapiPago</label>
                         </article>
                     </article>
