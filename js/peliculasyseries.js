@@ -211,8 +211,23 @@ const DATA_PELICULAS = [
         "Productores: Hwang Dong-hyuk",
         "Kim Ji-yeon"
     ],
-    "temporadas": 3,
-    "capitulos": 17
+    "temporadas": [
+        "Temporada 1",
+        "Temporada 2",
+        "Temporada 3"
+    ],
+    "capitulos": [
+                "Capitulo 1",
+        "Capitulo 2",
+        "Capitulo 3",
+        "Capitulo 4",
+        "Capitulo 5",
+        "Capitulo 6",
+        "Capitulo 7",
+        "Capitulo 8",
+        "Capitulo 9",
+        "... 17"
+    ]
 },
 
 {
@@ -244,8 +259,21 @@ const DATA_PELICULAS = [
     "productores": [
         ""
     ],
-    "temporadas": 1,
-    "capitulos": 37
+    "temporadas": [
+        "Temporada 1"
+    ],
+    "capitulos": [
+        "Capitulo 1",
+        "Capitulo 2",
+        "Capitulo 3",
+        "Capitulo 4",
+        "Capitulo 5",
+        "Capitulo 6",
+        "Capitulo 7",
+        "Capitulo 8",
+        "Capitulo 9",
+        "... 37"
+    ]
 },
 
 {
@@ -286,8 +314,25 @@ const DATA_PELICULAS = [
     "productores": [
         "Productor: Karen Moore"
     ],
-    "temporadas": 5,
-    "capitulos": 62
+    "temporadas": [
+        "Temporada 1",
+        "Temporada 2",
+        "Temporada 3",
+        "Temporada 4",
+        "Temporada 5",
+    ],
+    "capitulos": [
+        "Capitulo 1",
+        "Capitulo 2",
+        "Capitulo 3",
+        "Capitulo 4",
+        "Capitulo 5",
+        "Capitulo 6",
+        "Capitulo 7",
+        "Capitulo 8",
+        "Capitulo 9",
+        "... 62"
+    ]
 },
 {
     "imagen": "images/eternauta_series.jpg",
@@ -324,8 +369,17 @@ const DATA_PELICULAS = [
         "Leticia Cristi",
         "Diego Copello"
     ],
-    "temporadas": 1,
-    "capitulos": 6
+    "temporadas": [
+        "Temporada 1"
+    ],
+    "capitulos": [
+        "Capitulo 1",
+        "Capitulo 2",
+        "Capitulo 3",
+        "Capitulo 4",
+        "Capitulo 5",
+        "Capitulo 6"
+    ]
 },
 
 {
@@ -358,7 +412,28 @@ const DATA_PELICULAS = [
     "productores": [
         ""
     ],
-    "temporadas": 9,
-    "capitulos": 201
+    "temporadas": [
+        "Temporada 1",
+        "Temporada 2",
+        "Temporada 3",
+        "Temporada 4",
+        "Temporada 5",
+        "Temporada 6",
+        "Temporada 7",
+        "Temporada 8",
+        "Temporada 9"
+    ],
+    "capitulos": [
+        "Capitulo 1",
+        "Capitulo 2",
+        "Capitulo 3",
+        "Capitulo 4",
+        "Capitulo 5",
+        "Capitulo 6",
+        "Capitulo 7",
+        "Capitulo 8",
+        "Capitulo 9",
+        "... 201"
+    ]
 }
 ]

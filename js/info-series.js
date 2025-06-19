@@ -37,12 +37,14 @@ function AgregarTemporadas(cssSelector){
     const nodoRaiz = document.getElementById("temporadas-agregar");
 
     for(let elemento of cssSelector){
-        if(elemento.temporadas > 0 && elemento.temporadas == tituloPeli.temporadas){
-        const nodoPeliculaYSerie = document.createElement("div");
-        nodoPeliculaYSerie.innerHTML = `
-            <option id="temporada"> ${elemento.temporadas}</option>
-        `;
-        nodoRaiz.appendChild(nodoPeliculaYSerie);  
+        if(elemento.temporadas == tituloPeli.temporadas){
+            for(let i=0; i < elemento.temporadas.length; i++){
+                const nodoPeliculaYSerie = document.createElement("div");
+                nodoPeliculaYSerie.innerHTML = `
+                <option id="temporada"> ${elemento.temporadas[i]}</option>
+                `;
+                nodoRaiz.appendChild(nodoPeliculaYSerie);  
+            }
         }
     }
     }
@@ -53,13 +55,15 @@ function AgregarCapitulos(cssSelector){
         const nodoRaiz = document.getElementById("capitulo-agregar");
         for(let elemento of cssSelector){
             if(elemento.capitulos == tituloPeli.capitulos){
-            const nodoPeliculaYSerie = document.createElement("div");
-            nodoPeliculaYSerie.innerHTML = `
-            <option id="temporada" value="temporada1"> ${elemento.capitulos}</option>
-            `;  
-            nodoRaiz.appendChild(nodoPeliculaYSerie);
+                for(let i = 0; i < elemento.capitulos.length; i++){
+                    const nodoPeliculaYSerie = document.createElement("div");
+                    nodoPeliculaYSerie.innerHTML = `
+                    <option id="temporada"> ${elemento.capitulos[i]}</option>
+                    `;  
+                    nodoRaiz.appendChild(nodoPeliculaYSerie);
+                }
             }
-    }
+    }   
 }
 }
 
