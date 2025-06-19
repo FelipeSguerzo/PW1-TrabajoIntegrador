@@ -12,6 +12,8 @@
 // - QUE NO TENGA ESPACIOS
 // - TIENE QUE SER REQUERIDO UNO DE LOS TRES METODOS DE PAGO.
 
+// Agregue la varialbe let claveCorrecta; a la funcion validacionClaveDeLaTarjeta();
+
 const formulario = document.querySelector(".formulario");
 const inputs = document.querySelectorAll(".metodoDePago__tarjetaDeDebitoOCredito__codigoDeSeguridad, .metodoDePago__tarjetaDeDebitoOCredito__numeroDeTarjeta");
 
@@ -22,6 +24,8 @@ let metodoDePagoTarjeta = document.querySelector(".metodoDePago__tarjetaDeDebito
 let metodoDePagoClaveTarjeta = document.querySelector(".metodoDePago__tarjetaDeDebitoOCredito__codigoDeSeguridad");
 let metodoDePagoPagoFacil = document.getElementById("pagoFacil");
 let metodoDePagoRapiPago = document.getElementById("rapiPago");
+
+
 
 const expresiones = {
     numeroDeTarjeta: /^\d{16}$/,
@@ -68,10 +72,6 @@ function habilitarTransferencia() {
         }
     })
 }
-
-habilitarTarjeta();
-habilitarCuponDePago();
-habilitarTransferencia();
 
 function longitudNumeroDeTarjeta() {
     let numeroDeTarjeta = document.querySelector(".metodoDePago__tarjetaDeDebitoOCredito__numeroDeTarjeta").value;
@@ -120,16 +120,21 @@ function validacionClaveDeLaTarjeta() {
     const claveErronea = 0;
     const claveDeLaTarjeta = document.querySelector(".metodoDePago__tarjetaDeDebitoOCredito__codigoDeSeguridad").value;
     const esValido = expresiones.claveTarjeta.test(claveDeLaTarjeta);
+    let claveCorrecta = true;
 
     if (esValido == true && claveDeLaTarjeta != claveErronea) {
         metodoDePagoClaveTarjeta.classList.remove("validacion-incorrecta");
         metodoDePagoClaveTarjeta.classList.add("validacion-correcta");
         document.querySelector(".codigoDeSeguridad-incorrecto").style.display = "none";
+        claveCorrecta;
     } else {
         metodoDePagoClaveTarjeta.classList.add("validacion-incorrecta");
         metodoDePagoClaveTarjeta.classList.remove("validacion-correcta");
         document.querySelector(".codigoDeSeguridad-incorrecto").style.display = "flex";
+        claveCorrecta = false;
     };
+
+    return claveCorrecta;
 }
 
 function validacionIncorrectaInputs() {
@@ -158,3 +163,6 @@ function validacion() {
 
 validacionIncorrectaInputs();
 validacion();
+habilitarTarjeta();
+habilitarCuponDePago();
+habilitarTransferencia();
