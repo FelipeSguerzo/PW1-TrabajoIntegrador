@@ -72,7 +72,7 @@ agregarImgCarrusel(peliculasyseries);
 function agregarImgCarrusel(cssSelector){
     const nodoRaiz = document.querySelector("#track");
     for(let elemento of cssSelector){
-        if(elemento.temporadas > 0){
+        if(elemento.temporadas.length > 0){
             const nodoPeliculaYSerie = document.createElement("div");
                         
             nodoPeliculaYSerie.innerHTML = `
