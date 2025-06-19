@@ -27,6 +27,30 @@ if(tituloPeli){
     document.getElementById("productores").textContent = tituloPeli.productores;
 }
 
+agregarImgCarrusel(peliculasyseries);
+
+function agregarImgCarrusel(cssSelector){
+    const nodoRaiz = document.querySelector("#track");
+    for(let elemento of cssSelector){
+        if(elemento.temporadas == 0){
+            const nodoPeliculaYSerie = document.createElement("div");
+                        
+            nodoPeliculaYSerie.innerHTML = `
+                <div class="carrusel">
+                    <div>
+                        <a href="./info-pelicula.html?titulo=${elemento.titulo}">
+                            <picture>
+                                <img src="${elemento.imagen}" alt="${elemento.titulo}">
+                            </picture
+                        </a>
+                    </div>
+                </div>
+            `;
+            nodoRaiz.appendChild(nodoPeliculaYSerie);
+        }
+    }
+}
+
 function App(){}
     window.onload = function(event){
         var app = new App();
