@@ -16,8 +16,8 @@
         <nav>
             <ul>
                 <li><a href="main.html">HOME</a></li>
-                <li><a href="peliculas.html">PELÍCULAS</a></li>
-                <li><a href="series.html">SERIES</a></li>
+                <li><a href="soloPelicula.html">PELÍCULAS</a></li>
+                <li><a href="soloSeries.html">SERIES</a></li>
                 <li><a href="usuario.html">PERFIL</a></li>
                 <li><a href="index.html">CERRAR SESION</a></li>
             </ul>
@@ -47,23 +47,17 @@
                 </a>
 
                 <form class="temporada-capitulo" action="get">
-                    <select class="temporadas" name="temporada">
-                        <option id="temporada" value="temporada1"></option>
-                    </select>
-
-                    <select class="capitulos" name="capitulo" id="capitulo">
-                        <option id="capitulos" value="capitulosTemporada1"></option>
-
-                    </select>
+                    <select class="temporadas" id="temporadas-agregar" name="temporada"></select>
+                    <select class="capitulos" name="capitulo" id="capitulo-agregar"></select>
                 </form>
             </section>
             <form class="temporada-capitulo-movil" action="get">
                 <div class="verAhora-y-capitulo">
-                    <a class="btn-verAhora" href="https://www.youtube.com/watch?v=kXiw_wEcUVQ&ab_channel=Wave427"
+                    <a class="btn-verAhora" href=""
                         target="_blank">
                         <button class="btn-comprar-movil">Verahora</button>
                     </a>
-                    <select class="temporadas-movil" name="temporada" id="temporada">
+                    <select class="temporadas-movil" name="temporada" id="temporada-movil">
                         <option id="temporadasTemporada1" value="temporada1"></option>
                     </select>
 

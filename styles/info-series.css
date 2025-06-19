@@ -476,6 +476,10 @@ main {
     display: none;
   }
 
+  .btn-comprar-movil{
+    display: none;
+  }
+
   .temporada-capitulo{
     display: none;
   }
@@ -487,19 +491,6 @@ main {
   .temporada-capitulo-movil{
     display: grid;
     grid-template-columns: 2fr 1fr; 
-  }
-
-  .btn-comprar-movil{
-  padding: 0.4375rem;
-  gap: 0.625rem;
-  border: none;
-  border-radius: 0.3125rem;
-  cursor: pointer;
-  width: 12.3125rem;
-  height: 2.875rem;
-  border-radius: 0.3125rem;
-  font-weight: 600;
-  text-transform: uppercase;
   }
 
   .verAhora-y-capitulo{

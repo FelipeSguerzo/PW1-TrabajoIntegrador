@@ -33,66 +33,6 @@ function AgregarImgPeliYSerie(cssSelector){
     }
 }
 
-const btnPeliculas = document.querySelector(".btn-peliculas");
-
-btnPeliculas.addEventListener("click", function(){
-    
-    const nodoRaiz = document.querySelector(".content");
-    nodoRaiz.innerHTML = "";
-
-    for(let elemento of peliculasyseries){
-        const nodoPeliculaYSerie = document.createElement("div");
-
-        if(elemento.temporadas == 0){
-            nodoPeliculaYSerie.innerHTML = `
-            <a href="./info-pelicula.html?titulo=${elemento.titulo}">
-            <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
-            </a>
-            `;
-        }
-        nodoRaiz.appendChild(nodoPeliculaYSerie);
-    }
-});
-
-const btnSeries = document.querySelector(".btn-series");
-
-btnSeries.addEventListener("click", function(){
-
-    const nodoRaiz = document.querySelector(".content");
-    nodoRaiz.innerHTML = '';
-
-    for(let elemento of peliculasyseries){
-        if(elemento.temporadas !=0){
-            const nodoPeliculaYSerie = document.createElement("div");
-            nodoPeliculaYSerie.innerHTML = `
-            <a href="./info-series.html?titulo=${elemento.titulo}">
-            <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
-            </a>
-            `;
-            nodoRaiz.appendChild(nodoPeliculaYSerie);
-        }
-    }
-});
-
-const btnHome = document.querySelector(".btn-home");
-
-btnHome.addEventListener("click", function(){
-
-    const nodoRaiz = document.querySelector(".content");
-    nodoRaiz.innerHTML = '';
-
-    for(let elemento of peliculasyseries){
-        const nodoPeliculaYSerie = document.createElement("div");
-
-        nodoPeliculaYSerie.innerHTML = `
-        <a href="./info-pelicula.html?titulo=${elemento.titulo}">
-        <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
-        </a>
-        `;
-        nodoRaiz.appendChild(nodoPeliculaYSerie);  
-    } 
-});
-
 const btnNingunGenero = document.querySelector(".ningun-genero");
 
 btnNingunGenero.addEventListener("click", function(){

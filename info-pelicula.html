@@ -1,99 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximumscale=1">
-    <title>Peliculas</title>
-    <link rel="stylesheet" href="styles/headerYFooter.css" />
-    <link rel="stylesheet" href="styles/info-pelicula.css" />
-    <link
-      rel="icon"
-      type="image/png"
-      href="https://w7.pngwing.com/pngs/242/287/png-transparent-hbo-logo-black.png"
-    />
-  </head>
-  <body>
+    <title>Better Call Saul</title>
+    <link rel="stylesheet" href="./styles/info-series.css">
+    <link rel="stylesheet" href="./styles/headerYFooter.css"/>
+    <link rel="stylesheet" href="styles/info-pelicula.css"/>
+</head>
+
+<body>
     <header class="header">
-        <a href="index.html"><img class="headerimg" src="https://images.cdn.prd.api.discomax.com/05b7/3d4a7e2b0215.png?h=30&f=webp" alt="HBO LOGO"></a>
+        <a href="index.html"><img class="headerimg"
+                src="https://images.cdn.prd.api.discomax.com/05b7/3d4a7e2b0215.png?h=30&f=webp" alt="HBO LOGO"></a>
         <nav>
             <ul>
-            <li><a href="main.html">HOME</a></li>
-            <li><a href="peliculas.html">PELÍCULAS</a></li>
-            <li><a href="series.html">SERIES</a></li>
-            <li><a href="usuario.html">PERFIL</a></li>
-            <li><a href="index.html">CERRAR SESION</a></li>
-        </ul>
+                <li><a href="main.html">HOME</a></li>
+                <li><a href="soloPelicula.html">PELÍCULAS</a></li>
+                <li><a href="soloSeries.html">SERIES</a></li>
+                <li><a href="usuario.html">PERFIL</a></li>
+                <li><a href="index.html">CERRAR SESION</a></li>
+            </ul>
         </nav>
     </header>
 
     <section class="pelicula-hero">
-      <img class="peli-bg" id="imagen"/>
-      <section class="pelicula-detalles">
-        <section class="detalles-container">
-          <h1 class="pelicula-titulo" id="pelicula-titulo"></h1>
-          <section class="genero" id="genero">
-            <ul class="genero-li">
-              <li id="año"></li>
-              <li id="generos"></li>
-              <li id="clasificacion"></li>
-            </ul>
-          </section>
-          <section class="pelicula-descripcion">
-            <p class="descripcion" id="descripcion">
-              <span class="span-titulo" id="pelicula-titulo-desc"></span> Blake
-              Lively estelariza esta adaptación de la novela de Colleen Hoover
-              sobre amor, resiliencia y la fortaleza que requiere romper ciclos.
-            </p>
-          </section>
+        <img class="peli-bg" id="imagen" src=""/>
 
-          <a class="btn-ver" id="btn-ver" href="" target="_blank"
-            ><button class="btn-comprar">Ver ahora</button></a>
+        <section class="pelicula-detalles">
+            <section class="detalles-container">
+                <h1 class="pelicula-titulo" id="pelicula-titulo"></h1>
+                <section class="genero">
+                    <ul>
+                        <li id="clasificacion"></li>
+                        <li id="año"></li>
+                        <li id="generos"></li>
+                    </ul>
+                </section>
+                <section class="pelicula-descripcion">
+                    <p class="descripcion">
+                        <span class="span-titulo" id="descripcion"></span>
+                    </p>
+                </section>
+                <a class="btn-verAhora" id="btn-ver" href="" target="_blank">
+                    <button class="btn-comprar">Ver ahora</button>
+                </a>
+            </section>
+            <form class="temporada-capitulo-movil" action="get">
+                <div class="verAhora-y-capitulo">
+                    <a class="btn-verAhora" href=""
+                        target="_blank">
+                        <button class="btn-comprar-movil">Verahora</button>
+                    </a>
+                </div>
+            </form>
+            <section class="ifremaContenedor-movil">
+                <iframe class="iframe-pelicula-movil" id="iframe-movil"
+                            src=""
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+            </section>
         </section>
-      </section>
-                                       <section class="ifremaContenedor">
-          <iframe class="iframe-pelicula" id="iframe" src=""
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-          </iframe>  
+
+        <section class="ifremaContenedor">
+            <iframe class="iframe-pelicula" id="iframe" src=""
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
         </section>
     </section>
-    <main>
-      <section class="pelicula">
-        <section class="recomendaciones">
-          <h1 class="recomendacion-titulo">Quizá también te guste</h1>
-          <section class="similares">
-            <section class="pelicula-similar">
-              <a href="./info-pelicula.html"><img class="img-pelicula-similar"
-                src="./images/hulk_hero.png"
-                alt="Hulk"
-              /></a>
-              <h3 class="titulo-pelicula_recomendada">Hulk</h3>
-            </section>
-            <section class="pelicula-similar">
-              <a href="./info-pelicula.html"><img class="img-pelicula-similar"
-                src="./images/shaolin-soccer_hero.png"
-                alt="Shaolin Soccer"
-              /></a>
-              <h3 class="titulo-pelicula_recomendada">Shaolin Soccer</h3>
-            </section>
-            <section class="pelicula-similar">
-              <a href="./info-pelicula.html"><img class="img-pelicula-similar"
-                src="./images/baila-vini_mini.png"
-                alt="Baila, Vini"
-              /></a>
-              <h3 class="titulo-pelicula_recomendada">Baila, Vini</h3>
-            </section>
-            <section class="pelicula-similar">
-              <a href="./info-pelicula.html"><img  class="img-pelicula-similar"
-                src="./images/super-cool_hero.png"
-                alt="Super Cool"
-              /></a>
-              <h3 class="titulo-pelicula_recomendada">Super Cool</h3>
-            </section>
-          </section>
 
-          <section class="container-pelicula_desc">
+    <main>
+        <section class="pelicula">
+            <section class="recomendaciones">
+                <h1 class="recomendacion-titulo">Quizá también te guste</h1>
+                <section class="similares">
+                    <section class="pelicula-similar">
+                        <a href="./info-series.html"><img src="./images/breaking-bad.jpg" alt="Breaking Bad" /></a>
+                        <h3 class="titulo-pelicula_recomendada">Breaking Bad</h3>
+                    </section>
+                    <section class="pelicula-similar">
+                        <a href="./info-series.html"><img src="./images/chernobyl.jpg" alt="Chernobyl" /></a>
+                        <h3 class="titulo-pelicula_recomendada">Chernobyl</h3>
+                    </section>
+                    <section class="pelicula-similar">
+                        <a href="./info-series.html"><img src="./images/peaky-blinders.jpg" alt="Peaky Blinders" /></a>
+                        <h3 class="titulo-pelicula_recomendada">Peaky Blinders</h3>
+                    </section>
+                    <section class="pelicula-similar">
+                        <a href="./info-series.html"><img src="./images/dexter.jpg" alt="Dexter" /></a>
+                        <h3 class="titulo-pelicula_recomendada">Dexter</h3>
+                    </section>
+                </section>
+
+                <section class="container-pelicula_desc">
                     <section class="titulo_pelicula-descripcion">
                         <h1 id="titulo-detallado"></h1>
                     </section>
@@ -107,15 +111,15 @@
                         <article>
                             <p id="generos-detallado"></p>
                             <p id="año-detallado"></p>
-                            <p id="clasificacion-detallado"></p>
+                            <p id="clasificacion-detallado">></p>
                         </article>
                     </section>
                 </section>
-          </section>
+            </section>
         </section>
-      </section>
     </main>
-        <footer>
+
+    <footer>
         <section class="alumnos">
             <ul>
                 <li>Sguerzo Felipe - 47061231</li>
@@ -217,6 +221,7 @@
     </footer>
     <script src="js/peliculasyseries.js"></script>
     <script src="js/home.js"></script>
-    <script src="js/info-peli.js"></script>
-  </body>
+    <script src="js/info-series.js"></script>
+</body>
+
 </html>

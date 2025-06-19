@@ -358,7 +358,7 @@ const DATA_PELICULAS = [
     "productores": [
         ""
     ],
-    "temporadas": 9             ,
+    "temporadas": 9,
     "capitulos": 201
 }
 ]
