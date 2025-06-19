@@ -56,7 +56,7 @@ btnAccion.addEventListener("click", function(){
 
     for(let elemento of peliculasyseries){
         for(let generos of elemento.genero){
-            if(generos === "Acción" && elemento.temporadas > 0){
+            if(generos === "Acción" && elemento.temporadas != 0){
                 const nodoPeliculaYSerie = document.createElement("div");
 
                 nodoPeliculaYSerie.innerHTML = `
@@ -78,7 +78,7 @@ btnAdolescente.addEventListener("click", function(){
 
     for(let elemento of peliculasyseries){
         for(let generos of elemento.genero){
-            if(generos === "Adolescente" && elemento.temporadas > 0){
+            if(generos === "Adolescente" && elemento.temporadas != 0){
                 const nodoPeliculaYSerie = document.createElement("div");
 
                 nodoPeliculaYSerie.innerHTML = `
@@ -100,7 +100,7 @@ btnCF.addEventListener("click", function(){
 
     for(let elemento of peliculasyseries){
         for(let generos of elemento.genero){
-            if(generos === "Ciencia Ficción" && elemento.temporadas > 0){
+            if(generos === "Ciencia Ficción" && elemento.temporadas != 0){
                 const nodoPeliculaYSerie = document.createElement("div");
 
                 nodoPeliculaYSerie.innerHTML = `
@@ -122,7 +122,7 @@ btnComedia.addEventListener("click", function(){
 
     for(let elemento of peliculasyseries){
         for(let generos of elemento.genero){
-            if(generos === "Comedia" && elemento.temporadas > 0){
+            if(generos === "Comedia" && elemento.temporadas != 0){
                 const nodoPeliculaYSerie = document.createElement("div");
 
                 nodoPeliculaYSerie.innerHTML = `
@@ -144,7 +144,7 @@ btnDrama.addEventListener("click", function(){
 
     for(let elemento of peliculasyseries){
         for(let generos of elemento.genero){
-            if(generos === "Drama" && elemento.temporadas > 0){
+            if(generos === "Drama" && elemento.temporadas != 0){
 
                 const nodoPeliculaYSerie = document.createElement("div");
 
@@ -167,7 +167,7 @@ btnDocumental.addEventListener("click", function(){
 
     for(let elemento of peliculasyseries){
         for(let generos of elemento.genero){
-            if(generos === "Documental" && elemento.temporadas > 0){
+            if(generos === "Documental" && elemento.temporadas != 0){
                 const nodoPeliculaYSerie = document.createElement("div");
 
                 nodoPeliculaYSerie.innerHTML = `
@@ -189,7 +189,7 @@ btnFantasia.addEventListener("click", function(){
 
     for(let elemento of peliculasyseries){
         for(let generos of elemento.genero){
-            if(generos === "Fantasía" && elemento.temporadas > 0){
+            if(generos === "Fantasía" && elemento.temporadas != 0){
                 const nodoPeliculaYSerie = document.createElement("div");
 
                 nodoPeliculaYSerie.innerHTML = `
@@ -212,7 +212,7 @@ btnSuspenso.addEventListener("click", function(){
 
     for(let elemento of peliculasyseries){
         for(let generos of elemento.genero){
-            if(generos === "Suspenso" && elemento.temporadas > 0){
+            if(generos === "Suspenso" && elemento.temporadas != 0){
                 const nodoPeliculaYSerie = document.createElement("div");
 
                 nodoPeliculaYSerie.innerHTML = `
