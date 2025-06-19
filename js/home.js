@@ -325,9 +325,9 @@ nodoInputSearch.addEventListener("keyup", (e) => {
     peliculasyseries.forEach((elemento, index) => {
         const titulo = elemento.titulo.toLowerCase();
         if (titulo.includes(nombreABuscar)) {
-            nodosPeliculas[index].style.display = "block"; // Mostrar si coincide
+            nodosPeliculas[index].style.display = "block"; 
         } else {
-            nodosPeliculas[index].style.display = "none"; // Ocultar si no coincide
+            nodosPeliculas[index].style.display = "none"; 
         }
     });
 });
