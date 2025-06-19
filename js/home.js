@@ -315,3 +315,19 @@ btnSuspenso.addEventListener("click", function(){
         }
     }
 });
+
+const nodoInputSearch = document.querySelector(".search");
+nodoInputSearch.addEventListener("keyup", (e) => {
+    const nombreABuscar = nodoInputSearch.value.toLowerCase();
+    const nodoRaiz = document.querySelector(".content");
+    const nodosPeliculas = nodoRaiz.querySelectorAll("div");
+
+    peliculasyseries.forEach((elemento, index) => {
+        const titulo = elemento.titulo.toLowerCase();
+        if (titulo.includes(nombreABuscar)) {
+            nodosPeliculas[index].style.display = "block"; // Mostrar si coincide
+        } else {
+            nodosPeliculas[index].style.display = "none"; // Ocultar si no coincide
+        }
+    });
+});
