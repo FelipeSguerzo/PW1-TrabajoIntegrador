@@ -196,8 +196,8 @@ main {
     display: flex;
     flex-direction: column;
     gap: 0.625rem;
-    max-width: 50rem;
-
+    max-width: 40rem;
+    margin-right: 2rem;
     span {
       font-weight: bold;
     }
@@ -381,11 +381,6 @@ main {
       grid-row-gap: 2.5rem;
     }
 
-    .pelicula_descripcion-detallada{
-      display: flex;
-      flex-direction: column;
-  }
-
   .titulo-pelicula_recomendada{
     margin-top: 0.5rem;
   }
@@ -528,6 +523,11 @@ main {
 
   .pelicula{
     margin-top: 0;
+  }
+
+      .pelicula_descripcion-detallada{
+      display: flex;
+      flex-direction: column;
   }
 }
 
