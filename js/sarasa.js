@@ -1,21 +1,13 @@
-//BORRE LOS ID´S DEL INPUT DEL INPUT RADIO Y INGRESO DE NUMERO.
-//BORRE LOS ID´S DEL INPUT DE CONTRASEÑA Y REPETIR CONTRASEÑA POR QUE ESTABAN REPETIDOS
-
 // AGREGUE CLASS A LOS INPUT´S DEL .DATOSDEUSUARIO. (HTML) Y MODIFIQUE LOS SELECTORES EN EL CSS, 
 // LO LLAME DE MANERA DIRECTA (.FORM-DATOS), NO DE SELECTOR A SELECTOR, ANTES LO LLAMABA .FORMULARIO .DATOSDEUSUARIO INPUT.
 // AL PARECER LOS EVENTOS DE "SUBMIT" SE ESTAN PISANDO EN LOS DOS ARCHIVOS JS.
 // PREGUNTARLE A FELI SI SACAMOS LOS REQUIRED.
 
-// - SOLO 3 DIGITOS NI MAS NI MENOS
-// - SOLAMENTE NUMEROS
-// - QUE NO SEA 0 NI 000
-// - QUE NO TENGA ESPACIOS
-// - TIENE QUE SER REQUERIDO UNO DE LOS TRES METODOS DE PAGO.
-
 // Agregue la varialbe let claveCorrecta; a la funcion validacionClaveDeLaTarjeta();
 
 const formulario = document.querySelector(".formulario");
 const inputs = document.querySelectorAll(".metodoDePago__tarjetaDeDebitoOCredito__codigoDeSeguridad, .metodoDePago__tarjetaDeDebitoOCredito__numeroDeTarjeta");
+const registrarse = document.getElementById("confirm");
 
 let radioTarjeta = document.getElementById("radioTarjeta");
 let radioCupon = document.getElementById("cuponDePagoRadio");
@@ -26,11 +18,17 @@ let metodoDePagoPagoFacil = document.getElementById("pagoFacil");
 let metodoDePagoRapiPago = document.getElementById("rapiPago");
 
 
+registrarse.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+})
 
 const expresiones = {
     numeroDeTarjeta: /^\d{16}$/,
     claveTarjeta: /^\d{3}$/
 }
+
+//INPUTS DE LOS METODOS DE PAGO DESACTIVADOS.
 
 function habilitarTarjeta() {
     radioTarjeta.addEventListener("change", function () {
@@ -73,6 +71,10 @@ function habilitarTransferencia() {
     })
 }
 
+//INPUTS DE LOS METODOS DE PAGO DESACTIVADOS.
+
+// VALIDACION NUMERO DE TARJETA
+
 function longitudNumeroDeTarjeta() {
     let numeroDeTarjeta = document.querySelector(".metodoDePago__tarjetaDeDebitoOCredito__numeroDeTarjeta").value;
     const longitudValida = expresiones.numeroDeTarjeta.test(numeroDeTarjeta);
@@ -86,35 +88,50 @@ function numeroDeTarjetaValido() {
     const numeroDeTarjeta = longitudNumeroDeTarjeta();
     let vector = parseInt(numeroDeTarjeta, 10);
     let resultado = 0;
+    let resultadoPar;
+    let ultimoValorDeLaTarjeta;
 
     for (let i = 0; i < numeroDeTarjeta.length - 1; i++) {
         vector = parseInt(numeroDeTarjeta[i], 10);
         resultado += vector;
     }
 
-    let resultadoPar = resultado % 2;
-    let ultimoValorDeLaTarjeta = numeroDeTarjeta[15] % 2;
+    resultadoPar = resultado % 2;
+    ultimoValorDeLaTarjeta = numeroDeTarjeta[15] % 2;
 
     if (resultadoPar === 0 && ultimoValorDeLaTarjeta === 1) {
-        return true;
-    } else if (resultadoPar === 1 && ultimoValorDeLaTarjeta === 0) {
-        return true;
-    } else {
-        return false;
-    }
-}
-
-function validacionNumeroDeTarjeta() {
-    if (numeroDeTarjetaValido() == true) {
         metodoDePagoTarjeta.classList.remove("validacion-incorrecta");
         metodoDePagoTarjeta.classList.add("validacion-correcta");
         document.querySelector(".numeroDeTarjeta-incorrecto").style.display = "none";
+        return true;
+    } else if (resultadoPar === 1 && ultimoValorDeLaTarjeta === 0) {
+        metodoDePagoTarjeta.classList.remove("validacion-incorrecta");
+        metodoDePagoTarjeta.classList.add("validacion-correcta");
+        document.querySelector(".numeroDeTarjeta-incorrecto").style.display = "none";
+        return true;
     } else {
         metodoDePagoTarjeta.classList.add("validacion-incorrecta");
         metodoDePagoTarjeta.classList.remove("validacion-correcta");
         document.querySelector(".numeroDeTarjeta-incorrecto").style.display = "flex";
-    };
+        return false;
+    }
 }
+
+// function validacionNumeroDeTarjeta() {
+//     if (numeroDeTarjetaValido() == true) {
+//         metodoDePagoTarjeta.classList.remove("validacion-incorrecta");
+//         metodoDePagoTarjeta.classList.add("validacion-correcta");
+//         document.querySelector(".numeroDeTarjeta-incorrecto").style.display = "none";
+//     } else {
+//         metodoDePagoTarjeta.classList.add("validacion-incorrecta");
+//         metodoDePagoTarjeta.classList.remove("validacion-correcta");
+//         document.querySelector(".numeroDeTarjeta-incorrecto").style.display = "flex";
+//     };
+// }
+
+// VALIDACION NUMERO DE TARJETA
+
+// VALIDACION CLAVE DE LA TARJETA
 
 function validacionClaveDeLaTarjeta() {
     const claveErronea = 0;
@@ -137,11 +154,13 @@ function validacionClaveDeLaTarjeta() {
     return claveCorrecta;
 }
 
+// VALIDACION CLAVE DE LA TARJETA
+
 function validacionIncorrectaInputs() {
     inputs.forEach((input) => {
         input.addEventListener("keyup", function () {
             validacionClaveDeLaTarjeta();
-            validacionNumeroDeTarjeta();
+            numeroDeTarjetaValido();
         });
     });
 }
@@ -150,7 +169,7 @@ function validacion() {
     inputs.forEach((input) => {
         input.addEventListener("blur", function () {
             validacionClaveDeLaTarjeta();
-            validacionNumeroDeTarjeta();
+            numeroDeTarjetaValido();
             metodoDePagoClaveTarjeta.classList.remove("validacion-correcta");
             metodoDePagoClaveTarjeta.classList.remove("validacion-incorrecta");
             metodoDePagoTarjeta.classList.remove("validacion-correcta");
