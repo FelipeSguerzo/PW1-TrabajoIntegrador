@@ -13,6 +13,7 @@ AgregarImgPeliYSerie(peliculasyseries);
 
 function AgregarImgPeliYSerie(cssSelector){
     const nodoRaiz = document.querySelector(".content");
+    nodoRaiz.innerHTML = '';
     for(let elemento of cssSelector){
         const nodoPeliculaYSerie = document.createElement("div");
 
@@ -33,287 +34,97 @@ function AgregarImgPeliYSerie(cssSelector){
     }
 }
 
-const btnNingunGenero = document.querySelector(".ningun-genero");
-
-btnNingunGenero.addEventListener("click", function(){
-
+function agregarGenero(cssSelector, genero){
     const nodoRaiz = document.querySelector(".content");
     nodoRaiz.innerHTML = '';
 
-    for(let elemento of peliculasyseries){
-        const nodoPeliculaYSerie = document.createElement("div");
+    let seEncontro = 0;
 
-        nodoPeliculaYSerie.innerHTML = `
-        <a href="./info-pelicula.html?titulo=${elemento.titulo}">
-        <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
-        </a>
-        `;
-        nodoRaiz.appendChild(nodoPeliculaYSerie);  
+    for(let elemento of cssSelector){
+        for(let generos of elemento.genero){
+            if(generos === genero){
+                if(elemento.temporadas != 0){
+                    const nodoPeliculaYSerie = document.createElement("div");
+
+                    nodoPeliculaYSerie.innerHTML = `
+                        <a href="./info-series.html?titulo=${elemento.titulo}">
+                        <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
+                        </a>
+                        `;
+                    nodoRaiz.appendChild(nodoPeliculaYSerie);  
+                    seEncontro++;   
+                }else if(elemento.temporadas == 0){
+                    const nodoPeliculaYSerie = document.createElement("div");
+
+                    nodoPeliculaYSerie.innerHTML = `
+                        <a href="./info-peli.html?titulo=${elemento.titulo}">
+                        <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
+                        </a>
+                        `;
+                    nodoRaiz.appendChild(nodoPeliculaYSerie);
+                    seEncontro++;
+                }
+            }       
+        }
+    }
+
+    if(seEncontro == 0){
+        soloSeries(cssSelector);
     } 
+}
+
+const btnNingunGenero = document.querySelector(".ningun-genero");
+
+btnNingunGenero.addEventListener("click", function(){
+    AgregarImgPeliYSerie(peliculasyseries);
 });
 
 const btnAccion = document.querySelector(".genero-accion")
 
 btnAccion.addEventListener("click", function(){
-    const nodoRaiz = document.querySelector(".content");
-    nodoRaiz.innerHTML = '';
-
-    for(let elemento of peliculasyseries){
-        for(let generos of elemento.genero){
-            if(generos === "Acción"){
-                if(elemento.temporadas == 0){
-                    const nodoPeliculaYSerie = document.createElement("div");
-
-                    nodoPeliculaYSerie.innerHTML = `
-                    <a href="./info-pelicula.html?titulo=${elemento.titulo}">
-                    <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
-                    </a>
-                    `;
-                    nodoRaiz.appendChild(nodoPeliculaYSerie);  
-                }else{
-                    const nodoPeliculaYSerie = document.createElement("div");
-
-                    nodoPeliculaYSerie.innerHTML = `
-                    <a href="./info-series.html?titulo=${elemento.titulo}">
-                    <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
-                    </a>
-                    `;
-                    nodoRaiz.appendChild(nodoPeliculaYSerie);  
-                }
-            }
-        }
-    }
+    agregarGenero(peliculasyseries, "Acción");
 });
 
 const btnAdolescente = document.querySelector(".genero-adolescente");
 
 btnAdolescente.addEventListener("click", function(){
-    const nodoRaiz = document.querySelector(".content");
-    nodoRaiz.innerHTML = '';
-
-    for(let elemento of peliculasyseries){
-        for(let generos of elemento.genero){
-            if(generos === "Adolescente"){
-                if(elemento.temporadas == 0){
-                    const nodoPeliculaYSerie = document.createElement("div");
-
-                    nodoPeliculaYSerie.innerHTML = `
-                    <a href="./info-pelicula.html?titulo=${elemento.titulo}">
-                    <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
-                    </a>
-                    `;
-                    nodoRaiz.appendChild(nodoPeliculaYSerie);  
-                }else{
-                    const nodoPeliculaYSerie = document.createElement("div");
-
-                    nodoPeliculaYSerie.innerHTML = `
-                    <a href="./info-series.html?titulo=${elemento.titulo}">
-                    <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
-                    </a>
-                    `;
-                    nodoRaiz.appendChild(nodoPeliculaYSerie);  
-                }
-            }
-        }
-    }
+    agregarGenero(peliculasyseries, "Adolescente");
 });
 
 const btnCF = document.querySelector(".genero-cf");
 
 btnCF.addEventListener("click", function(){
-    const nodoRaiz = document.querySelector(".content");
-    nodoRaiz.innerHTML = '';
-
-    for(let elemento of peliculasyseries){
-        for(let generos of elemento.genero){
-            if(generos === "Ciencia Ficción"){
-                if(elemento.temporadas == 0){
-                    const nodoPeliculaYSerie = document.createElement("div");
-
-                    nodoPeliculaYSerie.innerHTML = `
-                    <a href="./info-pelicula.html?titulo=${elemento.titulo}">
-                    <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
-                    </a>
-                    `;
-                    nodoRaiz.appendChild(nodoPeliculaYSerie);  
-                }else{
-                    const nodoPeliculaYSerie = document.createElement("div");
-
-                    nodoPeliculaYSerie.innerHTML = `
-                    <a href="./info-series.html?titulo=${elemento.titulo}">
-                    <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
-                    </a>
-                    `;
-                    nodoRaiz.appendChild(nodoPeliculaYSerie);  
-                }
-            }
-        }
-    }
+    agregarGenero(peliculasyseries, "Ciencia Ficción");
 });
 
 const btnComedia = document.querySelector(".genero-comedia");
 
 btnComedia.addEventListener("click", function(){
-    const nodoRaiz = document.querySelector(".content");
-    nodoRaiz.innerHTML = '';
-
-    for(let elemento of peliculasyseries){
-        for(let generos of elemento.genero){
-            if(generos === "Comedia"){
-                if(elemento.temporadas == 0){
-                    const nodoPeliculaYSerie = document.createElement("div");
-
-                    nodoPeliculaYSerie.innerHTML = `
-                    <a href="./info-pelicula.html?titulo=${elemento.titulo}">
-                    <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
-                    </a>
-                    `;
-                    nodoRaiz.appendChild(nodoPeliculaYSerie);  
-                }else{
-                    const nodoPeliculaYSerie = document.createElement("div");
-
-                    nodoPeliculaYSerie.innerHTML = `
-                    <a href="./info-series.html?titulo=${elemento.titulo}">
-                    <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
-                    </a>
-                    `;
-                    nodoRaiz.appendChild(nodoPeliculaYSerie);  
-                }
-            }
-        }
-    }
+    agregarGenero(peliculasyseries, "Comedia");
 });
 
 const btnDrama = document.querySelector(".genero-drama");
 
 btnDrama.addEventListener("click", function(){
-    const nodoRaiz = document.querySelector(".content");
-    nodoRaiz.innerHTML = '';
-
-    for(let elemento of peliculasyseries){
-        for(let generos of elemento.genero){
-            if(generos === "Drama"){
-                if(elemento.temporadas == 0){
-                    const nodoPeliculaYSerie = document.createElement("div");
-
-                    nodoPeliculaYSerie.innerHTML = `
-                    <a href="./info-pelicula.html?titulo=${elemento.titulo}">
-                    <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
-                    </a>
-                    `;
-                    nodoRaiz.appendChild(nodoPeliculaYSerie);  
-                }else{
-                    const nodoPeliculaYSerie = document.createElement("div");
-
-                    nodoPeliculaYSerie.innerHTML = `
-                    <a href="./info-series.html?titulo=${elemento.titulo}">
-                    <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
-                    </a>
-                    `;
-                    nodoRaiz.appendChild(nodoPeliculaYSerie);  
-                }
-            }
-        }
-    }
+    agregarGenero(peliculasyseries, "Drama");
 });
 
 const btnDocumental = document.querySelector(".genero-documental");
 
 btnDocumental.addEventListener("click", function(){
-    const nodoRaiz = document.querySelector(".content");
-    nodoRaiz.innerHTML = '';
-
-    for(let elemento of peliculasyseries){
-        for(let generos of elemento.genero){
-            if(generos === "Documental"){
-                if(elemento.temporadas == 0){
-                    const nodoPeliculaYSerie = document.createElement("div");
-
-                    nodoPeliculaYSerie.innerHTML = `
-                    <a href="./info-pelicula.html?titulo=${elemento.titulo}">
-                    <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
-                    </a>
-                    `;
-                    nodoRaiz.appendChild(nodoPeliculaYSerie);  
-                }else{
-                    const nodoPeliculaYSerie = document.createElement("div");
-
-                    nodoPeliculaYSerie.innerHTML = `
-                    <a href="./info-series.html?titulo=${elemento.titulo}">
-                    <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
-                    </a>
-                    `;
-                    nodoRaiz.appendChild(nodoPeliculaYSerie);  
-                }
-            }
-        }
-    }
+    agregarGenero(peliculasyseries, "Documental");
 });
 
 const btnFantasia = document.querySelector(".genero-fantasia");
 
 btnFantasia.addEventListener("click", function(){
-    const nodoRaiz = document.querySelector(".content");
-    nodoRaiz.innerHTML = '';
-
-    for(let elemento of peliculasyseries){
-        for(let generos of elemento.genero){
-            if(generos === "Fantasía"){
-                if(elemento.temporadas == 0){
-                    const nodoPeliculaYSerie = document.createElement("div");
-
-                    nodoPeliculaYSerie.innerHTML = `
-                    <a href="./info-pelicula.html?titulo=${elemento.titulo}">
-                    <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
-                    </a>
-                    `;
-                    nodoRaiz.appendChild(nodoPeliculaYSerie);  
-                }else{
-                    const nodoPeliculaYSerie = document.createElement("div");
-
-                    nodoPeliculaYSerie.innerHTML = `
-                    <a href="./info-series.html?titulo=${elemento.titulo}">
-                    <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
-                    </a>
-                    `;
-                    nodoRaiz.appendChild(nodoPeliculaYSerie);  
-                }
-            }
-        }
-    }
+    agregarGenero(peliculasyseries, "Fantasía");
 });
 
 const btnSuspenso = document.querySelector(".genero-suspenso");
 
 btnSuspenso.addEventListener("click", function(){
-    const nodoRaiz = document.querySelector(".content");
-    nodoRaiz.innerHTML = '';
-
-    for(let elemento of peliculasyseries){
-        for(let generos of elemento.genero){
-            if(generos === "Suspenso"){
-                if(elemento.temporadas == 0){
-                    const nodoPeliculaYSerie = document.createElement("div");
-
-                    nodoPeliculaYSerie.innerHTML = `
-                    <a href="./info-pelicula.html?titulo=${elemento.titulo}">
-                    <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
-                    </a>
-                    `;
-                    nodoRaiz.appendChild(nodoPeliculaYSerie);  
-                }else{
-                    const nodoPeliculaYSerie = document.createElement("div");
-
-                    nodoPeliculaYSerie.innerHTML = `
-                    <a href="./info-series.html?titulo=${elemento.titulo}">
-                    <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
-                    </a>
-                    `;
-                    nodoRaiz.appendChild(nodoPeliculaYSerie);  
-                }
-            }
-        }
-    }
+    agregarGenero(peliculasyseries, "Suspenso");
 });
 
 const nodoInputSearch = document.querySelector(".search");
