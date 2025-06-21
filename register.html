@@ -105,14 +105,14 @@
 
                 <section class="metodoDePago">
                     <article class="metodoDePago__tarjetaDeDebitoOCredito">
-                        <input class="radio" type="radio" name="metodoDePago" id="radioTarjeta"/>
+                        <input class="radio" type="radio" name="metodoDePago" id="radioTarjeta" />
                         <input class="metodoDePago__tarjetaDeDebitoOCredito__numeroDeTarjeta" type="number"
-                            name="tarjetaDeDebitoOCredito" placeholder="N&uacute;mero de tarjeta" disabled/>
+                            name="tarjetaDeDebitoOCredito" placeholder="N&uacute;mero de tarjeta" disabled />
                         <input class="metodoDePago__tarjetaDeDebitoOCredito__codigoDeSeguridad" type="number"
-                            name="codigoDeSeguridad" id="codigoDeSeguridad" placeholder="Clave" disabled/>
+                            name="codigoDeSeguridad" id="codigoDeSeguridad" placeholder="Clave" disabled />
                     </article>
-                    <p class="codigoDeSeguridad-incorrecto">Clave inv&aacute;lida</p>
-                    <p class="numeroDeTarjeta-incorrecto">Tarjeta inv&aacute;lida</p>
+                    <span class="numeroDeTarjeta-incorrecto"></span>
+                    <span class="codigoDeSeguridad-incorrecto"></span>
 
                     <article class="cuponDePago">
                         <article>
@@ -121,12 +121,13 @@
                         </article>
 
                         <article class="seleccionDeCuponDePago">
-                            <input class="metodoDePago__cuponDePago" type="checkbox" id="pagoFacil" disabled/>
+                            <input class="metodoDePago__cuponDePago" type="checkbox" id="pagoFacil" disabled />
                             <label class="cuponDePago__pagoFacil" for="pagoFacil">Pago facil</label>
 
-                            <input class="metodoDePago__cuponDePago" type="checkbox" id="rapiPago" disabled/>
+                            <input class="metodoDePago__cuponDePago" type="checkbox" id="rapiPago" disabled />
                             <label class="cuponDePago__rapiPago" for="rapiPago">RapiPago</label>
                         </article>
+                        <span class="cupon-incorrecto"></span>
                     </article>
 
                     <article class="metodoDePago__transferenciaBancaria">
