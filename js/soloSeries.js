@@ -32,6 +32,9 @@ function agregarGenero(cssSelector, genero){
     const nodoRaiz = document.querySelector(".content");
     nodoRaiz.innerHTML = '';
 
+    const filtrado = cssSelector.filter(item => item.genero.includes(genero));
+    let seEncontro = 0;
+
     for(let elemento of cssSelector){
         for(let generos of elemento.genero){
             if(generos === genero && elemento.temporadas != 0){
@@ -42,9 +45,14 @@ function agregarGenero(cssSelector, genero){
                     <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
                     </a>
                     `;
-                nodoRaiz.appendChild(nodoPeliculaYSerie);     
-            }               
+                nodoRaiz.appendChild(nodoPeliculaYSerie); 
+                seEncontro++;    
+            }           
         }
+    }
+
+    if(seEncontro == 0){
+        soloSeries(cssSelector);
     }
 }
 

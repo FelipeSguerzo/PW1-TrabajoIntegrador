@@ -38,6 +38,8 @@ function agregarGenero(cssSelector, genero){
     const nodoRaiz = document.querySelector(".content");
     nodoRaiz.innerHTML = '';
 
+    let seEncontro = 0;
+
     for(let elemento of cssSelector){
         for(let generos of elemento.genero){
             if(generos === genero){
@@ -49,8 +51,9 @@ function agregarGenero(cssSelector, genero){
                         <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
                         </a>
                         `;
-                    nodoRaiz.appendChild(nodoPeliculaYSerie);     
-                }else{
+                    nodoRaiz.appendChild(nodoPeliculaYSerie);  
+                    seEncontro++;   
+                }else if(elemento.temporadas == 0){
                     const nodoPeliculaYSerie = document.createElement("div");
 
                     nodoPeliculaYSerie.innerHTML = `
@@ -58,11 +61,16 @@ function agregarGenero(cssSelector, genero){
                         <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
                         </a>
                         `;
-                    nodoRaiz.appendChild(nodoPeliculaYSerie);    
-                }   
+                    nodoRaiz.appendChild(nodoPeliculaYSerie);
+                    seEncontro++;
+                }
             }       
         }
     }
+
+    if(seEncontro == 0){
+        soloSeries(cssSelector);
+    } 
 }
 
 const btnNingunGenero = document.querySelector(".ningun-genero");

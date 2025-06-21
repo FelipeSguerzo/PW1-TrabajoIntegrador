@@ -31,6 +31,7 @@ function soloSeries(cssSelector){
 function agregarGenero(cssSelector, genero){
     const nodoRaiz = document.querySelector(".content");
     nodoRaiz.innerHTML = '';
+    let seEncontro = 0;
 
     for(let elemento of cssSelector){
         for(let generos of elemento.genero){
@@ -43,9 +44,14 @@ function agregarGenero(cssSelector, genero){
                     </a>
                     `;
                 nodoRaiz.appendChild(nodoPeliculaYSerie);     
+                seEncontro++;
             }               
         }
     }
+
+    if(seEncontro == 0){
+        soloSeries(cssSelector);
+    } 
 }
 
 const btnNingunGenero = document.querySelector(".ningun-genero");
