@@ -109,3 +109,20 @@ const btnSuspenso = document.querySelector(".genero-suspenso");
 btnSuspenso.addEventListener("click", function(){
     agregarGenero(peliculasyseries, "Suspenso");
 });
+
+const nodoInputSearch = document.querySelector(".search");
+nodoInputSearch.addEventListener("keyup", (e) => {
+    const nombreABuscar = nodoInputSearch.value.toLowerCase();
+    const nodoRaiz = document.querySelector(".content");
+    const nodosPeliculas = nodoRaiz.querySelectorAll("div");
+
+    peliculasyseries.forEach((elemento, index) => {
+        const titulo = elemento.titulo.toLowerCase();
+        console.log(titulo);
+        if (titulo.includes(nombreABuscar)) {
+            nodosPeliculas[index].style.display = "block"; 
+        } else {
+            nodosPeliculas[index].style.display = "none"; 
+        }
+    });
+});
