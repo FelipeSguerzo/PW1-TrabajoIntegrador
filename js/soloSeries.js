@@ -115,10 +115,17 @@ nodoInputSearch.addEventListener("keyup", (e) => {
     const nombreABuscar = nodoInputSearch.value.toLowerCase();
     const nodoRaiz = document.querySelector(".content");
     const nodosPeliculas = nodoRaiz.querySelectorAll("div");
+    const series = [];
 
-    peliculasyseries.forEach((elemento, index) => {
+    peliculasyseries.forEach((elemento)=>{
+        if(elemento.temporadas!=0){
+            series.push(elemento);
+        }
+    })
+
+     series.forEach((elemento, index) => {
         const titulo = elemento.titulo.toLowerCase();
-        console.log(titulo);
+        console.log(titulo)
         if (titulo.includes(nombreABuscar)) {
             nodosPeliculas[index].style.display = "block"; 
         } else {
