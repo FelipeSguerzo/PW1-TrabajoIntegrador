@@ -3,7 +3,7 @@ const inputUsername = document.querySelector("#usuario");
 const inputPassword = document.querySelector("#password");
 
 function validarInputs(){
-    if(inputPassword.value === "" || inputUsername.value === ""){
+    if(inputPassword.value.trim() === "" || inputUsername.value.trim() === ""){
         botonIniciarSesion.setAttribute("disabled","true");
     } else {
         botonIniciarSesion.removeAttribute("disabled");
