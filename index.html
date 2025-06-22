@@ -29,13 +29,23 @@
         <form class="form-login" action="main.html" method="get">
             <section class="inputs">
                 <div class="datos datos-login">
-                    <label for="usuario">Nombre de usuario</label>
+                    <section class="username">
+                        <label for="usuario">Nombre de usuario</label>
                     <input type="text" id="usuario" required placeholder="Ingrese su nombre de usuario">
+                    </section>
+                    <section class="username-error">
+                        
+                    </section>
                 </div>
 
                 <div class="datos datos-login">
-                    <label for="password">Contraseña</label>
+                    <section class="contrasenia-container">
+                        <label for="password">Contraseña</label>
                     <input type="password" id="password" required placeholder="Ingrese su contraseña">
+                    </section>
+                    <section class="password-error">
+                        
+                    </section>
                 </div>
             </section>
             <section class="finalizar">
