@@ -289,6 +289,11 @@ input[type=number]::-webkit-outer-spin-button {
     flex-direction: column;
 }
 
+.formulario-invalido {
+    color: red;
+    text-align: center;
+}
+
 /* Validaciones */
 
 .radio {
