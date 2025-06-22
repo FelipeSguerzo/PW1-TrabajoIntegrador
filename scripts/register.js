@@ -7,6 +7,7 @@ const form = document.querySelector("form");
 const mensajeContrasenia = document.querySelector(".mensaje-contrasenia");
 const mensajeRepetir = document.querySelector(".mensaje-repetir")
 const mensajeUsername = document.querySelector(".mensaje-usuario")
+const email = document.querySelector("#email");
 
 console.log("a");
 
@@ -24,6 +25,7 @@ form.addEventListener("submit", (e) => {
     const usuario = nodoUsername.value;
     const contrasenia = nodoContrasenia.value
     const contraseniaRepetida = nodoRepetirContrasenia.value;
+    const email = email.value;
     if (!verificarContrasenia(contrasenia)) {
         mensajeContrasenia.textContent = "La contraseña debe tener al menos 2 letras, 2 numeros y 2 caracteres especiales";
         mensajeContrasenia.style.color = "red";
@@ -37,12 +39,12 @@ form.addEventListener("submit", (e) => {
     }
 
 
-    if (crearUsuario(usuario, contrasenia)) {
+    if (crearUsuario(usuario, contrasenia,email)) {
         form.submit();
     }
 })
 
-function crearUsuario(username, contrasenia) {
+function crearUsuario(username, contrasenia,email) {
     const usuarios = getUsuarios();
     for (let i = 0; i < usuarios.length; i++) {
         if (usuarios[i].username === username) {
@@ -52,7 +54,7 @@ function crearUsuario(username, contrasenia) {
         }
     }
 
-    usuarios.push({ username, contrasenia });
+    usuarios.push({ username, contrasenia,email});
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
     console.log("La cuenta se ha creado con exito");
     return true;

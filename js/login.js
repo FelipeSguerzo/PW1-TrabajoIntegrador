@@ -44,9 +44,8 @@ form.addEventListener("submit",(e)=>{
         return
     }
 
-    const usuarioSesionIniciada = getUsuarioSesionIniciada();
-    usuarioSesionIniciada.push({username,contrasenia});
-    localStorage.setItem("usuarioSesionIniciada",JSON.stringify(usuarioSesionIniciada));
+    const usuario = getUsuarioSesion(username);
+    localStorage.setItem("usuarioSesionIniciada",JSON.stringify(usuario));
     form.submit();
 })
 
@@ -78,3 +77,17 @@ function coincideContraseniaConUsuario(username,contrasenia){
 
     return coinciden;
 }
+
+function getUsuarioSesion(username) {
+  const usuarios = getUsuarios();
+
+  for (const user of usuarios) {
+    if (user.username === username) {
+      const { username, contrasenia, correo } = user;
+      return { username, contrasenia, correo };
+    }
+  }
+
+  return null; 
+}
+
