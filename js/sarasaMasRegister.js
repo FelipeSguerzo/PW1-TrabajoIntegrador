@@ -45,14 +45,43 @@ form.addEventListener("submit", (e) => {
 
     mensajeRepetir.textContent = "";
     mensajeContrasenia.textContent = "";
-    const nombre = nombreDelUsuario.value;
-    const apellido = apellidoDelUsuario.value;
-    const usuario = nodoUsername.value;
+    const nombre = nombreDelUsuario.value.trim();
+    const apellido = apellidoDelUsuario.value.trim();
+    const usuario = nodoUsername.value.trim();
     const contrasenia = nodoContrasenia.value
     const contraseniaRepetida = nodoRepetirContrasenia.value;
     const correo = email.value;
     const numeroDeTarjetaDelUsuario = metodoDePagoTarjeta.value
     const claveDeTarjetaDelUsuario = metodoDePagoClaveTarjeta.value;
+
+    let metodoDePago;
+    let metodoDePagoSeleccionado = "";
+
+    if (radioTarjeta.checked) {
+        metodoDePagoSeleccionado = "tarjeta";
+        metodoDePago = {
+            tipo: "tarjeta",
+            detalles: {
+                numeroDeTarjeta: "****************",
+                clave: "***"
+            }
+        }
+    } else if (radioCupon.checked) {
+        metodoDePagoSeleccionado = "cupon";
+        metodoDePago = {
+            tipo: "cupon",
+            detalles: {
+                pagoFacil: metodoDePagoPagoFacil.checked,
+                rapiPago: metodoDePagoRapiPago.checked
+            }
+        };
+    } else if (radioTransferencia.checked) {
+        metodoDePagoSeleccionado = "transferencia";
+        metodoDePago = {
+            tipo: "transferencia",
+            detalles: {}
+        };
+    }
 
     if (!verificarContrasenia(contrasenia)) {
         mensajeContrasenia.textContent = "La contraseña debe tener al menos 2 letras, 2 numeros y 2 caracteres especiales";
@@ -66,12 +95,40 @@ form.addEventListener("submit", (e) => {
         return
     }
 
-    if (crearUsuario(usuario, contrasenia, correo, nombre, apellido) && (radioTransferencia.checked == true || cuponDePago() == true || ((numeroDeTarjetaValido(numeroDeTarjetaDelUsuario) == true) && validacionClaveDeLaTarjeta(claveDeTarjetaDelUsuario) == true))) {
+    let esValido = true;
+
+    if (usuario === "") {
+        esValido = false;
+        console.log(esValido);
+    }
+
+    if (correo === "") {
+        esValido = false;
+        console.log(esValido);
+    }
+
+    if (nombre === "") {
+        esValido = false;
+        console.log(esValido);
+    }
+
+    if (apellido === "") {
+        esValido = false;
+        console.log(esValido);
+    }
+
+    if (radioTransferencia.checked == false && cuponDePago() == false && (numeroDeTarjetaValido(numeroDeTarjetaDelUsuario) == false || validacionClaveDeLaTarjeta(claveDeTarjetaDelUsuario) == false)) {
+        esValido = false;
+        console.log(esValido);
+    }
+
+    if (esValido == true && crearUsuario(usuario, contrasenia, correo, nombre, apellido, metodoDePago) == true) {
+        crearUsuario(usuario, contrasenia, correo, nombre, apellido, metodoDePago);
         form.submit();
     }
 })
 
-function crearUsuario(username, contrasenia, correo, name, lastName) {
+function crearUsuario(username, contrasenia, correo, name, lastName, metodoDePago) {
     const usuarios = getUsuarios();
     for (let i = 0; i < usuarios.length; i++) {
         if (usuarios[i].username === username) {
@@ -81,12 +138,11 @@ function crearUsuario(username, contrasenia, correo, name, lastName) {
         }
     }
 
-    usuarios.push({ username, contrasenia, correo, name, lastName });
+    usuarios.push({ username, contrasenia, correo, name, lastName, metodoDePago });
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
     console.log("La cuenta se ha creado con exito");
     return true;
 }
-
 
 function verificarContrasenia(contrasenia) {
     const letras = contrasenia.match(/[a-zA-Z]/g) || [];
@@ -95,7 +151,6 @@ function verificarContrasenia(contrasenia) {
 
     return letras.length >= 2 && numeros.length >= 2 && caracteresEspeciales.length >= 2;
 }
-
 
 function eliminarUsuario(username) {
     const usuarios = getUsuarios();
@@ -108,8 +163,6 @@ function eliminarUsuario(username) {
 
     localStorage.setItem("usuarios", JSON.stringify(usuariosANoEliminar));
 }
-
-
 
 //INPUTS DE LOS METODOS DE PAGO DESACTIVADOS.
 
