@@ -84,7 +84,7 @@ form.addEventListener("submit", (e) => {
     }
 
     if (!verificarContrasenia(contrasenia)) {
-        mensajeContrasenia.textContent = "La contraseña debe tener al menos 2 letras, 2 numeros y 2 caracteres especiales";
+        mensajeContrasenia.textContent = "La contraseña debe tener al menos 8 caracteres y minimo 2 letras, 2 numeros y 2 caracteres especiales";
         mensajeContrasenia.style.color = "red";
         return
     }
@@ -145,11 +145,12 @@ function crearUsuario(username, contrasenia, correo, name, lastName, metodoDePag
 }
 
 function verificarContrasenia(contrasenia) {
+    const contraseniaTotal = contrasenia.length;
     const letras = contrasenia.match(/[a-zA-Z]/g) || [];
     const numeros = contrasenia.match(/[0-9]/g) || [];
     const caracteresEspeciales = contrasenia.match(/[!"#$%&/]/g) || [];
 
-    return letras.length >= 2 && numeros.length >= 2 && caracteresEspeciales.length >= 2;
+    return     contraseniaTotal >= 8 && letras.length >= 2 && numeros.length >= 2 && caracteresEspeciales.length >= 2;
 }
 
 function eliminarUsuario(username) {

@@ -22,7 +22,7 @@
         </nav>
     </header>
     <main>
-        <form action="guardarPerfil">
+        <form id="formularioUsuario" action="guardarPerfil">
             <section class="perfil">
                 <img src="images/perfil.png" alt="Imagen de perfil">
                 <h4 id="nombreUsuario">nombre de usuario</h4>
@@ -45,13 +45,13 @@
             <section class="metodos">
                 <h2>Metodo de pago</h2>
                 <article class="metodoDePago_tarjetaDeDebitoOCredito">
-                    <input class="radio" type="radio" name="metodoDePago" id="tarjetaDeDebitoOCredito" />
-                    <input class="metodoDePago_tarjetaDeDebitoOCredito_numeroDeTarjeta" type="tel" pattern="[0-9]{16}" name="tarjetaDeDebitoOCredito" id="tarjetaDeDebitoOCredito" placeholder="N&uacute;mero de tarjeta">
-                    <input class="metodoDePago_tarjetaDeDebitoOCredito_codigoDeSeguridad" type="tel" pattern="[0-9]{3}" name="codigoDeSeguridad" id="codigoDeSeguridad" placeholder="Clave">
+                    <input class="radio" type="radio" name="metodoDePago" id="tarjetaDeDebitoOCreditoRadio" value="tarjeta"/>
+                    <input class="metodoDePago_tarjetaDeDebitoOCredito_numeroDeTarjeta" type="number" name="tarjetaDeDebitoOCredito" id="tarjetaDeDebitoOCredito" placeholder="N&uacute;mero de tarjeta">
+                    <input class="metodoDePago_tarjetaDeDebitoOCredito_codigoDeSeguridad" type="number" name="codigoDeSeguridad" id="codigoDeSeguridad" placeholder="Clave">
                 </article>
                 <article class="cuponDePago">
                         <article>
-                            <input class="radio" type="radio" name="metodoDePago" id="cuponDePago" />
+                            <input class="radio" type="radio" name="metodoDePago" id="cuponDePago" value="cupon"/>
                             <label class="transferenciaBancaria" for="cuponDePago">Cup&oacute;n de pago</label>
                         </article>
                         
@@ -65,7 +65,7 @@
                     </article>
 
                 <article class="metodoDePago__transferenciaBancaria">
-                    <input class="radio" type="radio" name="metodoDePago" id="transferenciaBancaria" />
+                    <input class="radio" type="radio" name="metodoDePago" id="transferenciaBancaria" value="transferencia"/>
                     <label class="transferenciaBancaria" for="transferenciaBancaria">Transferencia bancaria</label>
                     <p>CBU: 21839094111100018971375</p>
                 </article>
@@ -168,4 +168,3 @@
     <script src="js/usuario.js"></script>
 </body>
 </html>
-

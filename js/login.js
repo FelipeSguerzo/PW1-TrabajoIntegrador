@@ -83,8 +83,8 @@ function getUsuarioSesion(username) {
 
   for (const user of usuarios) {
     if (user.username === username) {
-      const { username, contrasenia, correo } = user;
-      return { username, contrasenia, correo };
+      const { username, contrasenia, correo, metodoDePago } = user;
+      return { username, contrasenia, correo, metodoDePago };
     }
   }
 
