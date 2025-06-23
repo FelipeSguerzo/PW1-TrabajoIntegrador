@@ -9,7 +9,7 @@ const form = document.querySelector("form");
 const mensajeContrasenia = document.querySelector(".mensaje-contrasenia");
 const mensajeRepetir = document.querySelector(".mensaje-repetir")
 const mensajeUsername = document.querySelector(".mensaje-usuario")
-
+const email = document.querySelector("#email");
 //--------------------------------------------------------NICO--------------------------------------------------------------
 const formulario = document.querySelector(".formulario");
 const inputs = document.querySelectorAll(".metodoDePago__tarjetaDeDebitoOCredito__codigoDeSeguridad, .metodoDePago__tarjetaDeDebitoOCredito__numeroDeTarjeta");
@@ -48,6 +48,7 @@ form.addEventListener("submit", (e) => {
     const usuario = nodoUsername.value;
     const contrasenia = nodoContrasenia.value
     const contraseniaRepetida = nodoRepetirContrasenia.value;
+    const correo = email.value;
     const numeroDeTarjetaDelUsuario = metodoDePagoTarjeta.value
     const claveDeTarjetaDelUsuario = metodoDePagoClaveTarjeta.value;
 
@@ -63,12 +64,12 @@ form.addEventListener("submit", (e) => {
         return
     }
 
-    if (crearUsuario(usuario, contrasenia) && (radioTransferencia.checked == true || cuponDePago() == true || ((numeroDeTarjetaValido(numeroDeTarjetaDelUsuario) == true) && validacionClaveDeLaTarjeta(claveDeTarjetaDelUsuario) == true))) {
+    if (crearUsuario(usuario, contrasenia,correo) && (radioTransferencia.checked == true || cuponDePago() == true || ((numeroDeTarjetaValido(numeroDeTarjetaDelUsuario) == true) && validacionClaveDeLaTarjeta(claveDeTarjetaDelUsuario) == true))) {
         form.submit();
     }
 })
 
-function crearUsuario(username, contrasenia) {
+function crearUsuario(username, contrasenia, correo) {
     const usuarios = getUsuarios();
     for (let i = 0; i < usuarios.length; i++) {
         if (usuarios[i].username === username) {
@@ -78,7 +79,7 @@ function crearUsuario(username, contrasenia) {
         }
     }
 
-    usuarios.push({ username, contrasenia });
+    usuarios.push({ username, contrasenia, correo });
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
     console.log("La cuenta se ha creado con exito");
     return true;
