@@ -10,7 +10,7 @@ const mensajeContrasenia = document.querySelector(".mensaje-contrasenia");
 const mensajeRepetir = document.querySelector(".mensaje-repetir")
 const mensajeUsername = document.querySelector(".mensaje-usuario")
 const email = document.querySelector("#email");
-//--------------------------------------------------------NICO--------------------------------------------------------------
+
 const formulario = document.querySelector(".formulario");
 const inputs = document.querySelectorAll(".metodoDePago__tarjetaDeDebitoOCredito__codigoDeSeguridad, .metodoDePago__tarjetaDeDebitoOCredito__numeroDeTarjeta");
 
@@ -30,8 +30,6 @@ const expresiones = {
     numeroDeTarjeta: /^\d{16}$/,
     claveTarjeta: /^\d{3}$/
 }
-
-//--------------------------------------------------------NICO--------------------------------------------------------------
 
 console.log("a");
 
@@ -107,7 +105,7 @@ function eliminarUsuario(username) {
     localStorage.setItem("usuarios", JSON.stringify(usuariosANoEliminar));
 }
 
-//--------------------------------------------------------NICO--------------------------------------------------------------
+
 
 //INPUTS DE LOS METODOS DE PAGO DESACTIVADOS.
 
@@ -182,11 +180,6 @@ function numeroDeTarjetaValido(numeroDeTarjetaIngresada) {
     }
 
     return tarjetaValida;
-
-    // usuarios.push({ username, contrasenia });
-    // localStorage.setItem("usuarios", JSON.stringify(usuarios));
-    // console.log("La cuenta se ha creado con exito");
-    // return true;
 }
 
 function visualizacionNumeroDeTarjeta() {
@@ -306,5 +299,3 @@ validacion();
 habilitarTarjeta();
 habilitarCuponDePago();
 habilitarTransferencia();
-
-//--------------------------------------------------------NICO--------------------------------------------------------------
