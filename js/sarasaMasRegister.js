@@ -155,7 +155,6 @@ function habilitarTransferencia() {
 
 function numeroDeTarjetaValido(numeroDeTarjetaIngresada) {
     const longitudValida = expresiones.numeroDeTarjeta.test(numeroDeTarjetaIngresada);
-
     const numeroDeTarjeta = numeroDeTarjetaIngresada;
     let vector = parseInt(numeroDeTarjeta, 10);
     let resultado = 0;
@@ -180,7 +179,13 @@ function numeroDeTarjetaValido(numeroDeTarjetaIngresada) {
             tarjetaValida = false;
         }
     }
+
     return tarjetaValida;
+
+    // usuarios.push({ username, contrasenia });
+    // localStorage.setItem("usuarios", JSON.stringify(usuarios));
+    // console.log("La cuenta se ha creado con exito");
+    // return true;
 }
 
 function visualizacionNumeroDeTarjeta() {
