@@ -27,10 +27,15 @@ const mensajeDeErrorNumeroInvalido = document.querySelector(".numeroDeTarjeta-in
 const mensajeDeErrorClaveInvalida = document.querySelector(".codigoDeSeguridad-incorrecto");
 const mensajeDeErrorCupon = document.querySelector(".cupon-incorrecto");
 const mensajeFormularioInvalido = document.querySelector(".formulario-invalido");
+const mensajeNombre = document.querySelector(".js-mensajeErrorNombre");
+const mensajeApellido = document.querySelector(".js-mensajeErrorApellido");
+const mensajeCorreo = document.querySelector(".js-mensajeErrorCorreo");
 
 const expresiones = {
     numeroDeTarjeta: /^\d{16}$/,
-    claveTarjeta: /^\d{3}$/
+    claveTarjeta: /^\d{3}$/,
+    nombreYApellido: /^[a-zA-Z]+$/,
+    mail: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
 }
 
 console.log("a");
@@ -56,6 +61,7 @@ form.addEventListener("submit", (e) => {
 
     let metodoDePago;
     let metodoDePagoSeleccionado = "";
+    let esValido = true;
 
     if (radioTarjeta.checked) {
         metodoDePagoSeleccionado = "tarjeta";
@@ -95,31 +101,36 @@ form.addEventListener("submit", (e) => {
         return
     }
 
-    let esValido = true;
-
     if (usuario === "") {
         esValido = false;
-        console.log(esValido);
     }
 
-    if (correo === "") {
+    if (correo === "" || expresiones.mail.test(correo) === false) {
+        mensajeCorreo.style.display = "flex";
+        mensajeCorreo.textContent = "Correo inválido";
         esValido = false;
-        console.log(esValido);
+    } else {
+        mensajeCorreo.style.display = "none";
     }
 
-    if (nombre === "") {
+    if (nombre === "" || expresiones.nombreYApellido.test(nombre) === false) {
+        mensajeNombre.style.display = "flex";
+        mensajeNombre.textContent = "Ingrese solo letras";
         esValido = false;
-        console.log(esValido);
+    } else {
+        mensajeNombre.style.display = "none";
     }
 
-    if (apellido === "") {
+    if (apellido === "" || expresiones.nombreYApellido.test(apellido) === false) {
+        mensajeApellido.style.display = "flex";
+        mensajeApellido.textContent = "Ingrese solo letras";
         esValido = false;
-        console.log(esValido);
+    } else {
+         mensajeApellido.style.display = "none";
     }
 
     if (radioTransferencia.checked == false && cuponDePago() == false && (numeroDeTarjetaValido(numeroDeTarjetaDelUsuario) == false || validacionClaveDeLaTarjeta(claveDeTarjetaDelUsuario) == false)) {
         esValido = false;
-        console.log(esValido);
     }
 
     if (esValido == true && crearUsuario(usuario, contrasenia, correo, nombre, apellido, metodoDePago) == true) {
@@ -150,7 +161,7 @@ function verificarContrasenia(contrasenia) {
     const numeros = contrasenia.match(/[0-9]/g) || [];
     const caracteresEspeciales = contrasenia.match(/[!"#$%&/]/g) || [];
 
-    return     contraseniaTotal >= 8 && letras.length >= 2 && numeros.length >= 2 && caracteresEspeciales.length >= 2;
+    return contraseniaTotal >= 8 && letras.length >= 2 && numeros.length >= 2 && caracteresEspeciales.length >= 2;
 }
 
 function eliminarUsuario(username) {

@@ -283,6 +283,26 @@ input[type=number]::-webkit-outer-spin-button {
     width: fit-content;
 }
 
+.js-mensajeErrorNombre {
+    display: none;
+    color: rgb(228, 19, 19);
+    font-size: 1.1em;
+    width: fit-content;
+}
+
+.js-mensajeErrorApellido {
+    display: none;
+    color: rgb(228, 19, 19);
+    font-size: 1.1em;
+    width: fit-content;
+}
+
+.js-mensajeErrorCorreo {
+    display: none;
+    color: rgb(228, 19, 19);
+    font-size: 1.1em;
+    width: fit-content;
+}
 
 .validaciones {
     display: flex;
