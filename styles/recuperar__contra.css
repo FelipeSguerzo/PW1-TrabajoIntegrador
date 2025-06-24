@@ -1,25 +1,22 @@
-*{
-  color: white;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
-}
-
 body{
-    margin-top: 5%;
+    overflow-x: hidden;
     background: linear-gradient(to bottom, #000000 0%, #1a1a1a 100%);
-        background-color: #000;
+    background-color: #000;
+    color: white;
+    margin: 0;
+    margin-top: 3%;
+    padding: 0;
+    font-family: sans-serif;
 }
 
 main {
-    margin: 0;
-    min-height: 90vh;
-    color: white;
-    height: 51.25rem;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    margin-bottom: 10rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    min-height: 90vh;
 }
 
 
@@ -44,7 +41,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 13rem;
+    height: 17rem;
     gap: 1.25rem;
     margin: auto;
     margin-top: 3.125rem;
@@ -73,6 +70,7 @@ main {
 }
 
 .buttons {
+    margin-bottom: 2rem;
     display: flex;
     gap: 1.25rem;
     background-color: #323338;
@@ -111,6 +109,7 @@ main {
 }
 
 .h3correo{
+    margin-top: 2rem;
     margin-left: 10px;
     width: 18.75rem;
     font-size: 15px;
@@ -148,7 +147,7 @@ main {
 @media (max-width: 425px){
 
     .formlogin{
-    height: 10rem;
+    height: 17rem;
     gap: 1.25rem;
     margin: auto;
     margin-top: 7rem;
