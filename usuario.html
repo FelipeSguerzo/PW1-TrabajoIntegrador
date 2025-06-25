@@ -17,7 +17,7 @@
                 <li><a href="soloPelicula.html">PELÍCULAS</a></li>
                 <li><a href="soloSeries.html">SERIES</a></li>
                 <li class="activo"><a href="usuario.html">PERFIL</a></li>
-                <li><a href="index.html">CERRAR SESION</a></li>
+                <li class="cerrarSesion"><a href="index.html">CERRAR SESION</a></li>
             </ul>
         </nav>
     </header>
@@ -36,11 +36,11 @@
                 <p class="contraseña">************</p>
                 <br>
                 <h3 class="nuevaContraseña">Nueva contraseña</h3>
-                <input class="nuevaContraseña" type="text" name="nuevaContraseña" id="nuevaContraseña" placeholder="Ingrese su nueva contraseña">
-                <br>
+                <input class="nuevaContraseña" type="password" name="nuevaContraseña" id="nuevaContraseña" placeholder="Ingrese su nueva contraseña">
+                <article class="message-error mensaje-contrasenia"></article><br>
                 <h3 class="repetirContraseña">Repetir contraseña</h3>
-                <input class="repetirContraseña" type="text" name="repiteContraseña" id="repiteContraseña" placeholder="Ingrese su nueva contraseña">
-
+                <input class="repetirContraseña" type="password" name="repiteContraseña" id="repiteContraseña" placeholder="Ingrese su nueva contraseña">
+                <article class="message-error mensaje-repetir"></article>
             </section>
             <section class="metodos">
                 <h2>Metodo de pago</h2>
@@ -49,6 +49,8 @@
                     <input class="metodoDePago_tarjetaDeDebitoOCredito_numeroDeTarjeta" type="number" name="tarjetaDeDebitoOCredito" id="tarjetaDeDebitoOCredito" placeholder="N&uacute;mero de tarjeta">
                     <input class="metodoDePago_tarjetaDeDebitoOCredito_codigoDeSeguridad" type="number" name="codigoDeSeguridad" id="codigoDeSeguridad" placeholder="Clave">
                 </article>
+                <span class="numeroDeTarjeta-incorrecto"></span>
+                <span class="codigoDeSeguridad-incorrecto"></span>
                 <article class="cuponDePago">
                         <article>
                             <input class="radio" type="radio" name="metodoDePago" id="cuponDePago" value="cupon"/>
@@ -62,6 +64,7 @@
                             <input class="metodoDePago__cuponDePago" type="checkbox" id="rapiPago" />
                             <label class="cuponDePago__rapiPago" for="rapiPago">RapiPago</label>
                         </article>
+                        <span class="cupon-incorrecto"></span>
                     </article>
 
                 <article class="metodoDePago__transferenciaBancaria">
@@ -70,7 +73,7 @@
                     <p>CBU: 21839094111100018971375</p>
                 </article>
             </section>
-            <section class= "acionesFormulario">
+            <section class= "accionesFormulario">
                 <article class="guardarOCancelar">
                     <input class="boton" type="submit" value="Guardar cambios">
                     <button class="boton" type="button"><a href="./index.html">Cancelar subscripcion</a></button>
