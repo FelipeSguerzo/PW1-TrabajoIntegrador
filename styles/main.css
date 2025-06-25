@@ -413,3 +413,18 @@ main {
     height: 10rem;
     }   
 }
+
+.heart-icon {
+    font-size: 24px;
+  color: gray;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.heart-icon:hover {
+    color: red;
+}
+
+.active {
+    color: red;
+}

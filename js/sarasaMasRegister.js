@@ -154,7 +154,8 @@ function crearUsuario(username, contrasenia, correo, name, lastName, metodoDePag
         }
     }
 
-    usuarios.push({ username, contrasenia, correo, name, lastName, metodoDePago });
+    const favoritos = [];
+    usuarios.push({ username, contrasenia, correo, name, lastName, metodoDePago, favoritos});
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
     console.log("La cuenta se ha creado con exito");
     return true;

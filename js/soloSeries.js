@@ -18,10 +18,12 @@ function soloSeries(cssSelector){
     for(let elemento of cssSelector){
         if(elemento.temporadas !=0){
             const nodoPeliculaYSerie = document.createElement("div");
+            nodoPeliculaYSerie.className = "card";
             nodoPeliculaYSerie.innerHTML = `
             <a href="./info-series.html?titulo=${elemento.titulo}">
             <img src="${elemento.imagen}" alt="${elemento.titulo}" class="img">
             </a>
+            <i class="fa-solid fa-heart heart-icon" title="${elemento.titulo}"></i>
             `;
             nodoRaiz.appendChild(nodoPeliculaYSerie);
         }
@@ -133,3 +135,62 @@ nodoInputSearch.addEventListener("keyup", (e) => {
         }
     });
 });
+
+const heartFav = document.querySelectorAll(".heart-icon");
+
+const getUsuarios = () => {
+  const usuarios = localStorage.getItem("usuarios");
+  return usuarios ? JSON.parse(usuarios) : [];
+};
+
+const getUsuarioActivo = () => {
+  const usuario = localStorage.getItem("usuarioSesionIniciada");
+  return usuario ? JSON.parse(usuario) : null;
+};
+
+const usuarios = getUsuarios();
+const usuarioActivo = getUsuarioActivo();
+
+if (!usuarioActivo) {
+  console.log("no hay sesión iniciada");
+} else {
+  const usuarioIndex = usuarios.findIndex(u => u.username === usuarioActivo.username);
+  if (usuarioIndex === -1) {
+    console.log("no se encuentra el usuario en el localStorage");
+  } else {
+    let favoritos = usuarios[usuarioIndex].favoritos || [];
+
+    
+    heartFav.forEach((element) => {
+      const titulo = element.getAttribute("title");
+      if (favoritos.some(p => p.titulo === titulo)) {
+        element.classList.add("active");
+      }
+    });
+
+    heartFav.forEach((element) => {
+      element.addEventListener("click", (e) => {
+        e.preventDefault();
+        const tituloBuscado = element.getAttribute("title");
+        const peliculaEncontrada = peliculasyseries.find(p => p.titulo === tituloBuscado);
+
+        if (!peliculaEncontrada) return;
+
+        if (element.classList.contains("active")) {
+          element.classList.remove("active");
+          favoritos = favoritos.filter(p => p.titulo !== tituloBuscado);
+          console.log(`quitado de favoritos: ${tituloBuscado}`);
+        } else {
+          element.classList.add("active");
+          favoritos.push(peliculaEncontrada);
+          console.log(`agg a favoritos: ${tituloBuscado}`);
+        }
+
+        usuarios[usuarioIndex].favoritos = favoritos;
+        localStorage.setItem("usuarios", JSON.stringify(usuarios));
+        localStorage.setItem("usuarioSesionIniciada", JSON.stringify(usuarios[usuarioIndex]));
+        console.log("favs actuales:", favoritos);
+      });
+    });
+  }
+}
