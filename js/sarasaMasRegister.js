@@ -30,6 +30,7 @@ const mensajeFormularioInvalido = document.querySelector(".formulario-invalido")
 const mensajeNombre = document.querySelector(".js-mensajeErrorNombre");
 const mensajeApellido = document.querySelector(".js-mensajeErrorApellido");
 const mensajeCorreo = document.querySelector(".js-mensajeErrorCorreo");
+const mensajeSeleccionDePago = document.querySelector(".seleccioneDeMetodoDePago");
 
 const expresiones = {
     numeroDeTarjeta: /^\d{16}$/,
@@ -130,7 +131,11 @@ form.addEventListener("submit", (e) => {
     }
 
     if (radioTransferencia.checked == false && cuponDePago() == false && (numeroDeTarjetaValido(numeroDeTarjetaDelUsuario) == false || validacionClaveDeLaTarjeta(claveDeTarjetaDelUsuario) == false)) {
+        mensajeSeleccionDePago.style.display = "flex";
+        mensajeSeleccionDePago.textContent = "Seleccione un metodo de pago";
         esValido = false;
+    } else {
+        mensajeSeleccionDePago.style.display = "none";
     }
 
     if (esValido == true && crearUsuario(usuario, contrasenia, correo, nombre, apellido, metodoDePago) == true) {
