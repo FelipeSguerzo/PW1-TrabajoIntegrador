@@ -1,4 +1,3 @@
-
 let peliculasyseries = [];
 const peliculasJSON = localStorage.getItem("peliculasyseries");
 
