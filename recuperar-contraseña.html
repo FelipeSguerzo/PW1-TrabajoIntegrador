@@ -35,14 +35,25 @@
         <form class="formlogin" id="form-login" action="index.html" method="get">
             <section class="inputs">
                 <div class="datos">
-                    <h3 class="h3correo">Usuario</h3>
-                    <input type="text" id="email" required placeholder="Ingrese usuario">
+                    <section class="user">
+                        <h3 class="h3correo">Usuario</h3>
+                    <input type="text" id="username" required placeholder="Ingrese usuario">
+                    </section>
+                    <article class="msg-error__username">
+
+                    </article>
+                    <section class="correo">
                     <h3 class="h3correo">Correo electronico</h3>
                     <input type="email" id="email" required placeholder="Ingrese email">
+                    </section>
+                    <article class="msg-error__email">
+                        
+                    </article>
+                    
                 </div>
             </section>
             <section class="buttons">
-                <button class="btn-send" type="submit">Enviar</button>
+                <button class="btn-send" type="submit" disabled>Enviar</button>
                 <button class="btn-cancel"><a href="index.html">Cancelar</a></button>
             </section>
         </form>
@@ -133,6 +144,7 @@
                 </a>
             </section>
     </footer>
+<script src="js/recuperar-contra.js"></script>
 </body>
 
 </html>

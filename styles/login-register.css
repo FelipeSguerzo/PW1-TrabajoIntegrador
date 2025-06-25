@@ -138,8 +138,8 @@ button a {
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
-    align-items: start;
-    justify-content: start;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     max-width: 31.25rem;
     margin-top: .625rem;
