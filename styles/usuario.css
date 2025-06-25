@@ -97,13 +97,14 @@ form {
 }
 
 .boton {
-    width: 15em;
+    width: 13em;
     height: 3em;
     font-weight: bold;
     border-radius: 0.5em;
     color: black;
     border: none;
     cursor: pointer;
+    margin-bottom: 1.5rem;
 }
 
 .boton a {
@@ -119,7 +120,7 @@ form {
 @media (max-width: 768px)  {
     main {
         padding-top: 0;
-        width: 80%;
+        width: 101%;
     }
     .header {
         display: flex;
@@ -169,6 +170,7 @@ form {
     }
     footer{
         grid-template-columns: 90%;
+        width: 108%;
     }
     .alumnos{
     grid-column-start: auto;
@@ -201,10 +203,12 @@ form {
     }
 
     main{
+        width: 150%;
         margin: 1rem;
         margin-top: 5%;
         padding: 1rem;
     }
+
     form {
         grid-template-columns: 100%;
     }
@@ -235,5 +239,9 @@ form {
     }
     .boton{
         width: 100%;
+    }
+
+    footer{
+        width: 155%;
     }
 }
