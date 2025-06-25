@@ -75,4 +75,22 @@ if (!usuarioActivo) {
   }
 }
 
+const nodoInputSearch = document.querySelector(".search");
+nodoInputSearch.addEventListener("keyup", (e) => {
+    const nombreABuscar = nodoInputSearch.value.toLowerCase();
+    const nodoRaiz = document.querySelector(".content");
+    const nodosPeliculas = nodoRaiz.querySelectorAll(".card");
+    const usuarioActivo = getUsuarioActivo();
+    const favoritos = usuarioActivo.favoritos;
+
+    favoritos.forEach((elemento, index) => {
+        const titulo = elemento.titulo.toLowerCase();
+        if (titulo.includes(nombreABuscar)) {
+            nodosPeliculas[index].style.display = "block"; 
+        } else {
+            nodosPeliculas[index].style.display = "none"; 
+        }
+    });
+});
+
 
