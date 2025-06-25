@@ -12,13 +12,17 @@ form.addEventListener("submit",(e)=>{
     mensajeErrorUsername.textContent = "";
     mensajeErrorEmail.style.color = "red";
     mensajeErrorUsername.style.color = "red";
+    const username = usuarioInput.value;
+    const email = emailInput.value;
+    console.log(username);
+    console.log(email);
 
-    if(!seEncontro(usuarioInput.value)){
+    if(!seEncontro(username)){
         mensajeErrorUsername.textContent = "El usuario no se encontro";
         return;
     }
 
-    if(!validarDatos(emailInput.value,usuarioInput.value)){
+    if(!validarDatos(email,username)){
         mensajeErrorEmail.textContent = "Verifica que el nombre usuario este asociado al correo electronico proporcionado";
         return
     }
@@ -56,7 +60,8 @@ function validarDatos(email,username){
     const usuarios = getUsuarios();
     let datosValidos = false;
     usuarios.forEach((element)=>{
-    if(element.email === email && element.username === username){
+        console.log(element.correo,element.username);
+    if(element.correo == email && element.username === username){
         datosValidos = true;
     }
     })
