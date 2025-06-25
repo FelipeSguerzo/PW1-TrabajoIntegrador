@@ -207,3 +207,10 @@ if (!usuarioActivo) {
 }
 
 
+    if (linkCerrarSesion) {
+        linkCerrarSesion.addEventListener("click", (e) => {
+            e.preventDefault();
+            localStorage.removeItem("usuarioSesionIniciada");
+            window.location.href = "index.html";
+        });
+    }

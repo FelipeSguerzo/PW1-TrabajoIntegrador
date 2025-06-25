@@ -13,6 +13,19 @@ body {
 }
 
 
+.message-error,
+.numeroDeTarjeta-incorrecto,
+.codigoDeSeguridad-incorrecto,
+.cupon-incorrecto,
+.numeroDeTarjeta-incorrecto,
+.codigoDeSeguridad-incorrecto {
+    color: red; 
+    font-size: 0.9em; 
+    margin-top: 0.3em; 
+    display: block; 
+}
+
+
 main {
     margin: 2rem ;
     padding: 2rem;
