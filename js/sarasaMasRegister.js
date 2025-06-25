@@ -35,10 +35,10 @@ const mensajeSeleccionDePago = document.querySelector(".seleccioneDeMetodoDePago
 const expresiones = {
     numeroDeTarjeta: /^\d{16}$/,
     claveTarjeta: /^\d{3}$/,
-    nombreYApellido: /^[a-zA-Z]+$/,
+    nombreYApellido: /^[A-Za-z\s]+$/,
     mail: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
 }
-
+///^[a-zA-Z]+$/
 console.log("a");
 
 const getUsuarios = () => {
