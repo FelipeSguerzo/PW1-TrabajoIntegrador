@@ -1,0 +1,8 @@
+.heart-icon {
+    display: flex;
+    position: relative;
+    z-index: 1;
+    bottom: 2em;
+    left: 1em;
+    width: fit-content;
+}
