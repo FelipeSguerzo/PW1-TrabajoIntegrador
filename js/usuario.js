@@ -3,7 +3,7 @@
     const formUsuario = document.getElementById("formularioUsuario");
     const tarjetaDebitoCreditoRadio = document.getElementById("tarjetaDeDebitoOCreditoRadio");
     const numeroTarjetaInput = document.getElementById("tarjetaDeDebitoOCredito");
-    const codigoSeguridadInput = document.getElementById("#codigoDeSeguridad");
+    const codigoSeguridadInput = document.getElementById("codigoDeSeguridad");
     const cuponDePagoRadio = document.getElementById("cuponDePago");
     const pagoFacilCheckbox = document.getElementById("pagoFacil");
     const rapiPagoCheckbox = document.getElementById("rapiPago");
