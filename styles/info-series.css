@@ -443,8 +443,10 @@ main {
   }
 
   .temporada-capitulo{
-    margin-left: 2rem;
-    margin-top: .3rem;
+    margin-left: -13rem;
+    margin-top: 1rem;
+    margin-bottom: -2rem;
+
   }
 
   .btn-comprar{
@@ -457,38 +459,8 @@ main {
     justify-content: left;
   }
 
-  .temporadas-movil{
-    margin-bottom: 1rem;
-    display: flex;
-    width: 6.05rem;
-    background: #242323;
-    color: #d1c8c8;
-    border-radius: 0.3125rem;
-    padding: .5em;
-    margin-right: 2.5rem;
-  }
-
-    .capitulos-movil{
-    margin-bottom: 1rem;
-    display: flex;
-    background: #242323;
-    color: #d1c8c8;
-    border-radius: 0.3125rem;
-    padding: .5em;
-    width: 6.05rem;
-  }
-
-    .temporada-capitulo{
-    display: none;
-  }
-
   .ifremaContenedor{
     display: none;
-  }
-  
-  .temporada-capitulo-movil{
-    display: grid;
-    grid-template-columns: 2fr 1fr; 
   }
 
   .ifremaContenedor-movil{
@@ -594,7 +566,9 @@ main {
   }
 
   .temporada-capitulo{
-    display: none;
+    margin-left: -13rem;
+    margin-top: 3rem;
+    margin-bottom: -2rem;
   }
 
   .ifremaContenedor{
@@ -610,27 +584,6 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: left;
-  }
-
-  .temporadas-movil{
-    margin-bottom: 1rem;
-    display: flex;
-    width: 6.05rem;
-    background: #242323;
-    color: #d1c8c8;
-    border-radius: 0.3125rem;
-    padding: .5em;
-    margin-right: 2.5rem;
-  }
-
-  .capitulos-movil{
-    margin-bottom: 1rem;
-    display: flex;
-    background: #242323;
-    color: #d1c8c8;
-    border-radius: 0.3125rem;
-    padding: .5em;
-    width: 6.05rem;
   }
 
   .ifremaContenedor-movil{
