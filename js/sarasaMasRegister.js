@@ -69,8 +69,8 @@ form.addEventListener("submit", (e) => {
         metodoDePago = {
             tipo: "tarjeta",
             detalles: {
-                numeroDeTarjeta: "****************",
-                clave: "***"
+                numeroDeTarjeta: metodoDePagoTarjeta.value,
+                clave: metodoDePagoClaveTarjeta.value
             }
         }
     } else if (radioCupon.checked) {
