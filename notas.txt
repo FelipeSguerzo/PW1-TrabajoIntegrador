@@ -5,3 +5,9 @@ a otro metodo de pago (radio) se borre el checkbox.
 se desactive el boton guardar cambios.
 Ej.: Si mi metodo de pago es tarjeta, y cambio a otro metodo de pago se active el boton pero si
 vuelvo a cliquear en tarjeta el boton deberia estar desactivado al menos que cambie el numero o la clave.
+
+3. - Para desactivar los botones de cada hay que tener en cuenta que yo nombre distintos los id´s que los nombro Beto.
+
+4. - Agregue los disable al checkbox de rapiPago y pagoFacil.
+
+5. - Aguante boquita papaaaa!
