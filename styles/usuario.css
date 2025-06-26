@@ -1,17 +1,23 @@
-* {
-    margin: 0;
-    padding: 0.5rem;
-    box-sizing: border-box;
-    font-family: "Open Sans", sans-serif;
-
-}
 body {
     color: white;
     background: linear-gradient(to bottom, #000000 0%, #1a1a1a 100%);
     background-color: #000;
     margin-top: 3%;
+        margin: 0;
+    padding: 0rem;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
 }
 
+main {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 5rem;
+    margin-bottom: 10rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 50vh;
+}
 
 .message-error,
 .numeroDeTarjeta-incorrecto,
@@ -23,13 +29,6 @@ body {
     font-size: 0.9em; 
     margin-top: 0.3em; 
     display: block; 
-}
-
-
-main {
-    margin: 2rem ;
-    padding: 2rem;
-    padding-top: 1rem;
 }
 
 form {
@@ -119,28 +118,24 @@ form {
 
 @media (max-width: 768px)  {
     main {
-        padding-top: 0;
-        width: 101%;
+        width: 80%;
     }
+
     .header {
-        display: flex;
-        position: fixed;
-        justify-content: center;
-        padding: 0;
-        gap: 0.5em;
+      display: flex;
+      position: fixed;
+      justify-content: center;
+      padding: 0;
+      gap: 0.5em;
     }
 
-    .headerimg{
-        width: 2.5em;
-    }
-
-    .header nav ul{
+    .header nav ul {
         display: flex;
         gap: .6em;
     }
 
     .header li {
-        font-size: .6em;
+        font-size: .9em;
     }
 
     form {
@@ -168,10 +163,7 @@ form {
     .acionesFormulario {
         grid-column: 1 / -1;
     }
-    footer{
-        grid-template-columns: 90%;
-        width: 108%;
-    }
+
     .alumnos{
     grid-column-start: auto;
     }
@@ -181,32 +173,30 @@ form {
 }
 
 @media (max-width: 425px)  {
+
+    main{
+        width: 80%;
+    }
+
+    footer{
+        width: 100%;
+    }
+
     .header {
-        display: flex;
-        position: fixed;
-        justify-content: center;
-        padding: 0;
-        gap: 0.5em;
+      display: flex;
+      position: fixed;
+      justify-content: center;
+      padding: 0;
+      gap: 0.5em;
     }
 
-    .headerimg{
-        width: 2.5em;
-    }
-
-    .header nav ul{
+    .header nav ul {
         display: flex;
-        gap: 0.6em;
+        gap: .3em;
     }
 
     .header li {
         font-size: .6em;
-    }
-
-    main{
-        width: 150%;
-        margin: 1rem;
-        margin-top: 5%;
-        padding: 1rem;
     }
 
     form {
@@ -239,9 +229,5 @@ form {
     }
     .boton{
         width: 100%;
-    }
-
-    footer{
-        width: 155%;
     }
 }
