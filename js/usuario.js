@@ -15,8 +15,6 @@ const botonCancelarSubscripcion = document.querySelector(".accionesFormulario .b
 // const radioTransferencia = document.getElementById("transferenciaBancaria");
 // const metodoDePagoTarjeta = document.querySelector(".metodoDePago__tarjetaDeDebitoOCredito__numeroDeTarjeta");
 // const metodoDePagoClaveTarjeta = document.querySelector(".metodoDePago__tarjetaDeDebitoOCredito__codigoDeSeguridad");
-// const metodoDePagoPagoFacil = document.getElementById("pagoFacil");
-// const metodoDePagoRapiPago = document.getElementById("rapiPago");
 
 const nuevaContraseñaInput = document.getElementById("nuevaContraseña");
 const repiteContraseñaInput = document.getElementById("repiteContraseña");
@@ -32,7 +30,7 @@ const linkCerrarSesion = document.querySelector("li.cerrarSesion a");
 
 const expresiones = {
     numeroDeTarjeta: /^\d{16}$/,
-    claveTarjeta: /^\d{3}$/,    //REVISAR LA COMA SEGURO FALLA POR ESO
+    claveTarjeta: /^\d{3}$/    //REVISAR LA COMA SEGURO FALLA POR ESO
 };
 
 function validarNumeroDeTarjeta(numeroTarjetaIngresada) {
@@ -67,10 +65,11 @@ function validarNumeroDeTarjeta(numeroTarjetaIngresada) {
 }
 
 function validarCodigoDeSeguridad(claveIngresada) {
+    const claveErronea = 0;
     const esValido = expresiones.claveTarjeta.test(claveIngresada);
 
-    if (!esValido) {
-        mensajeCodigoSeguridadError.textContent = "La clave debe tener 3 numeros.";
+    if (!esValido || claveIngresada === claveErronea) {
+        mensajeCodigoSeguridadError.textContent = "La clave debe tener 3 numeros distintos de 0";
         mensajeCodigoSeguridadError.style.display = "block";
         return false;
     }
@@ -79,7 +78,6 @@ function validarCodigoDeSeguridad(claveIngresada) {
     mensajeCodigoSeguridadError.style.display = "none";
     return true;
 }
-
 
 const getUsuarios = () => {
     const usuarios = localStorage.getItem("usuarios");
@@ -108,20 +106,25 @@ function cargarMetodoDePago() {
             tarjetaDebitoCreditoRadio.checked = true;
             numeroTarjetaInput.value = metodoDePago.detalles.numeroDeTarjeta || "";
             codigoSeguridadInput.value = metodoDePago.detalles.clave || "";
+            pagoFacilCheckbox.disabled = true;
+            rapiPagoCheckbox.disabled = true;
+            numeroTarjetaInput.disabled = false;
+            codigoSeguridadInput.disabled = false;
         } else if (metodoDePago.tipo === "cupon") {
             cuponDePagoRadio.checked = true;
             if (metodoDePago.detalles && metodoDePago.detalles.pagoFacil) {
                 pagoFacilCheckbox.checked = true;
+                rapiPagoCheckbox.disabled = false;
             }
             if (metodoDePago.detalles && metodoDePago.detalles.rapiPago) {
                 rapiPagoCheckbox.checked = true;
+                pagoFacilCheckbox.disabled = false;
             }
         } else if (metodoDePago.tipo === "transferencia") {
             transferenciaBancariaRadio.checked = true;
         }
     }
 }
-
 
 function validarNuevaContrasena() {
     const contrasenia = nuevaContraseñaInput.value;
@@ -169,18 +172,44 @@ function validarMetodoDePagoSeleccionado() {
         const codigoValido = validarCodigoDeSeguridad(codigoSeguridadInput.value);
 
         if (numeroValido && codigoValido) {
+            pagoFacilCheckbox.checked = false;
+            rapiPagoCheckbox.checked = false;
+            pagoFacilCheckbox.disabled = true;
+            rapiPagoCheckbox.disabled = true;
+            numeroTarjetaInput.disabled = false;
+            codigoSeguridadInput.disabled = false;
             return true;
         } else {
+            numeroTarjetaInput.disabled = false;
+            codigoSeguridadInput.disabled = false;
+            pagoFacilCheckbox.checked = false;
+            rapiPagoCheckbox.checked = false;
+            pagoFacilCheckbox.disabled = true;
+            rapiPagoCheckbox.disabled = true;
             return false;
         }
 
     } else if (cuponDePagoRadio.checked) {
+        pagoFacilCheckbox.disabled = false;
+        rapiPagoCheckbox.disabled = false;
+        numeroTarjetaInput.disabled = true;
+        codigoSeguridadInput.disabled = true;
+        numeroTarjetaInput.value = "";
+        codigoSeguridadInput.value = "";
         if (pagoFacilCheckbox.checked || rapiPagoCheckbox.checked) {
             return true;
         } else {
             return false;
         }
     } else if (transferenciaBancariaRadio.checked) {
+        numeroTarjetaInput.disabled = true;
+        codigoSeguridadInput.disabled = true;
+        numeroTarjetaInput.value = "";
+        codigoSeguridadInput.value = "";
+        pagoFacilCheckbox.checked = false;
+        rapiPagoCheckbox.checked = false;
+        pagoFacilCheckbox.disabled = true;
+        rapiPagoCheckbox.disabled = true;
         return true;
     }
     return false;
@@ -277,8 +306,8 @@ formularioUsuario.addEventListener("submit", (e) => {
         nuevoMetodoDePago = {
             tipo: "tarjeta",
             detalles: {
-                numeroDeTarjeta: "****************",
-                clave: "***"
+                numeroDeTarjeta: numeroTarjetaInput.value,
+                clave: codigoSeguridadInput.value
             }
         };
     } else if (cuponDePagoRadio.checked) {
