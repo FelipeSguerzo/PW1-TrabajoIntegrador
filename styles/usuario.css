@@ -78,7 +78,7 @@ form {
     grid-template-rows: auto;
 }
 
-.acionesFormulario {
+.accionesFormulario {
     grid-column: 1 / -1; 
     grid-column-start: 2;
     grid-column-end: 4;
@@ -160,7 +160,7 @@ form {
         grid-column-start: auto;
     }
 
-    .acionesFormulario {
+    .accionesFormulario {
         grid-column: 1 / -1;
     }
 
@@ -221,7 +221,7 @@ form {
         grid-column-start: auto;
     }
 
-    .acionesFormulario {
+    .accionesFormulario {
         grid-column: 1 / -1;
     }
     .metodoDePago_tarjetaDeDebitoOCredito_codigoDeSeguridad{
