@@ -110,6 +110,78 @@ btnSuspenso.addEventListener("click", function(){
     agregarGenero(peliculasyseries, "Suspenso");
 });
 
+btnNingunGenero.addEventListener("mouseover", () => {
+    btnNingunGenero.style.backgroundColor = "#000";
+});
+
+btnNingunGenero.addEventListener("mouseout", () => {
+    btnNingunGenero.style.backgroundColor = "gray";
+});
+
+btnAccion.addEventListener("mouseover", () => {
+    btnAccion.style.backgroundColor = "#000";
+});
+
+btnAccion.addEventListener("mouseout", () => {
+    btnAccion.style.backgroundColor = "gray";
+});
+
+btnAdolescente.addEventListener("mouseover", () => {
+    btnAdolescente.style.backgroundColor = "#000";
+});
+
+btnAdolescente.addEventListener("mouseout", () => {
+    btnAdolescente.style.backgroundColor = "gray";
+});
+
+btnCF.addEventListener("mouseover", () => {
+    btnCF.style.backgroundColor = "#000";
+});
+
+btnCF.addEventListener("mouseout", () => {
+    btnCF.style.backgroundColor = "gray";
+});
+
+btnComedia.addEventListener("mouseover", () => {
+    btnComedia.style.backgroundColor = "#000";
+});
+
+btnComedia.addEventListener("mouseout", () => {
+    btnComedia.style.backgroundColor = "gray";
+});
+
+btnDocumental.addEventListener("mouseover", () => {
+    btnDocumental.style.backgroundColor = "#000";
+});
+
+btnDocumental.addEventListener("mouseout", () => {
+    btnDocumental.style.backgroundColor = "gray";
+});
+
+btnDrama.addEventListener("mouseover", () => {
+    btnDrama.style.backgroundColor = "#000";
+});
+
+btnDrama.addEventListener("mouseout", () => {
+    btnDrama.style.backgroundColor = "gray";
+});
+
+btnFantasia.addEventListener("mouseover", () => {
+    btnFantasia.style.backgroundColor = "#000";
+});
+
+btnFantasia.addEventListener("mouseout", () => {
+    btnFantasia.style.backgroundColor = "gray";
+});
+
+btnSuspenso.addEventListener("mouseover", () => {
+    btnSuspenso.style.backgroundColor = "#000";
+});
+
+btnSuspenso.addEventListener("mouseout", () => {
+    btnSuspenso.style.backgroundColor = "gray";
+});
+
 const nodoInputSearch = document.querySelector(".search");
 nodoInputSearch.addEventListener("keyup", (e) => {
     const nombreABuscar = nodoInputSearch.value.toLowerCase();
