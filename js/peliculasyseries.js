@@ -177,7 +177,7 @@ const DATA_PELICULAS = [
 {
     "imagen": "images/squid-game_series.jpg",
     "heroimg": "images/squid-game_hero.jpg",
-    "titulo": "El juego del calamar",
+    "titulo": "Squid Game",
     "clasificacion": 16,
     "año": 2021,
     "genero": [
