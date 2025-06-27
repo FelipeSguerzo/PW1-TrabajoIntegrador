@@ -132,16 +132,28 @@ body {
 
 .pass {
     display: flex;
+    align-items: center;
+    justify-content: end;
 }
 
-.formulario .datosDeUsuario .fa-regular {
+.formulario .datosDeUsuario .fa-eye-slash {
     display: flex;
     align-items: center;
     font-size: 16px;
-    position: relative;
+    position: absolute;
     opacity: 0.8;
-    left: -2.4em;
     cursor: pointer;
+    padding-right: 1.2em;
+}
+
+.formulario .datosDeUsuario .fa-eye {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    position: absolute;
+    opacity: 0.8;
+    cursor: pointer;
+    padding-right: 1.2em;
 }
 
 /* Formulario datos de la persona */
@@ -400,7 +412,7 @@ input[type=number]::-webkit-outer-spin-button {
     .formulario {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        /* align-items: center; */
     }
 
     .form-datos {
@@ -411,9 +423,9 @@ input[type=number]::-webkit-outer-spin-button {
         font-size: 1.3em;
     }
 
-    .formulario .datosDeUsuario .fa-regular {
+    /* .formulario .datosDeUsuario .fa-regular {
         display: none;
-    }
+    } */
 
     /* Formulario datos de la persona */
 
@@ -557,7 +569,7 @@ input[type=number]::-webkit-outer-spin-button {
     .formulario {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        /* align-items: center; */
     }
 
     .form-datos {
@@ -568,9 +580,9 @@ input[type=number]::-webkit-outer-spin-button {
         font-size: 1.3em;
     }
 
-    .formulario .datosDeUsuario .fa-regular {
+    /* .formulario .datosDeUsuario .fa-regular {
         display: none;
-    }
+    } */
 
     /* Formulario datos de la persona */
 

@@ -3,6 +3,39 @@ se desactive el boton guardar cambios.
 Ej.: Si mi metodo de pago es tarjeta, y cambio a otro metodo de pago se active el boton pero si
 vuelvo a cliquear en tarjeta el boton deberia estar desactivado al menos que cambie el numero o la clave.
 
-2. - Para desactivar los botones de cada hay que tener en cuenta que yo nombre distintos los id´s que los nombro Beto.
-
 3. - Falta validar el 000 en la clave tarjeta.
+
+4. - En usuario.js cambie quite que se borre los numeros de la tarjeta.
+
+5. - En sarasamasRegister.js solamente se puede seleccionar un checkbox.
+
+6. - Agregue el ojo del pass y cambio de tipo de input.
+
+7. - Retoque el css para que este el ojo en responsive y no se deforme.
+    Comente los dos (.formulario .datosDeUsuario .fa-regular)
+    Comente los dos align-items (.formulario)
+
+
+    .formulario .datosDeUsuario .fa-eye-slash {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    position: relative;
+    opacity: 0.8;
+    left: -2.4em;
+    cursor: pointer;
+}
+
+.formulario .datosDeUsuario .fa-eye {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    position: relative;
+    opacity: 0.8;
+    left: -2.3em;
+    cursor: pointer;
+}
+
+.pass {
+    display: flex;
+}

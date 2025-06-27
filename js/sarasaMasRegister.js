@@ -1,5 +1,3 @@
-// REVISAR CON CUPONES DE PAGO COMO HACER PARA QUE LO GUARDE EN EL LOCALSTORAGE
-
 const nodoContrasenia = document.querySelector("#contrasenia")
 const nodoRepetirContrasenia = document.querySelector("#repetirContrasenia")
 const nodoUsername = document.querySelector("#nombreDeUsuario")
@@ -86,7 +84,7 @@ form.addEventListener("submit", (e) => {
         metodoDePagoSeleccionado = "transferencia";
         metodoDePago = {
             tipo: "transferencia",
-            detalles: {}
+            detalles: "CBU: 21839094111100018971375"
         };
     }
 
@@ -226,6 +224,16 @@ function habilitarTransferencia() {
 }
 
 //INPUTS DE LOS METODOS DE PAGO DESACTIVADOS.
+
+// SELECCION DE PLAN
+
+function seleccionDePlan(){
+    
+}
+
+// SELECCION DE PLAN
+
+// VALIDACION NUMERO DE TARJETA
 
 function numeroDeTarjetaValido(numeroDeTarjetaIngresada) {
     const longitudValida = expresiones.numeroDeTarjeta.test(numeroDeTarjetaIngresada);
@@ -371,6 +379,40 @@ function visualizacionCuponDePago() {
 
 // VALIDACION CUPON DE PAGO
 
+// EYE CONTRASEÑA
+
+function iconoContrasenia() {
+    const eyePassClose = document.querySelector(".fa-regular");
+    const inputPass = document.querySelector("#contrasenia");
+
+    eyePassClose.addEventListener("click", function () {
+        if (inputPass.type === "password") {
+            inputPass.type = "text";
+            eyePassClose.className = "fa-regular fa-eye";
+        } else {
+            inputPass.type = "password";
+            eyePassClose.className = "fa-regular fa-eye-slash";
+        }
+    });
+}
+
+function iconoRepetirContrasenia() {
+    const eyeRepeatPassClose = document.querySelector("#repeat-pass");
+    const inputRepeatPass = document.querySelector("#repetirContrasenia");
+
+    eyeRepeatPassClose.addEventListener("click", function () {
+        if (inputRepeatPass.type === "password") {
+            inputRepeatPass.type = "text";
+            eyeRepeatPassClose.className = "fa-regular fa-eye";
+        } else {
+            inputRepeatPass.type = "password";
+            eyeRepeatPassClose.className = "fa-regular fa-eye-slash";
+        }
+    });
+}
+
+// EYE CONTRASEÑA
+
 function validacion() {
     inputs.forEach((input) => {
         input.addEventListener("blur", function () {
@@ -394,3 +436,5 @@ validacion();
 habilitarTarjeta();
 habilitarCuponDePago();
 habilitarTransferencia();
+iconoContrasenia();
+iconoRepetirContrasenia();
