@@ -60,7 +60,14 @@ form.addEventListener("submit", (e) => {
 
     let metodoDePago;
     let metodoDePagoSeleccionado = "";
+    // let plan;
     let esValido = true;
+
+    // if (seleccionDePlan() === ""){
+    //     esValido = false;
+    // } else {
+    //     plan = seleccionDePlan();
+    // }
 
     if (radioTarjeta.checked) {
         metodoDePagoSeleccionado = "tarjeta";
@@ -227,10 +234,36 @@ function habilitarTransferencia() {
 
 // SELECCION DE PLAN
 
-function seleccionDePlan(){
-    
-}
+function seleccionDePlan() {
+    const planEstandar = document.querySelector("#plan-estandar");
+    const planGold = document.querySelector("#plan-gold");
+    const planPlatino = document.querySelector("#plan-platino");
+    let planSeleccionado = "";
 
+    planEstandar.addEventListener("click", function () {
+        this.style.outline = ".1875rem solid white";
+        planGold.style.outline = "none";
+        planPlatino.style.outline = "none";
+        planSeleccionado = "Estandar";
+    });
+
+    planGold.addEventListener("click", function(){
+        this.style.outline = ".1875rem solid white";
+        planEstandar.style.outline = "none";
+        planPlatino.style.outline = "none";
+        planSeleccionado = "Gold";
+    });
+
+    planPlatino.addEventListener("click", function () {
+        this.style.outline = ".1875rem solid white";
+        planEstandar.style.outline = "none";
+        planGold.style.outline = "none";
+        planSeleccionado = "Platino";
+    });
+
+    return planSeleccionado;
+}
+seleccionDePlan();
 // SELECCION DE PLAN
 
 // VALIDACION NUMERO DE TARJETA
