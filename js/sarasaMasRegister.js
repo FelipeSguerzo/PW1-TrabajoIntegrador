@@ -127,7 +127,7 @@ form.addEventListener("submit", (e) => {
         mensajeApellido.textContent = "Ingrese solo letras";
         esValido = false;
     } else {
-         mensajeApellido.style.display = "none";
+        mensajeApellido.style.display = "none";
     }
 
     if (radioTransferencia.checked == false && cuponDePago() == false && (numeroDeTarjetaValido(numeroDeTarjetaDelUsuario) == false || validacionClaveDeLaTarjeta(claveDeTarjetaDelUsuario) == false)) {
@@ -155,7 +155,7 @@ function crearUsuario(username, contrasenia, correo, name, lastName, metodoDePag
     }
 
     const favoritos = [];
-    usuarios.push({ username, contrasenia, correo, name, lastName, metodoDePago, favoritos});
+    usuarios.push({ username, contrasenia, correo, name, lastName, metodoDePago, favoritos });
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
     console.log("La cuenta se ha creado con exito");
     return true;
@@ -323,17 +323,37 @@ function cuponDePago() {
 function visualizacionCuponDePago() {
     let checkboxPagoFacil = document.getElementById("pagoFacil");
     let checkboxRapiPago = document.getElementById("rapiPago");
-    const checkBoxes = document.querySelectorAll(".metodoDePago__cuponDePago");
+    // const checkBoxes = document.querySelectorAll(".metodoDePago__cuponDePago");
 
-    checkBoxes.forEach((checkbox) => {
-        checkbox.addEventListener("change", function () {
-            if (checkboxPagoFacil.checked === true || checkboxRapiPago.checked === true) {
-                document.querySelector(".cupon-incorrecto").style.display = "none";
-            } else {
-                document.querySelector(".cupon-incorrecto").style.display = "flex";
-                mensajeDeErrorCupon.textContent = "Seleccione al menos un cupón de pago";
-            }
-        });
+    // checkBoxes.forEach((checkbox) => {
+    //     checkbox.addEventListener("change", function () {
+    //         if (checkboxPagoFacil.checked === true || checkboxRapiPago.checked === true) {
+    //             document.querySelector(".cupon-incorrecto").style.display = "none";
+    //         } else {
+    //             document.querySelector(".cupon-incorrecto").style.display = "flex";
+    //             mensajeDeErrorCupon.textContent = "Seleccione al menos un cupón de pago";
+    //         }
+    //     });
+    // });
+
+    checkboxPagoFacil.addEventListener("change", function () {
+        if (checkboxPagoFacil.checked === true) {
+            checkboxRapiPago.checked = false;
+            document.querySelector(".cupon-incorrecto").style.display = "none";
+        } else {
+            document.querySelector(".cupon-incorrecto").style.display = "flex";
+            mensajeDeErrorCupon.textContent = "Seleccione un cupón de pago";
+        }
+    });
+
+    checkboxRapiPago.addEventListener("change", function () {
+        if (checkboxRapiPago.checked === true) {
+            checkboxPagoFacil.checked = false;
+            document.querySelector(".cupon-incorrecto").style.display = "none";
+        } else {
+            document.querySelector(".cupon-incorrecto").style.display = "flex";
+            mensajeDeErrorCupon.textContent = "Seleccione un cupón de pago";
+        }
     });
 
     radioTarjeta.addEventListener("change", function () {

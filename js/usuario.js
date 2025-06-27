@@ -194,8 +194,6 @@ function validarMetodoDePagoSeleccionado() {
         rapiPagoCheckbox.disabled = false;
         numeroTarjetaInput.disabled = true;
         codigoSeguridadInput.disabled = true;
-        numeroTarjetaInput.value = "";
-        codigoSeguridadInput.value = "";
         if (pagoFacilCheckbox.checked || rapiPagoCheckbox.checked) {
             return true;
         } else {
@@ -204,8 +202,6 @@ function validarMetodoDePagoSeleccionado() {
     } else if (transferenciaBancariaRadio.checked) {
         numeroTarjetaInput.disabled = true;
         codigoSeguridadInput.disabled = true;
-        numeroTarjetaInput.value = "";
-        codigoSeguridadInput.value = "";
         pagoFacilCheckbox.checked = false;
         rapiPagoCheckbox.checked = false;
         pagoFacilCheckbox.disabled = true;
