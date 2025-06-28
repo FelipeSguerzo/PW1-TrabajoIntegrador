@@ -28,8 +28,8 @@ const mensajeCorreo = document.querySelector(".js-mensajeErrorCorreo");
 const mensajeUsuario = document.querySelector(".js-mensajeErrorUsuario");
 const mensajeSeleccionDePago = document.querySelector(".seleccioneDeMetodoDePago");
 const mensajeContrasenia = document.querySelector(".mensaje-contrasenia");
-const mensajeRepetir = document.querySelector(".mensaje-repetir")
-const mensajeUsername = document.querySelector(".mensaje-usuario")
+const mensajeRepetir = document.querySelector(".mensaje-repetir");
+const mensajeUsername = document.querySelector(".mensaje-usuario");
 
 const expresiones = {
     numeroDeTarjeta: /^\d{16}$/,
@@ -37,7 +37,7 @@ const expresiones = {
     nombreYApellido: /^[A-Za-z\s]+$/,
     mail: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
 }
-///^[a-zA-Z]+$/
+
 console.log("a");
 
 const getUsuarios = () => {
@@ -61,21 +61,38 @@ form.addEventListener("submit", (e) => {
 
     let metodoDePago;
     let metodoDePagoSeleccionado = "";
-    // let plan;
     let esValido = true;
-
-    // if (seleccionDePlan() === ""){
-    //     esValido = false;
-    // } else {
-    //     plan = seleccionDePlan();
-    // }
 
     if (radioTransferencia.checked == false && cuponDePago() == false && (numeroDeTarjetaValido(numeroDeTarjetaDelUsuario) == false || validacionClaveDeLaTarjeta(claveDeTarjetaDelUsuario) == false)) {
         mensajeSeleccionDePago.style.display = "flex";
-        mensajeSeleccionDePago.textContent = "Seleccione un metodo de pago";
+        mensajeSeleccionDePago.textContent = "Seleccione un metodo de pago válido";
         esValido = false;
     } else {
         mensajeSeleccionDePago.style.display = "none";
+    }
+
+    if (radioTarjeta.checked == true && validacionClaveDeLaTarjeta(claveDeTarjetaDelUsuario) == false) {
+        mensajeDeErrorClaveInvalida.style.display = "flex";
+        mensajeDeErrorClaveInvalida.textContent = "Ingrese una clave válida";
+        esValido = false;
+    } else {
+        mensajeDeErrorClaveInvalida.style.display = "none";
+    }
+
+    if (radioTarjeta.checked == true && numeroDeTarjetaValido(numeroDeTarjetaDelUsuario) == false) {
+        mensajeDeErrorNumeroInvalido.style.display = "flex";
+        mensajeDeErrorNumeroInvalido.textContent = "Ingrese una tarjeta válida";
+        esValido = false;
+    } else {
+        mensajeDeErrorNumeroInvalido.style.display = "none";
+    }
+
+    if (radioCupon.checked == true && metodoDePagoPagoFacil.checked == false && metodoDePagoRapiPago.checked == false) {
+        mensajeDeErrorCupon.style.display = "flex";
+        mensajeDeErrorCupon.textContent = "Seleccione un cupón de pago";
+        esValido = false;
+    } else {
+        mensajeDeErrorCupon.style.display = "none";
     }
 
     if (radioTarjeta.checked) {
@@ -158,6 +175,7 @@ function crearUsuario(username, contrasenia, correo, name, lastName, metodoDePag
     const usuarios = getUsuarios();
     for (let i = 0; i < usuarios.length; i++) {
         if (usuarios[i].username === username) {
+            mensajeUsername.style.display = "flex";
             mensajeUsername.textContent = "Ya hay un usuario registrado con este nombre. Pruebe otro"
             mensajeUsername.style.color = "red";
             return false;
@@ -216,6 +234,12 @@ function habilitarCuponDePago() {
             metodoDePagoClaveTarjeta.disabled = true;
             metodoDePagoTarjeta.value = "";
             metodoDePagoClaveTarjeta.value = "";
+            document.querySelector(".numeroDeTarjeta-incorrecto").style.display = "none";
+            metodoDePagoTarjeta.classList.remove("validacion-incorrecta");
+            metodoDePagoClaveTarjeta.classList.remove("validacion-incorrecta");
+            document.querySelector(".codigoDeSeguridad-incorrecto").style.display = "none";
+            metodoDePagoTarjeta.classList.remove("validacion-correcta");
+            metodoDePagoClaveTarjeta.classList.remove("validacion-correcta");
         }
     });
 }
@@ -231,6 +255,12 @@ function habilitarTransferencia() {
             metodoDePagoClaveTarjeta.value = "";
             metodoDePagoPagoFacil.checked = false;
             metodoDePagoRapiPago.checked = false;
+            document.querySelector(".numeroDeTarjeta-incorrecto").style.display = "none";
+            metodoDePagoTarjeta.classList.remove("validacion-incorrecta");
+            metodoDePagoClaveTarjeta.classList.remove("validacion-incorrecta");
+            document.querySelector(".codigoDeSeguridad-incorrecto").style.display = "none";
+            metodoDePagoTarjeta.classList.remove("validacion-correcta");
+            metodoDePagoClaveTarjeta.classList.remove("validacion-correcta");
         }
     })
 }
@@ -311,7 +341,7 @@ function visualizacionNumeroDeTarjeta() {
             metodoDePagoTarjeta.classList.add("validacion-incorrecta");
             metodoDePagoTarjeta.classList.remove("validacion-correcta");
             document.querySelector(".numeroDeTarjeta-incorrecto").style.display = "flex";
-            mensajeDeErrorNumeroInvalido.textContent = "Tarjeta inválida";
+            mensajeDeErrorNumeroInvalido.textContent = "Ingrese una tarjeta válida";
         } else {
             metodoDePagoTarjeta.classList.remove("validacion-incorrecta");
             metodoDePagoTarjeta.classList.add("validacion-correcta");
@@ -350,7 +380,7 @@ function visualizacionClaveDeLaTarjeta() {
             metodoDePagoClaveTarjeta.classList.add("validacion-incorrecta");
             metodoDePagoClaveTarjeta.classList.remove("validacion-correcta");
             document.querySelector(".codigoDeSeguridad-incorrecto").style.display = "flex";
-            mensajeDeErrorClaveInvalida.textContent = "Clave inválida";
+            mensajeDeErrorClaveInvalida.textContent = "Ingrese una clave válida";
         }
     })
 }
@@ -451,26 +481,10 @@ function iconoRepetirContrasenia() {
 
 // EYE CONTRASEÑA
 
-// function validacion() {
-//     inputs.forEach((input) => {
-//         input.addEventListener("blur", function () {
-//             validacionClaveDeLaTarjeta();
-//             numeroDeTarjetaValido();
-//             metodoDePagoClaveTarjeta.classList.remove("validacion-correcta");
-//             metodoDePagoClaveTarjeta.classList.remove("validacion-incorrecta");
-//             metodoDePagoTarjeta.classList.remove("validacion-correcta");
-//             metodoDePagoTarjeta.classList.remove("validacion-incorrecta");
-//             document.querySelector(".codigoDeSeguridad-incorrecto").style.display = "none";
-//             document.querySelector(".numeroDeTarjeta-incorrecto").style.display = "none";
-//         });
-//     });
-// }
-
 cuponDePago();
 visualizacionCuponDePago();
 visualizacionNumeroDeTarjeta();
 visualizacionClaveDeLaTarjeta();
-// validacion();
 habilitarTarjeta();
 habilitarCuponDePago();
 habilitarTransferencia();
