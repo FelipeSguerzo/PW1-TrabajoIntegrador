@@ -280,43 +280,43 @@ input[type=number]::-webkit-outer-spin-button {
 
 .codigoDeSeguridad-incorrecto {
     display: none;
-    color: rgb(228, 19, 19);
-    font-size: 1.1em;
+    color: red;
+    font-size: 0.8em;
     width: fit-content;
 }
 
 .numeroDeTarjeta-incorrecto {
     display: none;
-    color: rgb(228, 19, 19);
-    font-size: 1.1em;
+    color: red;
+    font-size: 0.8em;
     width: fit-content;
 }
 
 .cupon-incorrecto {
     display: none;
-    color: rgb(228, 19, 19);
-    font-size: 1.1em;
+    color: red;
+    font-size: 0.8em;
     width: fit-content;
 }
 
 .js-mensajeErrorNombre {
     display: none;
-    color: rgb(228, 19, 19);
-    font-size: 1.1em;
+    color: red;
+    font-size: 0.8em;
     width: fit-content;
 }
 
 .js-mensajeErrorApellido {
     display: none;
-    color: rgb(228, 19, 19);
-    font-size: 1.1em;
+    color: red;
+    font-size: 0.8em;
     width: fit-content;
 }
 
 .js-mensajeErrorCorreo {
     display: none;
-    color: rgb(228, 19, 19);
-    font-size: 1.1em;
+    color: red;
+    font-size: 0.8em;
     width: fit-content;
 }
 
@@ -327,13 +327,21 @@ input[type=number]::-webkit-outer-spin-button {
 
 .seleccioneDeMetodoDePago {
     display: none;
-    color: rgb(228, 19, 19);
-    font-size: 1.1em;
+    color: red;
+    font-size: 0.8em;
+    width: fit-content;
+}
+
+.mensaje-usuario {
+    display: none;
+    color: red;
+    font-size: 0.8em;
     width: fit-content;
 }
 
 .message-error {
     width: 25em;
+    font-size: 0.8em;
 }
 
 /* Validaciones */

@@ -4,9 +4,6 @@ const nodoUsername = document.querySelector("#nombreDeUsuario")
 const nodoNumeroTarjeta = document.querySelector("#tarjetaDeDebitoOCredito")
 const buttonConfirm = document.querySelector("#confirm");
 const form = document.querySelector("form");
-const mensajeContrasenia = document.querySelector(".mensaje-contrasenia");
-const mensajeRepetir = document.querySelector(".mensaje-repetir")
-const mensajeUsername = document.querySelector(".mensaje-usuario")
 const email = document.querySelector("#email");
 const nombreDelUsuario = document.querySelector("#nombre");
 const apellidoDelUsuario = document.querySelector("#apellido");
@@ -28,7 +25,11 @@ const mensajeFormularioInvalido = document.querySelector(".formulario-invalido")
 const mensajeNombre = document.querySelector(".js-mensajeErrorNombre");
 const mensajeApellido = document.querySelector(".js-mensajeErrorApellido");
 const mensajeCorreo = document.querySelector(".js-mensajeErrorCorreo");
+const mensajeUsuario = document.querySelector(".js-mensajeErrorUsuario");
 const mensajeSeleccionDePago = document.querySelector(".seleccioneDeMetodoDePago");
+const mensajeContrasenia = document.querySelector(".mensaje-contrasenia");
+const mensajeRepetir = document.querySelector(".mensaje-repetir")
+const mensajeUsername = document.querySelector(".mensaje-usuario")
 
 const expresiones = {
     numeroDeTarjeta: /^\d{16}$/,
@@ -69,6 +70,14 @@ form.addEventListener("submit", (e) => {
     //     plan = seleccionDePlan();
     // }
 
+    if (radioTransferencia.checked == false && cuponDePago() == false && (numeroDeTarjetaValido(numeroDeTarjetaDelUsuario) == false || validacionClaveDeLaTarjeta(claveDeTarjetaDelUsuario) == false)) {
+        mensajeSeleccionDePago.style.display = "flex";
+        mensajeSeleccionDePago.textContent = "Seleccione un metodo de pago";
+        esValido = false;
+    } else {
+        mensajeSeleccionDePago.style.display = "none";
+    }
+
     if (radioTarjeta.checked) {
         metodoDePagoSeleccionado = "tarjeta";
         metodoDePago = {
@@ -95,20 +104,20 @@ form.addEventListener("submit", (e) => {
         };
     }
 
-    if (!verificarContrasenia(contrasenia)) {
-        mensajeContrasenia.textContent = "La contraseña debe tener al menos 8 caracteres y minimo 2 letras, 2 numeros y 2 caracteres especiales";
-        mensajeContrasenia.style.color = "red";
-        return
-    }
-
-    if (contrasenia !== contraseniaRepetida) {
-        mensajeRepetir.textContent = "Las contraseñas deben ser iguales";
-        mensajeRepetir.style.color = "red";
-        return
-    }
-
-    if (usuario === "") {
+    if (nombre === "" || expresiones.nombreYApellido.test(nombre) === false) {
+        mensajeNombre.style.display = "flex";
+        mensajeNombre.textContent = "El nombre debe ser solo letras";
         esValido = false;
+    } else {
+        mensajeNombre.style.display = "none";
+    }
+
+    if (apellido === "" || expresiones.nombreYApellido.test(apellido) === false) {
+        mensajeApellido.style.display = "flex";
+        mensajeApellido.textContent = "El apellido debe ser solo letras";
+        esValido = false;
+    } else {
+        mensajeApellido.style.display = "none";
     }
 
     if (correo === "" || expresiones.mail.test(correo) === false) {
@@ -119,28 +128,24 @@ form.addEventListener("submit", (e) => {
         mensajeCorreo.style.display = "none";
     }
 
-    if (nombre === "" || expresiones.nombreYApellido.test(nombre) === false) {
-        mensajeNombre.style.display = "flex";
-        mensajeNombre.textContent = "Ingrese solo letras";
+    if (usuario === "") {
+        mensajeUsername.style.display = "flex";
+        mensajeUsername.textContent = "Seleccione un nombre usuario";
         esValido = false;
     } else {
-        mensajeNombre.style.display = "none";
+        mensajeUsername.style.display = "none";
     }
 
-    if (apellido === "" || expresiones.nombreYApellido.test(apellido) === false) {
-        mensajeApellido.style.display = "flex";
-        mensajeApellido.textContent = "Ingrese solo letras";
-        esValido = false;
-    } else {
-        mensajeApellido.style.display = "none";
+    if (!verificarContrasenia(contrasenia)) {
+        mensajeContrasenia.textContent = "La contraseña debe tener al menos 8 caracteres y minimo 2 letras, 2 numeros y 2 caracteres especiales";
+        mensajeContrasenia.style.color = "red";
+        return
     }
 
-    if (radioTransferencia.checked == false && cuponDePago() == false && (numeroDeTarjetaValido(numeroDeTarjetaDelUsuario) == false || validacionClaveDeLaTarjeta(claveDeTarjetaDelUsuario) == false)) {
-        mensajeSeleccionDePago.style.display = "flex";
-        mensajeSeleccionDePago.textContent = "Seleccione un metodo de pago";
-        esValido = false;
-    } else {
-        mensajeSeleccionDePago.style.display = "none";
+    if (contrasenia !== contraseniaRepetida) {
+        mensajeRepetir.textContent = "Las contraseñas deben ser iguales";
+        mensajeRepetir.style.color = "red";
+        return
     }
 
     if (esValido == true && crearUsuario(usuario, contrasenia, correo, nombre, apellido, metodoDePago) == true) {
@@ -247,7 +252,7 @@ function seleccionDePlan() {
         planSeleccionado = "Estandar";
     });
 
-    planGold.addEventListener("click", function(){
+    planGold.addEventListener("click", function () {
         this.style.outline = ".1875rem solid white";
         planEstandar.style.outline = "none";
         planPlatino.style.outline = "none";
@@ -446,26 +451,26 @@ function iconoRepetirContrasenia() {
 
 // EYE CONTRASEÑA
 
-function validacion() {
-    inputs.forEach((input) => {
-        input.addEventListener("blur", function () {
-            validacionClaveDeLaTarjeta();
-            numeroDeTarjetaValido();
-            metodoDePagoClaveTarjeta.classList.remove("validacion-correcta");
-            metodoDePagoClaveTarjeta.classList.remove("validacion-incorrecta");
-            metodoDePagoTarjeta.classList.remove("validacion-correcta");
-            metodoDePagoTarjeta.classList.remove("validacion-incorrecta");
-            document.querySelector(".codigoDeSeguridad-incorrecto").style.display = "none";
-            document.querySelector(".numeroDeTarjeta-incorrecto").style.display = "none";
-        });
-    });
-}
+// function validacion() {
+//     inputs.forEach((input) => {
+//         input.addEventListener("blur", function () {
+//             validacionClaveDeLaTarjeta();
+//             numeroDeTarjetaValido();
+//             metodoDePagoClaveTarjeta.classList.remove("validacion-correcta");
+//             metodoDePagoClaveTarjeta.classList.remove("validacion-incorrecta");
+//             metodoDePagoTarjeta.classList.remove("validacion-correcta");
+//             metodoDePagoTarjeta.classList.remove("validacion-incorrecta");
+//             document.querySelector(".codigoDeSeguridad-incorrecto").style.display = "none";
+//             document.querySelector(".numeroDeTarjeta-incorrecto").style.display = "none";
+//         });
+//     });
+// }
 
 cuponDePago();
 visualizacionCuponDePago();
 visualizacionNumeroDeTarjeta();
 visualizacionClaveDeLaTarjeta();
-validacion();
+// validacion();
 habilitarTarjeta();
 habilitarCuponDePago();
 habilitarTransferencia();
