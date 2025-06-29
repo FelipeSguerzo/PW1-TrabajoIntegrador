@@ -3,7 +3,7 @@ body {
     background: linear-gradient(to bottom, #000000 0%, #1a1a1a 100%);
     background-color: #000;
     margin-top: 3%;
-        margin: 0;
+    margin: 0;
     padding: 0rem;
     box-sizing: border-box;
     font-family: "Open Sans", sans-serif;
@@ -19,35 +19,93 @@ main {
     min-height: 50vh;
 }
 
+.nombre-usuario {
+    text-align: center;
+}
+
 .message-error,
 .numeroDeTarjeta-incorrecto,
 .codigoDeSeguridad-incorrecto,
 .cupon-incorrecto,
 .numeroDeTarjeta-incorrecto,
 .codigoDeSeguridad-incorrecto {
-    color: red; 
-    font-size: 0.9em; 
-    margin-top: 0.3em; 
-    display: block; 
+    color: red;
+    font-size: 0.9em;
+    margin-top: 0.3em;
+    display: none;
 }
 
 form {
     display: grid;
     grid-template-columns: 10% 40% 40% 10%;
-    gap: 1rem; 
+    gap: 1rem;
 }
 
 .perfil {
     grid-column-start: 1;
+    text-align: center;
 }
 
 .datosPerfil {
     grid-column-start: 2;
 }
-.datosPerfil input{
+
+.datosPerfil input {
     width: 15rem;
     height: 2rem;
     display: inline-block;
+    border-radius: 0.5em;
+    border: none;
+    font-size: 1em;
+    padding-left: 1em;
+    background-color: #5a5760;
+    color: white;
+}
+
+.datosPerfil input::placeholder {
+    color: white;
+    opacity: 0.6;
+    font-size: .9em;
+}
+
+.metodoDePago_tarjetaDeDebitoOCredito_numeroDeTarjeta {
+    height: 2rem;
+    border-radius: 0.5em;
+    border: none;
+    font-size: 1em;
+    padding-left: 1em;
+    background-color: #5a5760;
+    color: white;
+    margin-bottom: 0.5em;
+}
+
+.metodoDePago_tarjetaDeDebitoOCredito_numeroDeTarjeta::placeholder {
+    color: white;
+    opacity: 0.6;
+    font-size: .9em;
+}
+
+.metodoDePago_tarjetaDeDebitoOCredito_codigoDeSeguridad {
+    width: 5em;
+    height: 2rem;
+    border-radius: 0.5em;
+    border: none;
+    font-size: 1em;
+    padding-left: 1em;
+    background-color: #5a5760;
+    color: white;
+}
+
+.metodoDePago_tarjetaDeDebitoOCredito_codigoDeSeguridad::placeholder {
+    color: white;
+    opacity: 0.6;
+    font-size: .9em;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 .mail {
@@ -55,31 +113,31 @@ form {
     padding: 0.7rem 1.2rem;
 }
 
-.contraseña{
+.contraseña {
     display: inline-block;
     padding: 0.7rem 1.2rem;
 }
 
-.nuevaContraseña{
-    display: inline-block;
-    padding: 0.7rem 1.2rem;
-    vertical-align: middle;
-}
-.repetirContraseña{
+.nuevaContraseña {
     display: inline-block;
     padding: 0.7rem 1.2rem;
     vertical-align: middle;
 }
 
+.repetirContraseña {
+    display: inline-block;
+    padding: 0.7rem 1.2rem;
+    vertical-align: middle;
+}
 
 .metodos {
     grid-column-start: 3;
-    display:grid;
+    display: grid;
     grid-template-rows: auto;
 }
 
 .accionesFormulario {
-    grid-column: 1 / -1; 
+    grid-column: 1 / -1;
     grid-column-start: 2;
     grid-column-end: 4;
     padding-top: 1.25rem;
@@ -89,10 +147,10 @@ form {
 }
 
 .perfil img {
-    width: 6.25rem; 
-    height: 6.25rem; 
-    object-fit: cover; 
-    border-radius: 50%; 
+    width: 6.25rem;
+    height: 6.25rem;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 .boton {
@@ -116,17 +174,17 @@ form {
     max-width: 12.5rem;
 }
 
-@media (max-width: 768px)  {
+@media (max-width: 768px) {
     main {
         width: 80%;
     }
 
     .header {
-      display: flex;
-      position: fixed;
-      justify-content: center;
-      padding: 0;
-      gap: 0.5em;
+        display: flex;
+        position: fixed;
+        justify-content: center;
+        padding: 0;
+        gap: 0.5em;
     }
 
     .header nav ul {
@@ -158,36 +216,38 @@ form {
 
     .metodos {
         grid-column-start: auto;
+        gap: 2em;
     }
 
     .accionesFormulario {
         grid-column: 1 / -1;
     }
 
-    .alumnos{
-    grid-column-start: auto;
+    .alumnos {
+        grid-column-start: auto;
     }
-    .contenedor-redes{
-    grid-column-start: auto;
+
+    .contenedor-redes {
+        grid-column-start: auto;
     }
 }
 
-@media (max-width: 425px)  {
+@media (max-width: 425px) {
 
-    main{
+    main {
         width: 80%;
     }
 
-    footer{
+    footer {
         width: 100%;
     }
 
     .header {
-      display: flex;
-      position: fixed;
-      justify-content: center;
-      padding: 0;
-      gap: 0.5em;
+        display: flex;
+        position: fixed;
+        justify-content: center;
+        padding: 0;
+        gap: 0.5em;
     }
 
     .header nav ul {
@@ -219,15 +279,18 @@ form {
 
     .metodos {
         grid-column-start: auto;
+        gap: 2em;
     }
 
     .accionesFormulario {
         grid-column: 1 / -1;
     }
-    .metodoDePago_tarjetaDeDebitoOCredito_codigoDeSeguridad{
+
+    .metodoDePago_tarjetaDeDebitoOCredito_codigoDeSeguridad {
         width: 30%;
     }
-    .boton{
+
+    .boton {
         width: 100%;
     }
 }

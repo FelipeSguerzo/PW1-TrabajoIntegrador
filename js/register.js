@@ -31,6 +31,8 @@ const mensajeContrasenia = document.querySelector(".mensaje-contrasenia");
 const mensajeRepetir = document.querySelector(".mensaje-repetir");
 const mensajeUsername = document.querySelector(".mensaje-usuario");
 
+let planSeleccionado = "";
+
 const expresiones = {
     numeroDeTarjeta: /^\d{16}$/,
     claveTarjeta: /^\d{3}$/,
@@ -269,36 +271,36 @@ function habilitarTransferencia() {
 
 // SELECCION DE PLAN
 
-function seleccionDePlan() {
-    const planEstandar = document.querySelector("#plan-estandar");
-    const planGold = document.querySelector("#plan-gold");
-    const planPlatino = document.querySelector("#plan-platino");
-    let planSeleccionado = "";
+// function seleccionDePlan() {
+//     const planEstandar = document.querySelector("#plan-estandar");
+//     const planGold = document.querySelector("#plan-gold");
+//     const planPlatino = document.querySelector("#plan-platino");
 
-    planEstandar.addEventListener("click", function () {
-        this.style.outline = ".1875rem solid white";
-        planGold.style.outline = "none";
-        planPlatino.style.outline = "none";
-        planSeleccionado = "Estandar";
-    });
 
-    planGold.addEventListener("click", function () {
-        this.style.outline = ".1875rem solid white";
-        planEstandar.style.outline = "none";
-        planPlatino.style.outline = "none";
-        planSeleccionado = "Gold";
-    });
+//     planEstandar.addEventListener("click", function () {
+//         this.style.outline = ".1875rem solid white";
+//         planGold.style.outline = "none";
+//         planPlatino.style.outline = "none";
+//         planSeleccionado = "Estandar";
+//     });
 
-    planPlatino.addEventListener("click", function () {
-        this.style.outline = ".1875rem solid white";
-        planEstandar.style.outline = "none";
-        planGold.style.outline = "none";
-        planSeleccionado = "Platino";
-    });
+//     planGold.addEventListener("click", function () {
+//         this.style.outline = ".1875rem solid white";
+//         planEstandar.style.outline = "none";
+//         planPlatino.style.outline = "none";
+//         planSeleccionado = "Gold";
+//     });
 
-    return planSeleccionado;
-}
-seleccionDePlan();
+//     planPlatino.addEventListener("click", function () {
+//         this.style.outline = ".1875rem solid white";
+//         planEstandar.style.outline = "none";
+//         planGold.style.outline = "none";
+//         planSeleccionado = "Platino";
+//     });
+
+//     return planSeleccionado;
+// }
+// seleccionDePlan();
 // SELECCION DE PLAN
 
 // VALIDACION NUMERO DE TARJETA

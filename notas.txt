@@ -1,17 +1,4 @@
-1. - Cuando seleccionas de vuelta el metodo de pago que tenias guardado y queda tal cual sin ningun cambio
-se desactive el boton guardar cambios.
-Ej.: Si mi metodo de pago es tarjeta, y cambio a otro metodo de pago se active el boton pero si
-vuelvo a cliquear en tarjeta el boton deberia estar desactivado al menos que cambie el numero o la clave.
-
-3. - Falta validar el 000 en la clave tarjeta.
-
-4. - En usuario.js cambie quite que se borre los numeros de la tarjeta.
-
-5. - En sarasamasRegister.js solamente se puede seleccionar un checkbox.
-
-6. - Agregue el ojo del pass y cambio de tipo de input.
-
-7. - Retoque el css para que este el ojo en responsive y no se deforme.
+7. - Retoque el css para que este el ojo en responsive ya no se deforme.
     Comente los dos (.formulario .datosDeUsuario .fa-regular)
     Comente los dos align-items (.formulario)
 

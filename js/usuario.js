@@ -10,33 +10,27 @@ const rapiPagoCheckbox = document.getElementById("rapiPago");
 const transferenciaBancariaRadio = document.getElementById("transferenciaBancaria");
 const botonCancelarSubscripcion = document.querySelector(".accionesFormulario .boton[type='button']");
 
-// const radioTarjeta = document.getElementById("radioTarjeta");
-// const radioCupon = document.getElementById("cuponDePagoRadio");
-// const radioTransferencia = document.getElementById("transferenciaBancaria");
-// const metodoDePagoTarjeta = document.querySelector(".metodoDePago__tarjetaDeDebitoOCredito__numeroDeTarjeta");
-// const metodoDePagoClaveTarjeta = document.querySelector(".metodoDePago__tarjetaDeDebitoOCredito__codigoDeSeguridad");
-
 const nuevaContraseñaInput = document.getElementById("nuevaContraseña");
 const repiteContraseñaInput = document.getElementById("repiteContraseña");
 const mensajeContrasenaError = document.querySelector(".mensaje-contrasenia");
 const mensajeRepetirError = document.querySelector(".mensaje-repetir");
 const botonGuardarCambios = document.querySelector(".accionesFormulario input[type='submit']");
 
-
 const mensajeNumeroTarjetaError = document.querySelector(".numeroDeTarjeta-incorrecto");
 const mensajeCodigoSeguridadError = document.querySelector(".codigoDeSeguridad-incorrecto");
+const mensajeCuponDePago = document.querySelector(".cupon-incorrecto");
 
 const linkCerrarSesion = document.querySelector("li.cerrarSesion a");
 
 const expresiones = {
     numeroDeTarjeta: /^\d{16}$/,
-    claveTarjeta: /^\d{3}$/    //REVISAR LA COMA SEGURO FALLA POR ESO
+    claveTarjeta: /^\d{3}$/
 };
 
 function validarNumeroDeTarjeta(numeroTarjetaIngresada) {
     const longitudValida = expresiones.numeroDeTarjeta.test(numeroTarjetaIngresada);
     if (!longitudValida) {
-        mensajeNumeroTarjetaError.textContent = "El número de tarjeta debe tener 16 numeros.";
+        mensajeNumeroTarjetaError.textContent = "El número de tarjeta debe tener 16 numeros";
         mensajeNumeroTarjetaError.style.display = "block";
         return false;
     }
@@ -54,7 +48,7 @@ function validarNumeroDeTarjeta(numeroTarjetaIngresada) {
         (sumaParidad === 1 && ultimoDigitoParidad === 0);
 
     if (!tarjetaValidaPorAlgoritmo) {
-        mensajeNumeroTarjetaError.textContent = "Número de tarjeta inválido.";
+        mensajeNumeroTarjetaError.textContent = "Número de tarjeta inválido";
         mensajeNumeroTarjetaError.style.display = "block";
         return false;
     }
@@ -68,8 +62,14 @@ function validarCodigoDeSeguridad(claveIngresada) {
     const claveErronea = 0;
     const esValido = expresiones.claveTarjeta.test(claveIngresada);
 
-    if (!esValido || claveIngresada === claveErronea) {
-        mensajeCodigoSeguridadError.textContent = "La clave debe tener 3 numeros distintos de 0";
+    if (!esValido) {
+        mensajeCodigoSeguridadError.textContent = "La clave debe tener 3 digitos";
+        mensajeCodigoSeguridadError.style.display = "block";
+        return false;
+    }
+
+    if (claveIngresada == claveErronea) {
+        mensajeCodigoSeguridadError.textContent = "Clave inválida";
         mensajeCodigoSeguridadError.style.display = "block";
         return false;
     }
@@ -91,6 +91,7 @@ const getUsuarioSesionIniciada = () => {
 
 function cargarMetodoDePago() {
     const usuarioActual = getUsuarioSesionIniciada();
+
     if (usuarioActual && usuarioActual.metodoDePago) {
         const metodoDePago = usuarioActual.metodoDePago;
 
@@ -134,23 +135,25 @@ function validarNuevaContrasena() {
     const caracteresEspeciales = (contrasenia.match(/[!"#$%&/]/g) || []).length >= 2;
 
     if (!contraseniaTotal) {
-        mensajeContrasenaError.textContent = "Mínimo 8 caracteres.";
+        mensajeContrasenaError.style.display = "block";
+        mensajeContrasenaError.textContent = "Mínimo 8 caracteres";
         return false;
     }
     if (!letras) {
-        mensajeContrasenaError.textContent = "Mínimo 2 letras.";
+        mensajeContrasenaError.textContent = "Mínimo 2 letras";
         return false;
     }
     if (!numeros) {
-        mensajeContrasenaError.textContent = "Mínimo 2 números.";
+        mensajeContrasenaError.textContent = "Mínimo 2 números";
         return false;
     }
     if (!caracteresEspeciales) {
-        mensajeContrasenaError.textContent = "Mínimo 2 caracteres especiales.";
+        mensajeContrasenaError.textContent = "Mínimo 2 caracteres especiales";
         return false;
     }
 
     mensajeContrasenaError.textContent = "";
+    mensajeContrasenaError.style.display = "none";
     return true;
 }
 
@@ -159,10 +162,12 @@ function validarRepetirContrasena() {
     const repiteContrasena = repiteContraseñaInput.value;
 
     if (contrasenia !== repiteContrasena) {
-        mensajeRepetirError.textContent = "Las contraseñas no coinciden.";
+        mensajeRepetirError.style.display = "block";
+        mensajeRepetirError.textContent = "Las contraseñas no coinciden";
         return false;
     }
     mensajeRepetirError.textContent = "";
+    mensajeRepetirError.style.display = "none";
     return true;
 }
 
@@ -241,6 +246,7 @@ tarjetaDebitoCreditoRadio.addEventListener("change", () => {
     actualizarEstadoBotonGuardar();
     mensajeNumeroTarjetaError.style.display = "none";
     mensajeCodigoSeguridadError.style.display = "none";
+    mensajeCuponDePago.style.display = "none";
 });
 
 numeroTarjetaInput.addEventListener("input", actualizarEstadoBotonGuardar);
@@ -255,6 +261,10 @@ cuponDePagoRadio.addEventListener("change", () => {
 pagoFacilCheckbox.addEventListener("change", () => {
     if (pagoFacilCheckbox.checked) {
         rapiPagoCheckbox.checked = false;
+        mensajeCuponDePago.style.display = "none";
+    } else {
+        mensajeCuponDePago.style.display = "block";
+        mensajeCuponDePago.textContent = "Seleccione al menos un cupon";
     }
     actualizarEstadoBotonGuardar();
 });
@@ -262,13 +272,19 @@ pagoFacilCheckbox.addEventListener("change", () => {
 rapiPagoCheckbox.addEventListener("change", () => {
     if (rapiPagoCheckbox.checked) {
         pagoFacilCheckbox.checked = false;
+        mensajeCuponDePago.style.display = "none";
+    } else {
+        mensajeCuponDePago.style.display = "block";
+        mensajeCuponDePago.textContent = "Seleccione al menos un cupon";
     }
     actualizarEstadoBotonGuardar();
 });
+
 transferenciaBancariaRadio.addEventListener("change", () => {
     actualizarEstadoBotonGuardar();
     mensajeNumeroTarjetaError.style.display = "none";
     mensajeCodigoSeguridadError.style.display = "none";
+    mensajeCuponDePago.style.display = "none";
 });
 
 
@@ -279,20 +295,20 @@ formularioUsuario.addEventListener("submit", (e) => {
     let usuarioActual = getUsuarioSesionIniciada();
 
     if (!usuarioActual) {
-        console.error("No hay usuario en sesión.");
+        console.error("No hay usuario en sesión");
         return;
     }
 
     if (nuevaContraseñaInput.value !== "" || repiteContraseñaInput.value !== "") {
         if (!validarNuevaContrasena() || !validarRepetirContrasena()) {
-            alert("Corrige los errores en las contraseñas.");
+            alert("Corrige los errores en las contraseñas");
             return;
         }
         usuarioActual.contrasenia = nuevaContraseñaInput.value;
     }
 
     if (!validarMetodoDePagoSeleccionado()) {
-        alert("Selecciona un metodo de pago y sus detalles");
+        alert("Selecciona un metodo de pago");
         return;
     }
 
@@ -317,7 +333,7 @@ formularioUsuario.addEventListener("submit", (e) => {
     } else if (transferenciaBancariaRadio.checked) {
         nuevoMetodoDePago = {
             tipo: "transferencia",
-            detalles: {}
+            detalles: "CBU: 21839094111100018971375"
         };
     }
 
@@ -328,12 +344,17 @@ formularioUsuario.addEventListener("submit", (e) => {
         usuarios[index] = usuarioActual;
         localStorage.setItem("usuarios", JSON.stringify(usuarios));
         localStorage.setItem("usuarioSesionIniciada", JSON.stringify(usuarioActual));
-        alert("Cambios guardados ");
+        alert("Cambios guardados");
+        if (cuponDePagoRadio.checked || transferenciaBancariaRadio.checked) {
+            numeroTarjetaInput.value = "";
+            codigoSeguridadInput.value = "";
+        }
         nuevaContraseñaInput.value = "";
         repiteContraseñaInput.value = "";
         actualizarEstadoBotonGuardar();
+        botonGuardarCambios.disabled = true;
     } else {
-        console.error("Usuario no encontrado en localStorage al intentar guardar.");
+        console.error("Usuario no encontrado en localStorage al intentar guardar");
     }
 });
 
@@ -361,48 +382,3 @@ if (linkCerrarSesion) {
         window.location.href = "index.html";
     });
 }
-
-// function habilitarTarjeta() {
-//     radioTarjeta.addEventListener("change", function () {
-//         if (this.checked) {
-//             metodoDePagoTarjeta.disabled = false;
-//             metodoDePagoClaveTarjeta.disabled = false;
-//             metodoDePagoPagoFacil.disabled = true;
-//             metodoDePagoRapiPago.disabled = true;
-//             metodoDePagoPagoFacil.checked = false;
-//             metodoDePagoRapiPago.checked = false;
-//         }
-//     });
-// }
-
-// function habilitarCuponDePago() {
-//     radioCupon.addEventListener("change", function () {
-//         if (this.checked) {
-//             metodoDePagoPagoFacil.disabled = false;
-//             metodoDePagoRapiPago.disabled = false;
-//             metodoDePagoTarjeta.disabled = true;
-//             metodoDePagoClaveTarjeta.disabled = true;
-//             metodoDePagoTarjeta.value = "";
-//             metodoDePagoClaveTarjeta.value = "";
-//         }
-//     });
-// }
-
-// function habilitarTransferencia() {
-//     radioTransferencia.addEventListener("change", function () {
-//         if (this.checked) {
-//             metodoDePagoPagoFacil.disabled = true;
-//             metodoDePagoRapiPago.disabled = true;
-//             metodoDePagoTarjeta.disabled = true;
-//             metodoDePagoClaveTarjeta.disabled = true;
-//             metodoDePagoTarjeta.value = "";
-//             metodoDePagoClaveTarjeta.value = "";
-//             metodoDePagoPagoFacil.checked = false;
-//             metodoDePagoRapiPago.checked = false;
-//         }
-//     })
-// }
-
-// habilitarTarjeta();
-// habilitarCuponDePago();
-// habilitarTransferencia();
